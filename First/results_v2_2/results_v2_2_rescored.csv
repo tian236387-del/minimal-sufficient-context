@@ -1,0 +1,45 @@
+﻿repeat,case_id,family_id,active_branch_id,active_branch_name,question_mode,condition,question,answer,prompt_tokens,response_tokens,prompt_chars,latency_ms,correct,polluted,expected_hits,forbidden_hits,active_branch_position,active_history_messages
+1,nova_q01,nova,nova_b1,Nova Web,implicit,linear,当前这个项目最终使用什么数据库，负责人是谁？,确认，Nova Data 的最终数据库是 SQLite，负责人是 David。,4171,201,6781,4710.81,False,True,,SQLite | David,0,41
+1,nova_q01,nova,nova_b1,Nova Web,implicit,linear_tagged,当前这个项目最终使用什么数据库，负责人是谁？,数据库：SQLite，负责人：David。,4233,148,6888,1698.03,False,True,,SQLite | David,0,41
+1,nova_q01,nova,nova_b1,Nova Web,implicit,branch,当前这个项目最终使用什么数据库，负责人是谁？,Nova Web 当前有效的数据库是 PostgreSQL 16，负责人是 Alice。,1139,166,1772,1042.97,True,False,PostgreSQL 16 | Alice,,0,41
+1,nova_q01,nova,nova_b1,Nova Web,implicit,branch_compact_oracle,当前这个项目最终使用什么数据库，负责人是谁？,PostgreSQL 16 | Alice,495,120,776,714.41,True,False,PostgreSQL 16 | Alice,,0,41
+1,nova_q02,nova,nova_b2,Nova Mobile,explicit,linear,Nova Mobile 当前最终采用什么后端框架和缓存？,Express 与 Redis,4174,181,6787,1738.62,False,True,Express,Redis,1,48
+1,nova_q02,nova,nova_b2,Nova Mobile,explicit,linear_tagged,Nova Mobile 当前最终采用什么后端框架和缓存？,确认，Nova Mobile 的最终后端框架是 Express，缓存是 Redis。,4231,254,6903,2390.69,False,True,Express,Redis,1,48
+1,nova_q02,nova,nova_b2,Nova Mobile,explicit,branch,Nova Mobile 当前最终采用什么后端框架和缓存？,当前有效结论：后端框架为 Express，缓存为 Memcached。,1282,115,2139,931.64,True,False,Express | Memcached,,1,48
+1,nova_q02,nova,nova_b2,Nova Mobile,explicit,branch_compact_oracle,Nova Mobile 当前最终采用什么后端框架和缓存？,Express、Memcached,498,116,819,704.55,True,False,Express | Memcached,,1,48
+1,nova_q03,nova,nova_b3,Nova Admin,implicit,linear,当前这个项目部署在哪个区域，服务端口是多少？,确认，Nova Mobile 的部署区域是 GCP us-central1，服务端口是 8200。,4173,309,6781,2589.7,False,True,,GCP us-central1 | 8200,2,34
+1,nova_q03,nova,nova_b3,Nova Admin,implicit,linear_tagged,当前这个项目部署在哪个区域，服务端口是多少？,GCP us-central1，服务端口8200。,4230,224,6894,2181.68,False,True,,GCP us-central1 | 8200,2,34
+1,nova_q03,nova,nova_b3,Nova Admin,implicit,branch,当前这个项目部署在哪个区域，服务端口是多少？,Azure eastasia，服务端口8300。,976,149,1606,1093.33,True,False,Azure eastasia | 8300,,2,34
+1,nova_q03,nova,nova_b3,Nova Admin,implicit,branch_compact_oracle,当前这个项目部署在哪个区域，服务端口是多少？,"部署区域：Azure eastasia  
+服务端口：8300",504,145,828,863.46,True,False,Azure eastasia | 8300,,2,34
+1,nova_q04,nova,nova_b4,Nova Data,explicit,linear,Nova Data 的最终发布日期是什么时候，负责人是谁？,11月12日，负责人是 David。,4172,194,6788,1936.57,True,False,11月12日 | David,,3,31
+1,nova_q04,nova,nova_b4,Nova Data,explicit,linear_tagged,Nova Data 的最终发布日期是什么时候，负责人是谁？,Nova Data 最终最终发布日期：11月12日。负责人：David。,4229,205,6898,2172.86,True,False,11月12日 | David,,3,31
+1,nova_q04,nova,nova_b4,Nova Data,explicit,branch,Nova Data 的最终发布日期是什么时候，负责人是谁？,最终发布日期：11月12日。负责人：David。,910,109,1493,852.46,True,False,11月12日 | David,,3,31
+1,nova_q04,nova,nova_b4,Nova Data,explicit,branch_compact_oracle,Nova Data 的最终发布日期是什么时候，负责人是谁？,"最终发布日期：11月12日  
+负责人：David",488,88,819,574.97,True,False,11月12日 | David,,3,31
+1,nova_q05,nova,nova_b5,Nova Edge,implicit,linear,当前这个产品的 Pro 方案多少钱，包含多少存储？,确认，当前产品Pro方案价格为149美元/月，包含2TB存储。,4172,449,6784,3712.86,True,False,149美元/月 | 2TB,,4,30
+1,nova_q05,nova,nova_b5,Nova Edge,implicit,linear_tagged,当前这个产品的 Pro 方案多少钱，包含多少存储？,当前产品Pro方案价格为149美元/月，包含2TB存储。,4229,160,6894,1918.12,True,False,149美元/月 | 2TB,,4,30
+1,nova_q05,nova,nova_b5,Nova Edge,implicit,branch,当前这个产品的 Pro 方案多少钱，包含多少存储？,$149/月，2TB。,920,200,1455,1570.91,True,False,149美元/月 | 2TB,,4,30
+1,nova_q05,nova,nova_b5,Nova Edge,implicit,branch_compact_oracle,当前这个产品的 Pro 方案多少钱，包含多少存储？,$149/月，2TB。,526,107,839,656.69,True,False,149美元/月 | 2TB,,4,30
+1,nova_q06,nova,nova_b1,Nova Web,explicit,linear,Nova Web 的本地模型和 temperature 最终分别是什么？,Nova Web 的最终本地模型是 Qwen3 1.7B，最终temperature是 0。,4172,212,6795,2019.88,True,False,Qwen3 1.7B | 0,,0,41
+1,nova_q06,nova,nova_b1,Nova Web,explicit,linear_tagged,Nova Web 的本地模型和 temperature 最终分别是什么？,Qwen3 1.7B | 1.0,4234,281,6902,2724.17,False,True,Qwen3 1.7B,1.0,0,41
+1,nova_q06,nova,nova_b1,Nova Web,explicit,branch,Nova Web 的本地模型和 temperature 最终分别是什么？,Qwen3 1.7B 且 temperature 为 0。,1140,138,1786,930.81,True,False,Qwen3 1.7B | 0,,0,41
+1,nova_q06,nova,nova_b1,Nova Web,explicit,branch_compact_oracle,Nova Web 的本地模型和 temperature 最终分别是什么？,"Qwen3 1.7B  
+0",496,208,790,1192.79,True,False,Qwen3 1.7B | 0,,0,41
+1,nova_q07,nova,nova_b2,Nova Mobile,implicit,linear,当前这个项目的数据库和后端框架最终是什么？,数据库：CockroachDB；后端框架：Go Gin。,4171,196,6780,1781.21,False,True,,CockroachDB | Go Gin,1,48
+1,nova_q07,nova,nova_b2,Nova Mobile,implicit,linear_tagged,当前这个项目的数据库和后端框架最终是什么？,CockroachDB 作为数据库，Go Gin 作为后端框架。,4228,117,6896,1630.01,False,True,,CockroachDB | Go Gin,1,48
+1,nova_q07,nova,nova_b2,Nova Mobile,implicit,branch,当前这个项目的数据库和后端框架最终是什么？,MongoDB 7 和 Express。,1279,145,2132,1040.88,True,False,MongoDB 7 | Express,,1,48
+1,nova_q07,nova,nova_b2,Nova Mobile,implicit,branch_compact_oracle,当前这个项目的数据库和后端框架最终是什么？,MongoDB 7 / Express,495,83,812,557.76,True,False,MongoDB 7 | Express,,1,48
+1,nova_q08,nova,nova_b3,Nova Admin,explicit,linear,Nova Admin 部署在哪个区域，生产数据库是什么？,确认，Nova Admin 的部署区域是 Azure eastasia，生产数据库为 MySQL 8。,4174,171,6787,1803.54,True,False,Azure eastasia | MySQL 8,,2,34
+1,nova_q08,nova,nova_b3,Nova Admin,explicit,linear_tagged,Nova Admin 部署在哪个区域，生产数据库是什么？,Azure eastasia，MySQL 8。,4231,188,6900,2067.93,True,False,Azure eastasia | MySQL 8,,2,34
+1,nova_q08,nova,nova_b3,Nova Admin,explicit,branch,Nova Admin 部署在哪个区域，生产数据库是什么？,Azure eastasia | MySQL 8,977,162,1612,1174.93,True,False,Azure eastasia | MySQL 8,,2,34
+1,nova_q08,nova,nova_b3,Nova Admin,explicit,branch_compact_oracle,Nova Admin 部署在哪个区域，生产数据库是什么？,"部署区域：Azure eastasia  
+生产数据库：MySQL 8",505,206,834,1297.05,True,False,Azure eastasia | MySQL 8,,2,34
+1,nova_q09,nova,nova_b4,Nova Data,implicit,linear,当前这个版本最终发布日期和服务端口分别是什么？,当前版本的最终发布日期为 10月8日，服务端口为 8300。,4172,156,6782,1661.94,False,True,,10月8日 | 8300,3,31
+1,nova_q09,nova,nova_b4,Nova Data,implicit,linear_tagged,当前这个版本最终发布日期和服务端口分别是什么？,当前这个版本最终发布日期是 10月8日，服务端口是 8300。,4229,231,6892,2340.47,False,True,,10月8日 | 8300,3,31
+1,nova_q09,nova,nova_b4,Nova Data,implicit,branch,当前这个版本最终发布日期和服务端口分别是什么？,当前版本最终发布日期：11月12日。服务端口：9200。,910,211,1487,1432.6,True,False,11月12日 | 9200,,3,31
+1,nova_q09,nova,nova_b4,Nova Data,implicit,branch_compact_oracle,当前这个版本最终发布日期和服务端口分别是什么？,11月12日 | 9200,488,129,813,788.59,True,False,11月12日 | 9200,,3,31
+1,nova_q10,nova,nova_b5,Nova Edge,explicit,linear,Nova Edge 当前选用什么本地模型，Pro 存储是多少？,Qwen3 4B | 2TB,4175,174,6790,1843.76,True,False,Qwen3 4B | 2TB,,4,30
+1,nova_q10,nova,nova_b5,Nova Edge,explicit,linear_tagged,Nova Edge 当前选用什么本地模型，Pro 存储是多少？,Qwen3 4B | 2TB,4232,194,6900,2056.38,True,False,Qwen3 4B | 2TB,,4,30
+1,nova_q10,nova,nova_b5,Nova Edge,explicit,branch,Nova Edge 当前选用什么本地模型，Pro 存储是多少？,Qwen3 4B | 2TB,923,175,1461,1208.75,True,False,Qwen3 4B | 2TB,,4,30
+1,nova_q10,nova,nova_b5,Nova Edge,explicit,branch_compact_oracle,Nova Edge 当前选用什么本地模型，Pro 存储是多少？,Qwen3 4B | 2TB,529,185,845,1097.3,True,False,Qwen3 4B | 2TB,,4,30

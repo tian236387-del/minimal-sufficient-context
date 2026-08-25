@@ -1,0 +1,10 @@
+.venv/
+backend/.venv/
+backend/msc_chat.db
+backend/msc_chat.db-*
+backend/backups/
+frontend/node_modules/
+frontend/dist/
+__pycache__/
+*.pyc
+.DS_Store

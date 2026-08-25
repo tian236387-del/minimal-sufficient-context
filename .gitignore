@@ -1,0 +1,51 @@
+# Operating system and editor files
+.DS_Store
+Thumbs.db
+Desktop.ini
+.idea/
+.vscode/
+*.swp
+
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+
+# Python
+**/__pycache__/
+**/*.py[cod]
+**/.venv/
+**/.pytest_cache/
+**/.mypy_cache/
+**/.ruff_cache/
+.coverage
+htmlcov/
+
+# Node / Vite
+**/node_modules/
+**/dist/
+**/.vite/
+npm-debug.log*
+
+# Local databases, backups, and logs
+**/*.db
+**/*.db-*
+**/*.sqlite
+**/*.sqlite3
+**/backups/
+*.log
+
+# Human-study participant data and browser profiles
+First/validation/human_study/data/*.jsonl
+First/validation/human_study/.visual-data/
+First/validation/human_study/analysis/
+First/validation/human_study/visual-artifacts/
+First/validation/human_study/onboarding-*.png
+
+# Local editable report with Office author metadata
+First/Minimal_Sufficient_Context_Experimental_Report_V2.2.docx
+
+# Temporary validation artifacts
+.tmp-*/
+tmp/
+temp/

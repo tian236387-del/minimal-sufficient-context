@@ -1,0 +1,67 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  backend:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: UI-V0.1/backend/requirements.txt
+      - name: Install backend dependencies
+        working-directory: UI-V0.1/backend
+        run: python -m pip install -r requirements.txt
+      - name: Run backend tests
+        working-directory: UI-V0.1/backend
+        env:
+          PYTHONDONTWRITEBYTECODE: "1"
+        run: python -m unittest discover -s tests -v
+      - name: Validate benchmark compiler and evaluator
+        env:
+          PYTHONDONTWRITEBYTECODE: "1"
+        run: >-
+          python First/run_benchmark_v2_2_fixed.py
+          --dry-run
+          --limit 3
+          --results-dir "${{ runner.temp }}/msc-benchmark"
+      - name: Run external validation unit tests
+        env:
+          PYTHONDONTWRITEBYTECODE: "1"
+        run: python -B -m unittest discover -s First/validation/tests -v
+      - name: Dry-run external validation matrix
+        env:
+          PYTHONDONTWRITEBYTECODE: "1"
+        run: python -B First/validation/run_matrix.py --dry-run
+      - name: Validate human study protocol
+        env:
+          PYTHONDONTWRITEBYTECODE: "1"
+        run: python -B First/validation/human_study/study_server.py --check
+
+  frontend:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: UI-V0.1/frontend/package-lock.json
+      - name: Install frontend dependencies
+        working-directory: UI-V0.1/frontend
+        run: npm ci
+      - name: Build frontend
+        working-directory: UI-V0.1/frontend
+        run: npm run build

@@ -1,0 +1,214 @@
+{
+  "started_at": "2026-08-25T04:42:52.942959+00:00",
+  "last_started_at": "2026-08-25T04:42:52.942969+00:00",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "machine": "AMD64",
+  "processor": "Intel64 Family 6 Model 183 Stepping 1, GenuineIntel",
+  "python": "3.14.3",
+  "ollama": "ollama version is 0.32.15",
+  "gpu": [
+    "NVIDIA GeForce RTX 5060 Laptop GPU, 8151 MiB, 582.05"
+  ],
+  "installed_models": [
+    "gemma3:4b",
+    "llama3.1:8b",
+    "llama3.2:3b",
+    "qwen3:1.7b",
+    "qwen3:4b"
+  ],
+  "model_inventory": [
+    {
+      "name": "llama3.1:8b",
+      "digest": "46e0c10c039e019119339687c3c1757cc81b9da49709a3b3924863ba87ca666e",
+      "size": 4920753328,
+      "modified_at": "2026-08-25T12:14:53.0274875+08:00",
+      "details": {
+        "parent_model": "",
+        "format": "gguf",
+        "family": "llama",
+        "families": [
+          "llama"
+        ],
+        "parameter_size": "8.0B",
+        "quantization_level": "Q4_K_M",
+        "context_length": 131072,
+        "embedding_length": 4096
+      }
+    },
+    {
+      "name": "gemma3:4b",
+      "digest": "a2af6cc3eb7fa8be8504abaf9b04e88f17a119ec3f04a3addf55f92841195f5a",
+      "size": 3338801804,
+      "modified_at": "2026-08-25T11:55:40.8426568+08:00",
+      "details": {
+        "parent_model": "",
+        "format": "gguf",
+        "family": "gemma3",
+        "families": [
+          "gemma3"
+        ],
+        "parameter_size": "4.3B",
+        "quantization_level": "Q4_K_M"
+      }
+    },
+    {
+      "name": "llama3.2:3b",
+      "digest": "a80c4f17acd55265feec403c7aef86be0c25983ab279d83f3bcd3abbcb5b8b72",
+      "size": 2019393189,
+      "modified_at": "2026-08-25T00:05:06.662857+08:00",
+      "details": {
+        "parent_model": "",
+        "format": "gguf",
+        "family": "llama",
+        "families": [
+          "llama"
+        ],
+        "parameter_size": "3.2B",
+        "quantization_level": "Q4_K_M",
+        "context_length": 131072,
+        "embedding_length": 3072
+      }
+    },
+    {
+      "name": "qwen3:4b",
+      "digest": "359d7dd4bcdab3d86b87d73ac27966f4dbb9f5efdfcc75d34a8764a09474fae7",
+      "size": 2497293931,
+      "modified_at": "2026-08-22T22:30:02.2073437+08:00",
+      "details": {
+        "parent_model": "",
+        "format": "gguf",
+        "family": "qwen3",
+        "families": [
+          "qwen3"
+        ],
+        "parameter_size": "4.0B",
+        "quantization_level": "Q4_K_M",
+        "context_length": 262144,
+        "embedding_length": 2560
+      }
+    },
+    {
+      "name": "qwen3:1.7b",
+      "digest": "8f68893c685c3ddff2aa3fffce2aa60a30bb2da65ca488b61fff134a4d1730e7",
+      "size": 1359293444,
+      "modified_at": "2026-08-22T21:08:18.0838214+08:00",
+      "details": {
+        "parent_model": "",
+        "format": "gguf",
+        "family": "qwen3",
+        "families": [
+          "qwen3"
+        ],
+        "parameter_size": "2.0B",
+        "quantization_level": "Q4_K_M",
+        "context_length": 40960,
+        "embedding_length": 2048
+      }
+    }
+  ],
+  "result_fields": [
+    "run_id",
+    "status",
+    "error",
+    "started_at",
+    "model",
+    "model_digest",
+    "model_family",
+    "model_size",
+    "model_tier",
+    "dataset_seed",
+    "inference_seed",
+    "repeat",
+    "num_ctx",
+    "history_min",
+    "history_max",
+    "temperature",
+    "think",
+    "num_predict",
+    "case_id",
+    "family_id",
+    "question_mode",
+    "active_branch_position",
+    "condition",
+    "question",
+    "answer",
+    "prompt_chars",
+    "prompt_tokens",
+    "response_tokens",
+    "latency_ms",
+    "load_ms",
+    "prompt_eval_ms",
+    "eval_ms",
+    "tokens_per_second",
+    "context_saturation",
+    "correct",
+    "polluted",
+    "expected_hits",
+    "forbidden_hits"
+  ],
+  "csv_schema_migrated": false,
+  "expected_jobs": 256,
+  "config_fingerprint": "ed24baa11820d4457acef00685ce56a556ba4da74fb95f664f9976cfd8de4dbe",
+  "config": {
+    "name": "cross-model-multiseed-repeated-window-scan",
+    "models": [
+      {
+        "name": "qwen3:4b",
+        "family": "Qwen",
+        "size": "4B",
+        "tier": "standard"
+      },
+      {
+        "name": "llama3.2:3b",
+        "family": "Llama",
+        "size": "3B",
+        "tier": "standard"
+      },
+      {
+        "name": "gemma3:4b",
+        "family": "Gemma",
+        "size": "4B",
+        "tier": "standard"
+      },
+      {
+        "name": "llama3.1:8b",
+        "family": "Llama",
+        "size": "8B",
+        "tier": "larger"
+      }
+    ],
+    "dataset_seeds": [
+      42,
+      314
+    ],
+    "inference_seeds": [
+      11,
+      29
+    ],
+    "repeats": 2,
+    "context_windows": [
+      4096,
+      8192,
+      16384,
+      32768
+    ],
+    "conditions": [
+      "linear_tagged",
+      "branch"
+    ],
+    "history_min": 230,
+    "history_max": 270,
+    "limit": 1,
+    "temperature": 0.2,
+    "think": false,
+    "num_predict": 128,
+    "timeout_seconds": 300,
+    "retries": 1,
+    "keep_alive": "15m"
+  },
+  "artifact_sha256": {
+    "runner": "8c7d683dc10800a4df6ae9a9162d9472a37a52c4bc9ac18e38dc59c1f89ff1c1",
+    "generator": "5d17da40f52e82e4247aa310843ac49b6121ddf21e6d02ebb93721f4dc922778",
+    "evaluator": "0cfb47e91502c0fc97d3650d843301949b175628444faac257adb8d4fd5388a7"
+  }
+}

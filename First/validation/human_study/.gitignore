@@ -1,0 +1,5 @@
+data/*.jsonl
+analysis/
+.visual-data/
+visual-artifacts/
+onboarding-*.png

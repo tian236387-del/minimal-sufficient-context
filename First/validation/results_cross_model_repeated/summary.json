@@ -1,0 +1,668 @@
+{
+  "generated_at": "2026-08-25T06:27:10.381260+00:00",
+  "config": {
+    "name": "cross-model-multiseed-repeated-window-scan",
+    "models": [
+      {
+        "name": "qwen3:4b",
+        "family": "Qwen",
+        "size": "4B",
+        "tier": "standard"
+      },
+      {
+        "name": "llama3.2:3b",
+        "family": "Llama",
+        "size": "3B",
+        "tier": "standard"
+      },
+      {
+        "name": "gemma3:4b",
+        "family": "Gemma",
+        "size": "4B",
+        "tier": "standard"
+      },
+      {
+        "name": "llama3.1:8b",
+        "family": "Llama",
+        "size": "8B",
+        "tier": "larger"
+      }
+    ],
+    "dataset_seeds": [
+      42,
+      314
+    ],
+    "inference_seeds": [
+      11,
+      29
+    ],
+    "repeats": 2,
+    "context_windows": [
+      4096,
+      8192,
+      16384,
+      32768
+    ],
+    "conditions": [
+      "linear_tagged",
+      "branch"
+    ],
+    "history_min": 230,
+    "history_max": 270,
+    "limit": 1,
+    "temperature": 0.2,
+    "think": false,
+    "num_predict": 128,
+    "timeout_seconds": 300,
+    "retries": 1,
+    "keep_alive": "15m"
+  },
+  "expected_jobs": 256,
+  "observed_jobs": 256,
+  "pending_jobs": 0,
+  "completion_rate": 1.0,
+  "rows": 256,
+  "attempt_rows": 256,
+  "successful_rows": 256,
+  "error_rows": 0,
+  "by_model_window": {
+    "gemma3:4b": {
+      "4096": {
+        "branch": {
+          "runs": 8,
+          "accuracy": 0.0,
+          "accuracy_ci95": [
+            0,
+            0.3244
+          ],
+          "pollution_rate": 0.0,
+          "pollution_ci95": [
+            0,
+            0.3244
+          ],
+          "avg_prompt_tokens": 3073.0,
+          "avg_latency_ms": 1891.5988,
+          "avg_tokens_per_second": 500044.0262,
+          "avg_context_saturation": 0.7503
+        },
+        "linear_tagged": {
+          "runs": 8,
+          "accuracy": 0.0,
+          "accuracy_ci95": [
+            0,
+            0.3244
+          ],
+          "pollution_rate": 1.0,
+          "pollution_ci95": [
+            0.6756,
+            1
+          ],
+          "avg_prompt_tokens": 4087.0,
+          "avg_latency_ms": 45939.8025,
+          "avg_tokens_per_second": 81.3263,
+          "avg_context_saturation": 0.9978
+        }
+      },
+      "8192": {
+        "branch": {
+          "runs": 8,
+          "accuracy": 1.0,
+          "accuracy_ci95": [
+            0.6756,
+            1
+          ],
+          "pollution_rate": 0.0,
+          "pollution_ci95": [
+            0,
+            0.3244
+          ],
+          "avg_prompt_tokens": 5510.5,
+          "avg_latency_ms": 1644.0563,
+          "avg_tokens_per_second": 83.8413,
+          "avg_context_saturation": 0.6726
+        },
+        "linear_tagged": {
+          "runs": 8,
+          "accuracy": 0.0,
+          "accuracy_ci95": [
+            0,
+            0.3244
+          ],
+          "pollution_rate": 0.5,
+          "pollution_ci95": [
+            0.2152,
+            0.7848
+          ],
+          "avg_prompt_tokens": 8183.0,
+          "avg_latency_ms": 44126.9925,
+          "avg_tokens_per_second": 80.3688,
+          "avg_context_saturation": 0.9989
+        }
+      },
+      "16384": {
+        "branch": {
+          "runs": 8,
+          "accuracy": 1.0,
+          "accuracy_ci95": [
+            0.6756,
+            1
+          ],
+          "pollution_rate": 0.0,
+          "pollution_ci95": [
+            0,
+            0.3244
+          ],
+          "avg_prompt_tokens": 5510.5,
+          "avg_latency_ms": 1721.1375,
+          "avg_tokens_per_second": 84.5812,
+          "avg_context_saturation": 0.3364
+        },
+        "linear_tagged": {
+          "runs": 8,
+          "accuracy": 0.0,
+          "accuracy_ci95": [
+            0,
+            0.3244
+          ],
+          "pollution_rate": 1.0,
+          "pollution_ci95": [
+            0.6756,
+            1
+          ],
+          "avg_prompt_tokens": 16370.5,
+          "avg_latency_ms": 34981.24,
+          "avg_tokens_per_second": 77.5125,
+          "avg_context_saturation": 0.9991
+        }
+      },
+      "32768": {
+        "branch": {
+          "runs": 8,
+          "accuracy": 1.0,
+          "accuracy_ci95": [
+            0.6756,
+            1
+          ],
+          "pollution_rate": 0.0,
+          "pollution_ci95": [
+            0,
+            0.3244
+          ],
+          "avg_prompt_tokens": 5510.5,
+          "avg_latency_ms": 1796.545,
+          "avg_tokens_per_second": 85.0312,
+          "avg_context_saturation": 0.1682
+        },
+        "linear_tagged": {
+          "runs": 8,
+          "accuracy": 1.0,
+          "accuracy_ci95": [
+            0.6756,
+            1
+          ],
+          "pollution_rate": 0.0,
+          "pollution_ci95": [
+            0,
+            0.3244
+          ],
+          "avg_prompt_tokens": 26726.5,
+          "avg_latency_ms": 10736.5637,
+          "avg_tokens_per_second": 72.5888,
+          "avg_context_saturation": 0.8156
+        }
+      }
+    },
+    "llama3.1:8b": {
+      "4096": {
+        "branch": {
+          "runs": 8,
+          "accuracy": 0.0,
+          "accuracy_ci95": [
+            0,
+            0.3244
+          ],
+          "pollution_rate": 0.0,
+          "pollution_ci95": [
+            0,
+            0.3244
+          ],
+          "avg_prompt_tokens": 4083.0,
+          "avg_latency_ms": 3393.7587,
+          "avg_tokens_per_second": 53.8687,
+          "avg_context_saturation": 0.9968
+        },
+        "linear_tagged": {
+          "runs": 8,
+          "accuracy": 0.0,
+          "accuracy_ci95": [
+            0,
+            0.3244
+          ],
+          "pollution_rate": 0.0,
+          "pollution_ci95": [
+            0,
+            0.3244
+          ],
+          "avg_prompt_tokens": 4089.0,
+          "avg_latency_ms": 62825.61,
+          "avg_tokens_per_second": 51.1525,
+          "avg_context_saturation": 0.9983
+        }
+      },
+      "8192": {
+        "branch": {
+          "runs": 8,
+          "accuracy": 1.0,
+          "accuracy_ci95": [
+            0.6756,
+            1
+          ],
+          "pollution_rate": 0.0,
+          "pollution_ci95": [
+            0,
+            0.3244
+          ],
+          "avg_prompt_tokens": 6146.5,
+          "avg_latency_ms": 3305.135,
+          "avg_tokens_per_second": 49.9462,
+          "avg_context_saturation": 0.7503
+        },
+        "linear_tagged": {
+          "runs": 8,
+          "accuracy": 0.0,
+          "accuracy_ci95": [
+            0,
+            0.3244
+          ],
+          "pollution_rate": 1.0,
+          "pollution_ci95": [
+            0.6756,
+            1
+          ],
+          "avg_prompt_tokens": 8187.0,
+          "avg_latency_ms": 60231.1913,
+          "avg_tokens_per_second": 46.5112,
+          "avg_context_saturation": 0.9994
+        }
+      },
+      "16384": {
+        "branch": {
+          "runs": 8,
+          "accuracy": 1.0,
+          "accuracy_ci95": [
+            0.6756,
+            1
+          ],
+          "pollution_rate": 0.0,
+          "pollution_ci95": [
+            0,
+            0.3244
+          ],
+          "avg_prompt_tokens": 6146.5,
+          "avg_latency_ms": 4597.555,
+          "avg_tokens_per_second": 22.915,
+          "avg_context_saturation": 0.3751
+        },
+        "linear_tagged": {
+          "runs": 8,
+          "accuracy": 0.0,
+          "accuracy_ci95": [
+            0,
+            0.3244
+          ],
+          "pollution_rate": 1.0,
+          "pollution_ci95": [
+            0.6756,
+            1
+          ],
+          "avg_prompt_tokens": 16369.0,
+          "avg_latency_ms": 55422.8037,
+          "avg_tokens_per_second": 14.61,
+          "avg_context_saturation": 0.9991
+        }
+      },
+      "32768": {
+        "branch": {
+          "runs": 8,
+          "accuracy": 1.0,
+          "accuracy_ci95": [
+            0.6756,
+            1
+          ],
+          "pollution_rate": 0.0,
+          "pollution_ci95": [
+            0,
+            0.3244
+          ],
+          "avg_prompt_tokens": 6146.5,
+          "avg_latency_ms": 3874.225,
+          "avg_tokens_per_second": 11.2313,
+          "avg_context_saturation": 0.1876
+        },
+        "linear_tagged": {
+          "runs": 8,
+          "accuracy": 0.0,
+          "accuracy_ci95": [
+            0,
+            0.3244
+          ],
+          "pollution_rate": 1.0,
+          "pollution_ci95": [
+            0.6756,
+            1
+          ],
+          "avg_prompt_tokens": 29807.5,
+          "avg_latency_ms": 40518.345,
+          "avg_tokens_per_second": 3.3638,
+          "avg_context_saturation": 0.9097
+        }
+      }
+    },
+    "llama3.2:3b": {
+      "4096": {
+        "branch": {
+          "runs": 8,
+          "accuracy": 0.0,
+          "accuracy_ci95": [
+            0,
+            0.3244
+          ],
+          "pollution_rate": 0.5,
+          "pollution_ci95": [
+            0.2152,
+            0.7848
+          ],
+          "avg_prompt_tokens": 4079.5,
+          "avg_latency_ms": 2536.7888,
+          "avg_tokens_per_second": 100.39,
+          "avg_context_saturation": 0.996
+        },
+        "linear_tagged": {
+          "runs": 8,
+          "accuracy": 0.0,
+          "accuracy_ci95": [
+            0,
+            0.3244
+          ],
+          "pollution_rate": 0.0,
+          "pollution_ci95": [
+            0,
+            0.3244
+          ],
+          "avg_prompt_tokens": 4079.5,
+          "avg_latency_ms": 59546.7038,
+          "avg_tokens_per_second": 95.6737,
+          "avg_context_saturation": 0.996
+        }
+      },
+      "8192": {
+        "branch": {
+          "runs": 8,
+          "accuracy": 1.0,
+          "accuracy_ci95": [
+            0.6756,
+            1
+          ],
+          "pollution_rate": 0.0,
+          "pollution_ci95": [
+            0,
+            0.3244
+          ],
+          "avg_prompt_tokens": 6156.5,
+          "avg_latency_ms": 1852.54,
+          "avg_tokens_per_second": 95.9613,
+          "avg_context_saturation": 0.7516
+        },
+        "linear_tagged": {
+          "runs": 8,
+          "accuracy": 0.0,
+          "accuracy_ci95": [
+            0,
+            0.3244
+          ],
+          "pollution_rate": 0.75,
+          "pollution_ci95": [
+            0.4093,
+            0.9285
+          ],
+          "avg_prompt_tokens": 8171.5,
+          "avg_latency_ms": 57463.8962,
+          "avg_tokens_per_second": 84.4625,
+          "avg_context_saturation": 0.9975
+        }
+      },
+      "16384": {
+        "branch": {
+          "runs": 8,
+          "accuracy": 1.0,
+          "accuracy_ci95": [
+            0.6756,
+            1
+          ],
+          "pollution_rate": 0.0,
+          "pollution_ci95": [
+            0,
+            0.3244
+          ],
+          "avg_prompt_tokens": 6156.5,
+          "avg_latency_ms": 1874.2425,
+          "avg_tokens_per_second": 99.6488,
+          "avg_context_saturation": 0.3758
+        },
+        "linear_tagged": {
+          "runs": 8,
+          "accuracy": 0.0,
+          "accuracy_ci95": [
+            0,
+            0.3244
+          ],
+          "pollution_rate": 0.5,
+          "pollution_ci95": [
+            0.2152,
+            0.7848
+          ],
+          "avg_prompt_tokens": 16379.0,
+          "avg_latency_ms": 47810.9662,
+          "avg_tokens_per_second": 72.515,
+          "avg_context_saturation": 0.9997
+        }
+      },
+      "32768": {
+        "branch": {
+          "runs": 8,
+          "accuracy": 1.0,
+          "accuracy_ci95": [
+            0.6756,
+            1
+          ],
+          "pollution_rate": 0.0,
+          "pollution_ci95": [
+            0,
+            0.3244
+          ],
+          "avg_prompt_tokens": 6156.5,
+          "avg_latency_ms": 1494.7812,
+          "avg_tokens_per_second": 112.8888,
+          "avg_context_saturation": 0.1879
+        },
+        "linear_tagged": {
+          "runs": 8,
+          "accuracy": 0.0,
+          "accuracy_ci95": [
+            0,
+            0.3244
+          ],
+          "pollution_rate": 1.0,
+          "pollution_ci95": [
+            0.6756,
+            1
+          ],
+          "avg_prompt_tokens": 29817.5,
+          "avg_latency_ms": 15910.265,
+          "avg_tokens_per_second": 58.3588,
+          "avg_context_saturation": 0.91
+        }
+      }
+    },
+    "qwen3:4b": {
+      "4096": {
+        "branch": {
+          "runs": 8,
+          "accuracy": 0.0,
+          "accuracy_ci95": [
+            0,
+            0.3244
+          ],
+          "pollution_rate": 0.0,
+          "pollution_ci95": [
+            0,
+            0.3244
+          ],
+          "avg_prompt_tokens": 4088.0,
+          "avg_latency_ms": 3696.2263,
+          "avg_tokens_per_second": 84.2138,
+          "avg_context_saturation": 0.998
+        },
+        "linear_tagged": {
+          "runs": 8,
+          "accuracy": 0.0,
+          "accuracy_ci95": [
+            0,
+            0.3244
+          ],
+          "pollution_rate": 0.5,
+          "pollution_ci95": [
+            0.2152,
+            0.7848
+          ],
+          "avg_prompt_tokens": 4088.5,
+          "avg_latency_ms": 57662.77,
+          "avg_tokens_per_second": 84.3363,
+          "avg_context_saturation": 0.9982
+        }
+      },
+      "8192": {
+        "branch": {
+          "runs": 8,
+          "accuracy": 1.0,
+          "accuracy_ci95": [
+            0.6756,
+            1
+          ],
+          "pollution_rate": 0.0,
+          "pollution_ci95": [
+            0,
+            0.3244
+          ],
+          "avg_prompt_tokens": 5265.5,
+          "avg_latency_ms": 3314.7487,
+          "avg_tokens_per_second": 80.0225,
+          "avg_context_saturation": 0.6427
+        },
+        "linear_tagged": {
+          "runs": 8,
+          "accuracy": 0.0,
+          "accuracy_ci95": [
+            0,
+            0.3244
+          ],
+          "pollution_rate": 0.5,
+          "pollution_ci95": [
+            0.2152,
+            0.7848
+          ],
+          "avg_prompt_tokens": 8179.5,
+          "avg_latency_ms": 54652.1375,
+          "avg_tokens_per_second": 72.7163,
+          "avg_context_saturation": 0.9985
+        }
+      },
+      "16384": {
+        "branch": {
+          "runs": 8,
+          "accuracy": 1.0,
+          "accuracy_ci95": [
+            0.6756,
+            1
+          ],
+          "pollution_rate": 0.0,
+          "pollution_ci95": [
+            0,
+            0.3244
+          ],
+          "avg_prompt_tokens": 5265.5,
+          "avg_latency_ms": 3510.165,
+          "avg_tokens_per_second": 80.085,
+          "avg_context_saturation": 0.3214
+        },
+        "linear_tagged": {
+          "runs": 8,
+          "accuracy": 0.0,
+          "accuracy_ci95": [
+            0,
+            0.3244
+          ],
+          "pollution_rate": 1.0,
+          "pollution_ci95": [
+            0.6756,
+            1
+          ],
+          "avg_prompt_tokens": 16370.0,
+          "avg_latency_ms": 42517.6687,
+          "avg_tokens_per_second": 58.705,
+          "avg_context_saturation": 0.9991
+        }
+      },
+      "32768": {
+        "branch": {
+          "runs": 8,
+          "accuracy": 0.75,
+          "accuracy_ci95": [
+            0.4093,
+            0.9285
+          ],
+          "pollution_rate": 0.0,
+          "pollution_ci95": [
+            0,
+            0.3244
+          ],
+          "avg_prompt_tokens": 5265.5,
+          "avg_latency_ms": 8677.9312,
+          "avg_tokens_per_second": 18.595,
+          "avg_context_saturation": 0.1607
+        },
+        "linear_tagged": {
+          "runs": 8,
+          "accuracy": 0.0,
+          "accuracy_ci95": [
+            0,
+            0.3244
+          ],
+          "pollution_rate": 1.0,
+          "pollution_ci95": [
+            0.6756,
+            1
+          ],
+          "avg_prompt_tokens": 25516.5,
+          "avg_latency_ms": 41890.7312,
+          "avg_tokens_per_second": 5.9175,
+          "avg_context_saturation": 0.7787
+        }
+      }
+    }
+  },
+  "repeatability": {
+    "groups": 128,
+    "accuracy_agreement_rate": 1.0,
+    "pollution_agreement_rate": 1.0,
+    "exact_answer_agreement_rate": 1.0,
+    "avg_unique_answers": 1.0
+  },
+  "paired_branch_vs_linear_tagged": {
+    "pairs": 128,
+    "avg_accuracy_delta": 0.6719,
+    "avg_pollution_delta": -0.6406,
+    "avg_prompt_token_reduction_pct": 44.95
+  },
+  "errors": []
+}

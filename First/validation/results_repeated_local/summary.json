@@ -1,0 +1,212 @@
+{
+  "generated_at": "2026-08-25T04:28:00.018358+00:00",
+  "config": {
+    "name": "local-multiseed-repeated-window-scan",
+    "models": [
+      {
+        "name": "qwen3:1.7b",
+        "family": "Qwen",
+        "size": "1.7B",
+        "tier": "local-control"
+      }
+    ],
+    "dataset_seeds": [
+      42,
+      314
+    ],
+    "inference_seeds": [
+      11,
+      29
+    ],
+    "repeats": 2,
+    "context_windows": [
+      4096,
+      8192,
+      16384,
+      32768
+    ],
+    "conditions": [
+      "linear_tagged",
+      "branch"
+    ],
+    "history_min": 230,
+    "history_max": 270,
+    "limit": 1,
+    "temperature": 0.2,
+    "think": false,
+    "num_predict": 128,
+    "timeout_seconds": 300,
+    "retries": 1,
+    "keep_alive": "15m"
+  },
+  "expected_jobs": 64,
+  "observed_jobs": 64,
+  "pending_jobs": 0,
+  "completion_rate": 1.0,
+  "rows": 64,
+  "attempt_rows": 64,
+  "successful_rows": 64,
+  "error_rows": 0,
+  "by_model_window": {
+    "qwen3:1.7b": {
+      "4096": {
+        "branch": {
+          "runs": 8,
+          "accuracy": 0.0,
+          "accuracy_ci95": [
+            0,
+            0.3244
+          ],
+          "pollution_rate": 0.0,
+          "pollution_ci95": [
+            0,
+            0.3244
+          ],
+          "avg_prompt_tokens": 4085.0,
+          "avg_latency_ms": 1681.505,
+          "avg_tokens_per_second": 145.8212,
+          "avg_context_saturation": 0.9973
+        },
+        "linear_tagged": {
+          "runs": 8,
+          "accuracy": 0.0,
+          "accuracy_ci95": [
+            0,
+            0.3244
+          ],
+          "pollution_rate": 1.0,
+          "pollution_ci95": [
+            0.6756,
+            1
+          ],
+          "avg_prompt_tokens": 4083.5,
+          "avg_latency_ms": 57226.3875,
+          "avg_tokens_per_second": 104.3863,
+          "avg_context_saturation": 0.997
+        }
+      },
+      "8192": {
+        "branch": {
+          "runs": 8,
+          "accuracy": 1.0,
+          "accuracy_ci95": [
+            0.6756,
+            1
+          ],
+          "pollution_rate": 0.0,
+          "pollution_ci95": [
+            0,
+            0.3244
+          ],
+          "avg_prompt_tokens": 5271.5,
+          "avg_latency_ms": 1055.2825,
+          "avg_tokens_per_second": 149.8075,
+          "avg_context_saturation": 0.6435
+        },
+        "linear_tagged": {
+          "runs": 8,
+          "accuracy": 0.0,
+          "accuracy_ci95": [
+            0,
+            0.3244
+          ],
+          "pollution_rate": 1.0,
+          "pollution_ci95": [
+            0.6756,
+            1
+          ],
+          "avg_prompt_tokens": 8185.5,
+          "avg_latency_ms": 54675.6188,
+          "avg_tokens_per_second": 97.5162,
+          "avg_context_saturation": 0.9992
+        }
+      },
+      "16384": {
+        "branch": {
+          "runs": 8,
+          "accuracy": 1.0,
+          "accuracy_ci95": [
+            0.6756,
+            1
+          ],
+          "pollution_rate": 0.0,
+          "pollution_ci95": [
+            0,
+            0.3244
+          ],
+          "avg_prompt_tokens": 5271.5,
+          "avg_latency_ms": 1116.8163,
+          "avg_tokens_per_second": 138.8812,
+          "avg_context_saturation": 0.3217
+        },
+        "linear_tagged": {
+          "runs": 8,
+          "accuracy": 0.0,
+          "accuracy_ci95": [
+            0,
+            0.3244
+          ],
+          "pollution_rate": 1.0,
+          "pollution_ci95": [
+            0.6756,
+            1
+          ],
+          "avg_prompt_tokens": 16376.0,
+          "avg_latency_ms": 39386.465,
+          "avg_tokens_per_second": 68.1188,
+          "avg_context_saturation": 0.9995
+        }
+      },
+      "32768": {
+        "branch": {
+          "runs": 8,
+          "accuracy": 1.0,
+          "accuracy_ci95": [
+            0.6756,
+            1
+          ],
+          "pollution_rate": 0.0,
+          "pollution_ci95": [
+            0,
+            0.3244
+          ],
+          "avg_prompt_tokens": 5271.5,
+          "avg_latency_ms": 1272.6825,
+          "avg_tokens_per_second": 157.005,
+          "avg_context_saturation": 0.1608
+        },
+        "linear_tagged": {
+          "runs": 8,
+          "accuracy": 0.0,
+          "accuracy_ci95": [
+            0,
+            0.3244
+          ],
+          "pollution_rate": 1.0,
+          "pollution_ci95": [
+            0.6756,
+            1
+          ],
+          "avg_prompt_tokens": 25522.5,
+          "avg_latency_ms": 9482.9487,
+          "avg_tokens_per_second": 61.4813,
+          "avg_context_saturation": 0.7789
+        }
+      }
+    }
+  },
+  "repeatability": {
+    "groups": 32,
+    "accuracy_agreement_rate": 1.0,
+    "pollution_agreement_rate": 1.0,
+    "exact_answer_agreement_rate": 0.9375,
+    "avg_unique_answers": 1.0625
+  },
+  "paired_branch_vs_linear_tagged": {
+    "pairs": 32,
+    "avg_accuracy_delta": 0.75,
+    "avg_pollution_delta": -1.0,
+    "avg_prompt_token_reduction_pct": 45.6713
+  },
+  "errors": []
+}

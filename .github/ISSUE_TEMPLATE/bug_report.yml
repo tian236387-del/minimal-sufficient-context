@@ -1,0 +1,44 @@
+name: Bug report
+description: 报告一个可以复现的产品或实验工具问题
+title: "[Bug] "
+body:
+  - type: markdown
+    attributes:
+      value: 请勿上传对话数据库、浏览器 Profile、凭据或真人实验原始数据。
+  - type: textarea
+    id: summary
+    attributes:
+      label: 问题描述
+      description: 实际发生了什么？你原本期待什么？
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: 复现步骤
+      placeholder: |
+        1. 打开...
+        2. 点击...
+        3. 看到...
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: MSC 版本
+      placeholder: 0.2.1
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: 环境
+      description: 操作系统、Python、Node、Ollama 和模型版本
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: 已脱敏日志
+      render: shell
+

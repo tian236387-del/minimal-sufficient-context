@@ -1,0 +1,37 @@
+name: Feature request
+description: 提议一个聚焦核心工作流的改进
+title: "[Feature] "
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: 用户问题
+      description: 这个建议解决了什么真实使用困难？
+    validations:
+      required: true
+  - type: dropdown
+    id: workflow
+    attributes:
+      label: 主要影响路径
+      options:
+        - 首次使用
+        - 提问与流式回答
+        - Fork 与分支管理
+        - A/B 对比
+        - Context Inspector
+        - 实验与验证
+        - 其他
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: 建议方案
+      description: 描述最小可行改动和预期结果。
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: 已考虑的替代方案
+

@@ -1,0 +1,415 @@
+﻿repeat,case_id,family_id,active_branch_id,active_branch_name,question_mode,condition,question,answer,prompt_tokens,response_tokens,prompt_chars,latency_ms,correct,polluted,expected_hits,forbidden_hits,active_branch_position,active_history_messages
+1,nova_q01,nova,nova_b1,Nova Web,implicit,linear,当前这个项目最终使用什么数据库，负责人是谁？,"SQLite, David",4171,1189,6781,18842.39,False,True,,SQLite | David,0,41
+1,nova_q01,nova,nova_b1,Nova Web,implicit,linear_tagged,当前这个项目最终使用什么数据库，负责人是谁？,数据库：SQLite，负责人：David,4233,1004,6888,13895.45,False,True,,SQLite | David,0,41
+1,nova_q01,nova,nova_b1,Nova Web,implicit,branch,当前这个项目最终使用什么数据库，负责人是谁？,Nova Web 最终数据库为 PostgreSQL 16，负责人是 Alice。,1139,730,1772,8202.71,True,False,PostgreSQL 16 | Alice,,0,41
+1,nova_q01,nova,nova_b1,Nova Web,implicit,branch_compact_oracle,当前这个项目最终使用什么数据库，负责人是谁？,"PostgreSQL 16, Alice",495,646,776,6920.07,True,False,PostgreSQL 16 | Alice,,0,41
+1,nova_q02,nova,nova_b2,Nova Mobile,explicit,linear,Nova Mobile 当前最终采用什么后端框架和缓存？,后端框架：Express；缓存：Memcached,4174,1402,6787,23198.06,True,False,Express | Memcached,,1,48
+1,nova_q02,nova,nova_b2,Nova Mobile,explicit,linear_tagged,Nova Mobile 当前最终采用什么后端框架和缓存？,后端框架：Express，缓存：Memcached,4231,588,6903,8843.81,True,False,Express | Memcached,,1,48
+1,nova_q02,nova,nova_b2,Nova Mobile,explicit,branch,Nova Mobile 当前最终采用什么后端框架和缓存？,后端框架：Express，缓存：Memcached,1282,740,2139,8621.46,True,False,Express | Memcached,,1,48
+1,nova_q02,nova,nova_b2,Nova Mobile,explicit,branch_compact_oracle,Nova Mobile 当前最终采用什么后端框架和缓存？,后端框架：Express，缓存：Memcached,498,780,819,8308.07,True,False,Express | Memcached,,1,48
+1,nova_q03,nova,nova_b3,Nova Admin,implicit,linear,当前这个项目部署在哪个区域，服务端口是多少？,GCP us-central1，8200,4173,1062,6781,14279.47,False,True,,GCP us-central1 | 8200,2,34
+1,nova_q03,nova,nova_b3,Nova Admin,implicit,linear_tagged,当前这个项目部署在哪个区域，服务端口是多少？,"Azure eastasia, 8300",4230,1386,6894,18677.36,True,False,Azure eastasia | 8300,,2,34
+1,nova_q03,nova,nova_b3,Nova Admin,implicit,branch,当前这个项目部署在哪个区域，服务端口是多少？,部署区域：Azure eastasia，服务端口：8300,976,447,1606,5388.44,True,False,Azure eastasia | 8300,,2,34
+1,nova_q03,nova,nova_b3,Nova Admin,implicit,branch_compact_oracle,当前这个项目部署在哪个区域，服务端口是多少？,"Azure eastasia, 8300",504,1028,828,11039.53,True,False,Azure eastasia | 8300,,2,34
+1,nova_q04,nova,nova_b4,Nova Data,explicit,linear,Nova Data 的最终发布日期是什么时候，负责人是谁？,11月12日，David,4172,728,6788,10312.5,True,False,11月12日 | David,,3,31
+1,nova_q04,nova,nova_b4,Nova Data,explicit,linear_tagged,Nova Data 的最终发布日期是什么时候，负责人是谁？,11月12日，David,4229,1450,6898,20107.69,True,False,11月12日 | David,,3,31
+1,nova_q04,nova,nova_b4,Nova Data,explicit,branch,Nova Data 的最终发布日期是什么时候，负责人是谁？,11月12日，David,910,1556,1493,17987.07,True,False,11月12日 | David,,3,31
+1,nova_q04,nova,nova_b4,Nova Data,explicit,branch_compact_oracle,Nova Data 的最终发布日期是什么时候，负责人是谁？,11月12日，David,488,1316,819,14145.98,True,False,11月12日 | David,,3,31
+1,nova_q05,nova,nova_b5,Nova Edge,implicit,linear,当前这个产品的 Pro 方案多少钱，包含多少存储？,149美元/月，2TB,4172,1262,6784,17190.03,True,False,149美元/月 | 2TB,,4,30
+1,nova_q05,nova,nova_b5,Nova Edge,implicit,linear_tagged,当前这个产品的 Pro 方案多少钱，包含多少存储？,149美元/月，2TB,4229,884,6894,12663.72,True,False,149美元/月 | 2TB,,4,30
+1,nova_q05,nova,nova_b5,Nova Edge,implicit,branch,当前这个产品的 Pro 方案多少钱，包含多少存储？,149美元/月，2TB,920,1187,1455,13617.36,True,False,149美元/月 | 2TB,,4,30
+1,nova_q05,nova,nova_b5,Nova Edge,implicit,branch_compact_oracle,当前这个产品的 Pro 方案多少钱，包含多少存储？,149美元/月，2TB,526,1422,839,15601.76,True,False,149美元/月 | 2TB,,4,30
+1,nova_q06,nova,nova_b1,Nova Web,explicit,linear,Nova Web 的本地模型和 temperature 最终分别是什么？,"Qwen3 1.7B, 0",4172,1679,6795,22432.49,True,False,Qwen3 1.7B | 0,,0,41
+1,nova_q06,nova,nova_b1,Nova Web,explicit,linear_tagged,Nova Web 的本地模型和 temperature 最终分别是什么？,Qwen3 1.7B 和 0,4234,2211,6902,29672.09,True,False,Qwen3 1.7B | 0,,0,41
+1,nova_q06,nova,nova_b1,Nova Web,explicit,branch,Nova Web 的本地模型和 temperature 最终分别是什么？,Qwen3 1.7B 和 0,1140,1460,1786,16599.89,True,False,Qwen3 1.7B | 0,,0,41
+1,nova_q06,nova,nova_b1,Nova Web,explicit,branch_compact_oracle,Nova Web 的本地模型和 temperature 最终分别是什么？,Qwen3 1.7B 和 0,496,2008,790,22078.81,True,False,Qwen3 1.7B | 0,,0,41
+1,nova_q07,nova,nova_b2,Nova Mobile,implicit,linear,当前这个项目的数据库和后端框架最终是什么？,CockroachDB 和 Go Gin,4171,1578,6780,21190.99,False,True,,CockroachDB | Go Gin,1,48
+1,nova_q07,nova,nova_b2,Nova Mobile,implicit,linear_tagged,当前这个项目的数据库和后端框架最终是什么？,数据库：CockroachDB，后端框架：Go Gin,4228,1187,6896,16409.86,False,True,,CockroachDB | Go Gin,1,48
+1,nova_q07,nova,nova_b2,Nova Mobile,implicit,branch,当前这个项目的数据库和后端框架最终是什么？,数据库：MongoDB 7，后端框架：Express,1279,1235,2132,14917.02,True,False,MongoDB 7 | Express,,1,48
+1,nova_q07,nova,nova_b2,Nova Mobile,implicit,branch_compact_oracle,当前这个项目的数据库和后端框架最终是什么？,数据库：MongoDB 7，后端框架：Express,495,819,812,8877.9,True,False,MongoDB 7 | Express,,1,48
+1,nova_q08,nova,nova_b3,Nova Admin,explicit,linear,Nova Admin 部署在哪个区域，生产数据库是什么？,Azure eastasia 和 MySQL 8,4174,1669,6787,22417.95,True,False,Azure eastasia | MySQL 8,,2,34
+1,nova_q08,nova,nova_b3,Nova Admin,explicit,linear_tagged,Nova Admin 部署在哪个区域，生产数据库是什么？,Azure eastasia 和 MySQL 8,4231,1833,6900,25175.33,True,False,Azure eastasia | MySQL 8,,2,34
+1,nova_q08,nova,nova_b3,Nova Admin,explicit,branch,Nova Admin 部署在哪个区域，生产数据库是什么？,Azure eastasia 和 MySQL 8,977,2173,1612,24968.56,True,False,Azure eastasia | MySQL 8,,2,34
+1,nova_q08,nova,nova_b3,Nova Admin,explicit,branch_compact_oracle,Nova Admin 部署在哪个区域，生产数据库是什么？,部署区域：Azure eastasia，生产数据库：MySQL 8,505,1267,834,13871.08,True,False,Azure eastasia | MySQL 8,,2,34
+1,nova_q09,nova,nova_b4,Nova Data,implicit,linear,当前这个版本最终发布日期和服务端口分别是什么？,10月8日，8300,4172,1293,6782,17431.19,False,True,,10月8日 | 8300,3,31
+1,nova_q09,nova,nova_b4,Nova Data,implicit,linear_tagged,当前这个版本最终发布日期和服务端口分别是什么？,"10月8日, 8300",4229,1731,6892,23649.43,False,True,,10月8日 | 8300,3,31
+1,nova_q09,nova,nova_b4,Nova Data,implicit,branch,当前这个版本最终发布日期和服务端口分别是什么？,"11月12日, 9200",910,1600,1487,18735.28,True,False,11月12日 | 9200,,3,31
+1,nova_q09,nova,nova_b4,Nova Data,implicit,branch_compact_oracle,当前这个版本最终发布日期和服务端口分别是什么？,发布日期：11月12日，服务端口：9200,488,2012,813,22224.94,True,False,11月12日 | 9200,,3,31
+1,nova_q10,nova,nova_b5,Nova Edge,explicit,linear,Nova Edge 当前选用什么本地模型，Pro 存储是多少？,Nova Edge 当前选用本地模型 Qwen3 4B，Pro 存储 2TB。,4175,1343,6790,18274.1,True,False,Qwen3 4B | 2TB,,4,30
+1,nova_q10,nova,nova_b5,Nova Edge,explicit,linear_tagged,Nova Edge 当前选用什么本地模型，Pro 存储是多少？,Nova Edge 当前选用本地模型 Qwen3 4B，Pro 存储 2TB。,4232,1162,6900,16532.06,True,False,Qwen3 4B | 2TB,,4,30
+1,nova_q10,nova,nova_b5,Nova Edge,explicit,branch,Nova Edge 当前选用什么本地模型，Pro 存储是多少？,Qwen3 4B，2TB,923,1157,1461,14244.3,True,False,Qwen3 4B | 2TB,,4,30
+1,nova_q10,nova,nova_b5,Nova Edge,explicit,branch_compact_oracle,Nova Edge 当前选用什么本地模型，Pro 存储是多少？,本地模型：Qwen3 4B，Pro 存储：2TB,529,1085,845,11950.62,True,False,Qwen3 4B | 2TB,,4,30
+1,atlas_q01,atlas,atlas_b1,Atlas Analytics,implicit,linear,当前这个项目最终使用什么数据库，负责人是谁？,数据库：SQLite，负责人：David,4798,1647,8275,22891.07,False,True,,SQLite | David,1,45
+1,atlas_q01,atlas,atlas_b1,Atlas Analytics,implicit,linear_tagged,当前这个项目最终使用什么数据库，负责人是谁？,SQLite，David,4855,1779,8403,24931.43,False,True,,SQLite | David,1,45
+1,atlas_q01,atlas,atlas_b1,Atlas Analytics,implicit,branch,当前这个项目最终使用什么数据库，负责人是谁？,数据库：MongoDB 7，负责人：Bob,1199,1753,2214,20701.13,True,False,MongoDB 7 | Bob,,1,45
+1,atlas_q01,atlas,atlas_b1,Atlas Analytics,implicit,branch_compact_oracle,当前这个项目最终使用什么数据库，负责人是谁？,数据库：MongoDB 7，负责人：Bob,493,885,868,9752.11,True,False,MongoDB 7 | Bob,,1,45
+1,atlas_q02,atlas,atlas_b2,Atlas Admin,explicit,linear,Atlas Admin 当前最终采用什么后端框架和缓存？,Django 和 KeyDB,4801,1493,8281,21310.36,True,False,Django | KeyDB,,2,44
+1,atlas_q02,atlas,atlas_b2,Atlas Admin,explicit,linear_tagged,Atlas Admin 当前最终采用什么后端框架和缓存？,后端框架：FastAPI，缓存：KeyDB,4858,1322,8397,19460.14,False,True,KeyDB,FastAPI,2,44
+1,atlas_q02,atlas,atlas_b2,Atlas Admin,explicit,branch,Atlas Admin 当前最终采用什么后端框架和缓存？,Django 和 KeyDB,1183,1455,1990,17280.28,True,False,Django | KeyDB,,2,44
+1,atlas_q02,atlas,atlas_b2,Atlas Admin,explicit,branch_compact_oracle,Atlas Admin 当前最终采用什么后端框架和缓存？,Django 和 KeyDB,490,1468,815,16586.19,True,False,Django | KeyDB,,2,44
+1,atlas_q03,atlas,atlas_b3,Atlas Sync,implicit,linear,当前这个项目部署在哪个区域，服务端口是多少？,"GCP asia-northeast1, 9300",4800,1463,8275,20924.49,False,True,,GCP asia-northeast1 | 9300,3,46
+1,atlas_q03,atlas,atlas_b3,Atlas Sync,implicit,linear_tagged,当前这个项目部署在哪个区域，服务端口是多少？,部署区域：AWS eu-west-1，服务端口：9200,4857,1677,8388,24317.39,True,False,AWS eu-west-1 | 9200,,3,46
+1,atlas_q03,atlas,atlas_b3,Atlas Sync,implicit,branch,当前这个项目部署在哪个区域，服务端口是多少？,"AWS eu-west-1, 9200",1231,1206,2038,14701.59,True,False,AWS eu-west-1 | 9200,,3,46
+1,atlas_q03,atlas,atlas_b3,Atlas Sync,implicit,branch_compact_oracle,当前这个项目部署在哪个区域，服务端口是多少？,"AWS eu-west-1, 9200",486,431,811,4957.56,True,False,AWS eu-west-1 | 9200,,3,46
+1,atlas_q04,atlas,atlas_b4,Atlas Core,explicit,linear,Atlas Core 的最终发布日期是什么时候，负责人是谁？,12月3日，Eve,4799,1524,8283,21987.15,True,False,12月3日 | Eve,,4,33
+1,atlas_q04,atlas,atlas_b4,Atlas Core,explicit,linear_tagged,Atlas Core 的最终发布日期是什么时候，负责人是谁？,12月3日，Eve,4856,1294,8396,19136.06,True,False,12月3日 | Eve,,4,33
+1,atlas_q04,atlas,atlas_b4,Atlas Core,explicit,branch,Atlas Core 的最终发布日期是什么时候，负责人是谁？,12月3日，Eve,974,1649,1600,19513.25,True,False,12月3日 | Eve,,4,33
+1,atlas_q04,atlas,atlas_b4,Atlas Core,explicit,branch_compact_oracle,Atlas Core 的最终发布日期是什么时候，负责人是谁？,Atlas Core 的最终发布日期是12月3日，负责人是Eve。,519,706,842,7782.17,True,False,12月3日 | Eve,,4,33
+1,atlas_q05,atlas,atlas_b5,Atlas Studio,implicit,linear,当前这个产品的 Pro 方案多少钱，包含多少存储？,Atlas Sync 的 Pro 方案是 99 美元/月，包含 1TB 存储。,4799,290,8278,5245.01,False,True,,99美元/月 | 1TB,0,47
+1,atlas_q05,atlas,atlas_b5,Atlas Studio,implicit,linear_tagged,当前这个产品的 Pro 方案多少钱，包含多少存储？,99美元/月，1TB,4856,1245,8397,18041.78,False,True,,99美元/月 | 1TB,0,47
+1,atlas_q05,atlas,atlas_b5,Atlas Studio,implicit,branch,当前这个产品的 Pro 方案多少钱，包含多少存储？,29美元/月，50GB,1267,1410,2159,16302.58,True,False,29美元/月 | 50GB,,0,47
+1,atlas_q05,atlas,atlas_b5,Atlas Studio,implicit,branch_compact_oracle,当前这个产品的 Pro 方案多少钱，包含多少存储？,29美元/月，50GB,490,1162,829,12648.44,True,False,29美元/月 | 50GB,,0,47
+1,atlas_q06,atlas,atlas_b1,Atlas Analytics,explicit,linear,Atlas Analytics 的本地模型和 temperature 最终分别是什么？,"Llama 3.2 3B, 0.2",4799,1189,8296,18735.0,True,False,Llama 3.2 3B | 0.2,,1,45
+1,atlas_q06,atlas,atlas_b1,Atlas Analytics,explicit,linear_tagged,Atlas Analytics 的本地模型和 temperature 最终分别是什么？,Llama 3.2 3B，0.2,4856,1490,8424,21696.22,True,False,Llama 3.2 3B | 0.2,,1,45
+1,atlas_q06,atlas,atlas_b1,Atlas Analytics,explicit,branch,Atlas Analytics 的本地模型和 temperature 最终分别是什么？,Llama 3.2 3B 和 0.2,1200,1751,2235,21136.25,True,False,Llama 3.2 3B | 0.2,,1,45
+1,atlas_q06,atlas,atlas_b1,Atlas Analytics,explicit,branch_compact_oracle,Atlas Analytics 的本地模型和 temperature 最终分别是什么？,"Llama 3.2 3B, 0.2",494,1544,889,17369.77,True,False,Llama 3.2 3B | 0.2,,1,45
+1,atlas_q07,atlas,atlas_b2,Atlas Admin,implicit,linear,当前这个项目的数据库和后端框架最终是什么？,数据库：PostgreSQL 16，后端框架：FastAPI,4798,786,8274,11990.45,False,True,,PostgreSQL 16 | FastAPI,2,44
+1,atlas_q07,atlas,atlas_b2,Atlas Admin,implicit,linear_tagged,当前这个项目的数据库和后端框架最终是什么？,"数据库：PostgreSQL 16  
+后端框架：FastAPI",4855,539,8390,8870.81,False,True,,PostgreSQL 16 | FastAPI,2,44
+1,atlas_q07,atlas,atlas_b2,Atlas Admin,implicit,branch,当前这个项目的数据库和后端框架最终是什么？,数据库：MySQL 8，后端框架：Django,1180,1298,1983,15413.01,True,False,MySQL 8 | Django,,2,44
+1,atlas_q07,atlas,atlas_b2,Atlas Admin,implicit,branch_compact_oracle,当前这个项目的数据库和后端框架最终是什么？,数据库：MySQL 8，后端框架：Django,487,567,808,6497.45,True,False,MySQL 8 | Django,,2,44
+1,atlas_q08,atlas,atlas_b3,Atlas Sync,explicit,linear,Atlas Sync 部署在哪个区域，生产数据库是什么？,"AWS eu-west-1, SQLite",4801,1596,8281,22422.16,True,False,AWS eu-west-1 | SQLite,,3,46
+1,atlas_q08,atlas,atlas_b3,Atlas Sync,explicit,linear_tagged,Atlas Sync 部署在哪个区域，生产数据库是什么？,AWS eu-west-1，SQLite,4858,2000,8394,28124.76,True,False,AWS eu-west-1 | SQLite,,3,46
+1,atlas_q08,atlas,atlas_b3,Atlas Sync,explicit,branch,Atlas Sync 部署在哪个区域，生产数据库是什么？,AWS eu-west-1 和 SQLite,1232,1301,2044,15123.67,True,False,AWS eu-west-1 | SQLite,,3,46
+1,atlas_q08,atlas,atlas_b3,Atlas Sync,explicit,branch_compact_oracle,Atlas Sync 部署在哪个区域，生产数据库是什么？,AWS eu-west-1；SQLite,487,1502,817,16438.01,True,False,AWS eu-west-1 | SQLite,,3,46
+1,atlas_q09,atlas,atlas_b4,Atlas Core,implicit,linear,当前这个版本最终发布日期和服务端口分别是什么？,12月3日，9300,4799,1148,8276,16594.43,True,False,12月3日 | 9300,,4,33
+1,atlas_q09,atlas,atlas_b4,Atlas Core,implicit,linear_tagged,当前这个版本最终发布日期和服务端口分别是什么？,12月3日 和 9300,4856,1084,8389,16155.55,True,False,12月3日 | 9300,,4,33
+1,atlas_q09,atlas,atlas_b4,Atlas Core,implicit,branch,当前这个版本最终发布日期和服务端口分别是什么？,发布日期：12月3日，服务端口：9300,974,994,1593,11765.24,True,False,12月3日 | 9300,,4,33
+1,atlas_q09,atlas,atlas_b4,Atlas Core,implicit,branch_compact_oracle,当前这个版本最终发布日期和服务端口分别是什么？,最终发布日期：12月3日，服务端口：9300,519,1110,835,12428.2,True,False,12月3日 | 9300,,4,33
+1,atlas_q10,atlas,atlas_b5,Atlas Studio,explicit,linear,Atlas Studio 当前选用什么本地模型，Pro 存储是多少？,Qwen3 1.7B 和 50GB,4802,1310,8287,18392.24,True,False,Qwen3 1.7B | 50GB,,0,47
+1,atlas_q10,atlas,atlas_b5,Atlas Studio,explicit,linear_tagged,Atlas Studio 当前选用什么本地模型，Pro 存储是多少？,Qwen3 1.7B，50GB,4859,2546,8406,35084.62,True,False,Qwen3 1.7B | 50GB,,0,47
+1,atlas_q10,atlas,atlas_b5,Atlas Studio,explicit,branch,Atlas Studio 当前选用什么本地模型，Pro 存储是多少？,Qwen3 1.7B 和 50GB,1270,1562,2168,18644.37,True,False,Qwen3 1.7B | 50GB,,0,47
+1,atlas_q10,atlas,atlas_b5,Atlas Studio,explicit,branch_compact_oracle,Atlas Studio 当前选用什么本地模型，Pro 存储是多少？,"本地模型：Qwen3 1.7B  
+Pro 存储：50GB",493,1063,838,11713.11,True,False,Qwen3 1.7B | 50GB,,0,47
+1,helios_q01,helios,helios_b1,Helios API,implicit,linear,当前这个项目最终使用什么数据库，负责人是谁？,SQLite，David,3834,1177,6367,16270.63,False,True,,SQLite | David,2,33
+1,helios_q01,helios,helios_b1,Helios API,implicit,linear_tagged,当前这个项目最终使用什么数据库，负责人是谁？,"SQLite, David",3894,3282,6480,44649.93,False,True,,SQLite | David,2,33
+1,helios_q01,helios,helios_b1,Helios API,implicit,branch,当前这个项目最终使用什么数据库，负责人是谁？,数据库：MySQL 8，负责人：Carol,990,1039,1578,12580.36,True,False,MySQL 8 | Carol,,2,33
+1,helios_q01,helios,helios_b1,Helios API,implicit,branch_compact_oracle,当前这个项目最终使用什么数据库，负责人是谁？,"MySQL 8, Carol",503,615,822,6949.25,True,False,MySQL 8 | Carol,,2,33
+1,helios_q02,helios,helios_b2,Helios Worker,explicit,linear,Helios Worker 当前最终采用什么后端框架和缓存？,后端框架：Spring Boot，缓存：Dragonfly,3838,1116,6375,15388.4,True,False,Spring Boot | Dragonfly,,3,33
+1,helios_q02,helios,helios_b2,Helios Worker,explicit,linear_tagged,Helios Worker 当前最终采用什么后端框架和缓存？,后端框架：Spring Boot，缓存：Dragonfly,3903,1015,6497,14410.41,True,False,Spring Boot | Dragonfly,,3,33
+1,helios_q02,helios,helios_b2,Helios Worker,explicit,branch,Helios Worker 当前最终采用什么后端框架和缓存？,后端框架：Spring Boot，缓存：Dragonfly,990,1246,1698,14633.33,True,False,Spring Boot | Dragonfly,,3,33
+1,helios_q02,helios,helios_b2,Helios Worker,explicit,branch_compact_oracle,Helios Worker 当前最终采用什么后端框架和缓存？,后端框架：Spring Boot，缓存：Dragonfly,504,1515,868,16998.11,True,False,Spring Boot | Dragonfly,,3,33
+1,helios_q03,helios,helios_b3,Helios Portal,implicit,linear,当前这个项目部署在哪个区域，服务端口是多少？,GCP asia-northeast1，9300,3836,1323,6367,18211.85,True,False,GCP asia-northeast1 | 9300,,4,34
+1,helios_q03,helios,helios_b3,Helios Portal,implicit,linear_tagged,当前这个项目部署在哪个区域，服务端口是多少？,部署区域：GCP asia-northeast1，服务端口：9300,3896,943,6489,14434.17,True,False,GCP asia-northeast1 | 9300,,4,34
+1,helios_q03,helios,helios_b3,Helios Portal,implicit,branch,当前这个项目部署在哪个区域，服务端口是多少？,GCP asia-northeast1，9300,1029,1429,1718,16978.64,True,False,GCP asia-northeast1 | 9300,,4,34
+1,helios_q03,helios,helios_b3,Helios Portal,implicit,branch_compact_oracle,当前这个项目部署在哪个区域，服务端口是多少？,部署区域：GCP asia-northeast1，服务端口：9300,534,570,863,6528.72,True,False,GCP asia-northeast1 | 9300,,4,34
+1,helios_q04,helios,helios_b4,Helios Ops,explicit,linear,Helios Ops 的最终发布日期是什么时候，负责人是谁？,8月30日，Alice,3836,1452,6375,19819.99,True,False,8月30日 | Alice,,0,30
+1,helios_q04,helios,helios_b4,Helios Ops,explicit,linear_tagged,Helios Ops 的最终发布日期是什么时候，负责人是谁？,8月30日，Alice,3896,1918,6488,26888.64,True,False,8月30日 | Alice,,0,30
+1,helios_q04,helios,helios_b4,Helios Ops,explicit,branch,Helios Ops 的最终发布日期是什么时候，负责人是谁？,发布日期：8月30日，负责人：Alice,938,652,1477,7686.69,True,False,8月30日 | Alice,,0,30
+1,helios_q04,helios,helios_b4,Helios Ops,explicit,branch_compact_oracle,Helios Ops 的最终发布日期是什么时候，负责人是谁？,8月30日，Alice,521,870,842,9787.24,True,False,8月30日 | Alice,,0,30
+1,helios_q05,helios,helios_b5,Helios Search,implicit,linear,当前这个产品的 Pro 方案多少钱，包含多少存储？,99美元/月，1TB,3835,1177,6370,16248.07,False,True,,99美元/月 | 1TB,1,31
+1,helios_q05,helios,helios_b5,Helios Search,implicit,linear_tagged,当前这个产品的 Pro 方案多少钱，包含多少存储？,99美元/月，1TB,3895,1649,6492,22881.9,False,True,,99美元/月 | 1TB,1,31
+1,helios_q05,helios,helios_b5,Helios Search,implicit,branch,当前这个产品的 Pro 方案多少钱，包含多少存储？,49美元/月，200GB,968,952,1635,11257.22,True,False,49美元/月 | 200GB,,1,31
+1,helios_q05,helios,helios_b5,Helios Search,implicit,branch_compact_oracle,当前这个产品的 Pro 方案多少钱，包含多少存储？,49美元/月，200GB,520,1092,873,12262.7,True,False,49美元/月 | 200GB,,1,31
+1,helios_q06,helios,helios_b1,Helios API,explicit,linear,Helios API 的本地模型和 temperature 最终分别是什么？,Gemma 3 4B 和 0.4,3836,1536,6383,21559.52,True,False,Gemma 3 4B | 0.4,,2,33
+1,helios_q06,helios,helios_b1,Helios API,explicit,linear_tagged,Helios API 的本地模型和 temperature 最终分别是什么？,Gemma 3 4B 和 0.4,3896,1739,6496,23936.13,True,False,Gemma 3 4B | 0.4,,2,33
+1,helios_q06,helios,helios_b1,Helios API,explicit,branch,Helios API 的本地模型和 temperature 最终分别是什么？,Gemma 3 4B 和 0.4,992,2349,1594,28123.94,True,False,Gemma 3 4B | 0.4,,2,33
+1,helios_q06,helios,helios_b1,Helios API,explicit,branch_compact_oracle,Helios API 的本地模型和 temperature 最终分别是什么？,本地模型：Gemma 3 4B；temperature：0.4,505,1626,838,18405.55,True,False,Gemma 3 4B | 0.4,,2,33
+1,helios_q07,helios,helios_b2,Helios Worker,implicit,linear,当前这个项目的数据库和后端框架最终是什么？,数据库：MySQL 8，后端框架：Django,3834,1225,6366,16940.94,False,True,,MySQL 8 | Django,3,33
+1,helios_q07,helios,helios_b2,Helios Worker,implicit,linear_tagged,当前这个项目的数据库和后端框架最终是什么？,MySQL 8 和 Django,3894,1488,6488,20562.29,False,True,,MySQL 8 | Django,3,33
+1,helios_q07,helios,helios_b2,Helios Worker,implicit,branch,当前这个项目的数据库和后端框架最终是什么？,数据库：SQLite，后端框架：Spring Boot,986,1233,1689,14535.64,True,False,SQLite | Spring Boot,,3,33
+1,helios_q07,helios,helios_b2,Helios Worker,implicit,branch_compact_oracle,当前这个项目的数据库和后端框架最终是什么？,数据库：SQLite，后端框架：Spring Boot,500,690,859,7753.16,True,False,SQLite | Spring Boot,,3,33
+1,helios_q08,helios,helios_b3,Helios Portal,explicit,linear,Helios Portal 部署在哪个区域，生产数据库是什么？,Helios Portal 部署在 GCP asia-northeast1 区域，生产数据库是 CockroachDB。,3838,659,6376,9531.23,True,False,GCP asia-northeast1 | CockroachDB,,4,34
+1,helios_q08,helios,helios_b3,Helios Portal,explicit,linear_tagged,Helios Portal 部署在哪个区域，生产数据库是什么？,GCP asia-northeast1，CockroachDB,3898,1032,6498,14589.92,True,False,GCP asia-northeast1 | CockroachDB,,4,34
+1,helios_q08,helios,helios_b3,Helios Portal,explicit,branch,Helios Portal 部署在哪个区域，生产数据库是什么？,GCP asia-northeast1 和 CockroachDB,1031,1967,1727,23015.64,True,False,GCP asia-northeast1 | CockroachDB,,4,34
+1,helios_q08,helios,helios_b3,Helios Portal,explicit,branch_compact_oracle,Helios Portal 部署在哪个区域，生产数据库是什么？,"部署区域：GCP asia-northeast1  
+生产数据库：CockroachDB",536,797,872,8946.32,True,False,GCP asia-northeast1 | CockroachDB,,4,34
+1,helios_q09,helios,helios_b4,Helios Ops,implicit,linear,当前这个版本最终发布日期和服务端口分别是什么？,12月3日 和 9300,3835,1375,6368,19293.91,False,True,,12月3日 | 9300,0,30
+1,helios_q09,helios,helios_b4,Helios Ops,implicit,linear_tagged,当前这个版本最终发布日期和服务端口分别是什么？,"12月3日, 9300",3895,1400,6481,19389.39,False,True,,12月3日 | 9300,0,30
+1,helios_q09,helios,helios_b4,Helios Ops,implicit,branch,当前这个版本最终发布日期和服务端口分别是什么？,8月30日 和 8100,937,1671,1470,19379.5,True,False,8月30日 | 8100,,0,30
+1,helios_q09,helios,helios_b4,Helios Ops,implicit,branch_compact_oracle,当前这个版本最终发布日期和服务端口分别是什么？,最终发布日期：8月30日，服务端口：8100,520,865,835,9787.24,True,False,8月30日 | 8100,,0,30
+1,helios_q10,helios,helios_b5,Helios Search,explicit,linear,Helios Search 当前选用什么本地模型，Pro 存储是多少？,"Llama 3.2 3B, 200GB",3839,1004,6380,14279.4,True,False,Llama 3.2 3B | 200GB,,1,31
+1,helios_q10,helios,helios_b5,Helios Search,explicit,linear_tagged,Helios Search 当前选用什么本地模型，Pro 存储是多少？,本地模型：Llama 3.2 3B，Pro 存储：200GB,3899,1261,6502,17838.06,True,False,Llama 3.2 3B | 200GB,,1,31
+1,helios_q10,helios,helios_b5,Helios Search,explicit,branch,Helios Search 当前选用什么本地模型，Pro 存储是多少？,Llama 3.2 3B 和 200GB,972,2273,1645,26748.55,True,False,Llama 3.2 3B | 200GB,,1,31
+1,helios_q10,helios,helios_b5,Helios Search,explicit,branch_compact_oracle,Helios Search 当前选用什么本地模型，Pro 存储是多少？,Llama 3.2 3B，200GB,524,1843,883,21341.68,True,False,Llama 3.2 3B | 200GB,,1,31
+1,phoenix_q01,phoenix,phoenix_b1,Phoenix Desktop,implicit,linear,当前这个项目最终使用什么数据库，负责人是谁？,数据库：CockroachDB，负责人：Eve,4526,911,8216,13430.36,False,True,,CockroachDB | Eve,3,35
+1,phoenix_q01,phoenix,phoenix_b1,Phoenix Desktop,implicit,linear_tagged,当前这个项目最终使用什么数据库，负责人是谁？,"CockroachDB, Eve",4583,1873,8344,27122.19,False,True,,CockroachDB | Eve,3,35
+1,phoenix_q01,phoenix,phoenix_b1,Phoenix Desktop,implicit,branch,当前这个项目最终使用什么数据库，负责人是谁？,"SQLite, David",995,1699,1835,19839.47,True,False,SQLite | David,,3,35
+1,phoenix_q01,phoenix,phoenix_b1,Phoenix Desktop,implicit,branch_compact_oracle,当前这个项目最终使用什么数据库，负责人是谁？,SQLite，David,497,378,885,4367.66,True,False,SQLite | David,,3,35
+1,phoenix_q02,phoenix,phoenix_b2,Phoenix Mobile,explicit,linear,Phoenix Mobile 当前最终采用什么后端框架和缓存？,后端框架：Go Gin，缓存：无缓存,4529,1273,8225,18304.24,True,False,Go Gin | 无缓存,,4,33
+1,phoenix_q02,phoenix,phoenix_b2,Phoenix Mobile,explicit,linear_tagged,Phoenix Mobile 当前最终采用什么后端框架和缓存？,后端框架：Go Gin，缓存：无缓存,4586,1446,8350,20577.06,True,False,Go Gin | 无缓存,,4,33
+1,phoenix_q02,phoenix,phoenix_b2,Phoenix Mobile,explicit,branch,Phoenix Mobile 当前最终采用什么后端框架和缓存？,后端框架：Go Gin，缓存：无缓存,975,1756,1728,20345.18,True,False,Go Gin | 无缓存,,4,33
+1,phoenix_q02,phoenix,phoenix_b2,Phoenix Mobile,explicit,branch_compact_oracle,Phoenix Mobile 当前最终采用什么后端框架和缓存？,Go Gin 和无缓存,515,1635,886,18488.73,True,False,Go Gin | 无缓存,,4,33
+1,phoenix_q03,phoenix,phoenix_b3,Phoenix Console,implicit,linear,当前这个项目部署在哪个区域，服务端口是多少？,"Azure eastasia, 8300",4528,1953,8216,27051.0,False,True,,Azure eastasia | 8300,0,46
+1,phoenix_q03,phoenix,phoenix_b3,Phoenix Console,implicit,linear_tagged,当前这个项目部署在哪个区域，服务端口是多少？,"Azure eastasia, 8300",4585,1337,8344,19472.84,False,True,,Azure eastasia | 8300,0,46
+1,phoenix_q03,phoenix,phoenix_b3,Phoenix Console,implicit,branch,当前这个项目部署在哪个区域，服务端口是多少？,"AWS ap-southeast-1, 8100",1232,1686,2273,20272.12,True,False,AWS ap-southeast-1 | 8100,,0,46
+1,phoenix_q03,phoenix,phoenix_b3,Phoenix Console,implicit,branch_compact_oracle,当前这个项目部署在哪个区域，服务端口是多少？,"AWS ap-southeast-1, 8100",503,1371,884,15853.74,True,False,AWS ap-southeast-1 | 8100,,0,46
+1,phoenix_q04,phoenix,phoenix_b4,Phoenix Cloud,explicit,linear,Phoenix Cloud 的最终发布日期是什么时候，负责人是谁？,9月15日，Bob,4527,1202,8227,17239.37,True,False,9月15日 | Bob,,1,46
+1,phoenix_q04,phoenix,phoenix_b4,Phoenix Cloud,explicit,linear_tagged,Phoenix Cloud 的最终发布日期是什么时候，负责人是谁？,Phoenix Cloud 的最终发布日期是 9月15日，负责人是 Bob。,4584,776,8349,11818.25,True,False,9月15日 | Bob,,1,46
+1,phoenix_q04,phoenix,phoenix_b4,Phoenix Cloud,explicit,branch,Phoenix Cloud 的最终发布日期是什么时候，负责人是谁？,9月15日，Bob,1224,1429,2179,16787.58,True,False,9月15日 | Bob,,1,46
+1,phoenix_q04,phoenix,phoenix_b4,Phoenix Cloud,explicit,branch_compact_oracle,Phoenix Cloud 的最终发布日期是什么时候，负责人是谁？,9月15日，Bob,500,896,866,10041.03,True,False,9月15日 | Bob,,1,46
+1,phoenix_q05,phoenix,phoenix_b5,Phoenix Labs,implicit,linear,当前这个产品的 Pro 方案多少钱，包含多少存储？,149美元/月，2TB存储,4527,729,8219,10940.89,False,True,,149美元/月 | 2TB,2,42
+1,phoenix_q05,phoenix,phoenix_b5,Phoenix Labs,implicit,linear_tagged,当前这个产品的 Pro 方案多少钱，包含多少存储？,79美元/月，500GB存储,4584,600,8338,9399.8,True,False,79美元/月 | 500GB,,2,42
+1,phoenix_q05,phoenix,phoenix_b5,Phoenix Labs,implicit,branch,当前这个产品的 Pro 方案多少钱，包含多少存储？,79美元/月，500GB存储,1156,568,1982,7292.5,True,False,79美元/月 | 500GB,,2,42
+1,phoenix_q05,phoenix,phoenix_b5,Phoenix Labs,implicit,branch_compact_oracle,当前这个产品的 Pro 方案多少钱，包含多少存储？,79美元/月，500GB,493,769,822,8368.45,True,False,79美元/月 | 500GB,,2,42
+1,phoenix_q06,phoenix,phoenix_b1,Phoenix Desktop,explicit,linear,Phoenix Desktop 的本地模型和 temperature 最终分别是什么？,本地模型：Phi-4 Mini，temperature：0.7,4527,1458,8237,20003.58,True,False,Phi-4 Mini | 0.7,,3,35
+1,phoenix_q06,phoenix,phoenix_b1,Phoenix Desktop,explicit,linear_tagged,Phoenix Desktop 的本地模型和 temperature 最终分别是什么？,本地模型：Phi-4 Mini，temperature：0.7,4584,2208,8365,31551.8,True,False,Phi-4 Mini | 0.7,,3,35
+1,phoenix_q06,phoenix,phoenix_b1,Phoenix Desktop,explicit,branch,Phoenix Desktop 的本地模型和 temperature 最终分别是什么？,本地模型：Phi-4 Mini；temperature：0.7,996,1821,1856,21694.19,True,False,Phi-4 Mini | 0.7,,3,35
+1,phoenix_q06,phoenix,phoenix_b1,Phoenix Desktop,explicit,branch_compact_oracle,Phoenix Desktop 的本地模型和 temperature 最终分别是什么？,Phi-4 Mini and 0.7,498,1372,906,15102.9,True,False,Phi-4 Mini | 0.7,,3,35
+1,phoenix_q07,phoenix,phoenix_b2,Phoenix Mobile,implicit,linear,当前这个项目的数据库和后端框架最终是什么？,CockroachDB 和 Go Gin,4526,1377,8215,19898.9,True,False,CockroachDB | Go Gin,,4,33
+1,phoenix_q07,phoenix,phoenix_b2,Phoenix Mobile,implicit,linear_tagged,当前这个项目的数据库和后端框架最终是什么？,数据库：CockroachDB，后端框架：Go Gin,4583,1341,8340,19036.64,True,False,CockroachDB | Go Gin,,4,33
+1,phoenix_q07,phoenix,phoenix_b2,Phoenix Mobile,implicit,branch,当前这个项目的数据库和后端框架最终是什么？,CockroachDB 和 Go Gin,972,1666,1718,19612.32,True,False,CockroachDB | Go Gin,,4,33
+1,phoenix_q07,phoenix,phoenix_b2,Phoenix Mobile,implicit,branch_compact_oracle,当前这个项目的数据库和后端框架最终是什么？,数据库：CockroachDB，后端框架：Go Gin,512,631,876,7104.76,True,False,CockroachDB | Go Gin,,4,33
+1,phoenix_q08,phoenix,phoenix_b3,Phoenix Console,explicit,linear,Phoenix Console 部署在哪个区域，生产数据库是什么？,"AWS ap-southeast-1, PostgreSQL 16",4529,1782,8227,24468.46,True,False,AWS ap-southeast-1 | PostgreSQL 16,,0,46
+1,phoenix_q08,phoenix,phoenix_b3,Phoenix Console,explicit,linear_tagged,Phoenix Console 部署在哪个区域，生产数据库是什么？,部署区域：AWS ap-southeast-1；生产数据库：PostgreSQL 16,4586,399,8355,7138.52,True,False,AWS ap-southeast-1 | PostgreSQL 16,,0,46
+1,phoenix_q08,phoenix,phoenix_b3,Phoenix Console,explicit,branch,Phoenix Console 部署在哪个区域，生产数据库是什么？,"部署区域：AWS ap-southeast-1  
+生产数据库：PostgreSQL 16",1233,997,2284,11954.54,True,False,AWS ap-southeast-1 | PostgreSQL 16,,0,46
+1,phoenix_q08,phoenix,phoenix_b3,Phoenix Console,explicit,branch_compact_oracle,Phoenix Console 部署在哪个区域，生产数据库是什么？,AWS ap-southeast-1；PostgreSQL 16,504,1940,895,21812.73,True,False,AWS ap-southeast-1 | PostgreSQL 16,,0,46
+1,phoenix_q09,phoenix,phoenix_b4,Phoenix Cloud,implicit,linear,当前这个版本最终发布日期和服务端口分别是什么？,最终发布日期：8月30日，服务端口：8100,4527,587,8217,8839.33,False,True,,8月30日 | 8100,1,46
+1,phoenix_q09,phoenix,phoenix_b4,Phoenix Cloud,implicit,linear_tagged,当前这个版本最终发布日期和服务端口分别是什么？,8月30日，8100,4584,1941,8339,27088.68,False,True,,8月30日 | 8100,1,46
+1,phoenix_q09,phoenix,phoenix_b4,Phoenix Cloud,implicit,branch,当前这个版本最终发布日期和服务端口分别是什么？,当前版本发布日期为9月15日，服务端口为8200。,1224,638,2169,7845.04,True,False,9月15日 | 8200,,1,46
+1,phoenix_q09,phoenix,phoenix_b4,Phoenix Cloud,implicit,branch_compact_oracle,当前这个版本最终发布日期和服务端口分别是什么？,最终发布日期：9月15日，服务端口：8200,500,665,856,7310.21,True,False,9月15日 | 8200,,1,46
+1,phoenix_q10,phoenix,phoenix_b5,Phoenix Labs,explicit,linear,Phoenix Labs 当前选用什么本地模型，Pro 存储是多少？,Gemma 3 4B，500GB,4530,1498,8228,20648.32,True,False,Gemma 3 4B | 500GB,,2,42
+1,phoenix_q10,phoenix,phoenix_b5,Phoenix Labs,explicit,linear_tagged,Phoenix Labs 当前选用什么本地模型，Pro 存储是多少？,"Gemma 3 4B, 500GB",4587,2873,8347,40827.83,True,False,Gemma 3 4B | 500GB,,2,42
+1,phoenix_q10,phoenix,phoenix_b5,Phoenix Labs,explicit,branch,Phoenix Labs 当前选用什么本地模型，Pro 存储是多少？,Gemma 3 4B，500GB,1159,2374,1991,28543.38,True,False,Gemma 3 4B | 500GB,,2,42
+1,phoenix_q10,phoenix,phoenix_b5,Phoenix Labs,explicit,branch_compact_oracle,Phoenix Labs 当前选用什么本地模型，Pro 存储是多少？,"Gemma 3 4B, 500GB",496,1094,831,12205.8,True,False,Gemma 3 4B | 500GB,,2,42
+1,orbit_q01,orbit,orbit_b1,Orbit CRM,implicit,linear,当前这个项目最终使用什么数据库，负责人是谁？,CockroachDB 和 Eve,4589,1954,7739,27022.84,True,False,CockroachDB | Eve,,4,38
+1,orbit_q01,orbit,orbit_b1,Orbit CRM,implicit,linear_tagged,当前这个项目最终使用什么数据库，负责人是谁？,"CockroachDB, Eve",4647,1443,7849,20540.28,True,False,CockroachDB | Eve,,4,38
+1,orbit_q01,orbit,orbit_b1,Orbit CRM,implicit,branch,当前这个项目最终使用什么数据库，负责人是谁？,"CockroachDB, Eve",1099,1789,1718,21498.96,True,False,CockroachDB | Eve,,4,38
+1,orbit_q01,orbit,orbit_b1,Orbit CRM,implicit,branch_compact_oracle,当前这个项目最终使用什么数据库，负责人是谁？,CockroachDB 和 Eve,509,551,801,6926.45,True,False,CockroachDB | Eve,,4,38
+1,orbit_q02,orbit,orbit_b2,Orbit Billing,explicit,linear,Orbit Billing 当前最终采用什么后端框架和缓存？,FastAPI 和 Redis,4593,1908,7747,26917.33,True,False,FastAPI | Redis,,0,48
+1,orbit_q02,orbit,orbit_b2,Orbit Billing,explicit,linear_tagged,Orbit Billing 当前最终采用什么后端框架和缓存？,后端框架：FastAPI，缓存：Redis,4651,496,7869,8363.2,True,False,FastAPI | Redis,,0,48
+1,orbit_q02,orbit,orbit_b2,Orbit Billing,explicit,branch,Orbit Billing 当前最终采用什么后端框架和缓存？,后端框架：FastAPI，缓存：Redis,1315,1482,2243,17347.35,True,False,FastAPI | Redis,,0,48
+1,orbit_q02,orbit,orbit_b2,Orbit Billing,explicit,branch_compact_oracle,Orbit Billing 当前最终采用什么后端框架和缓存？,FastAPI 和 Redis,510,1517,846,17323.94,True,False,FastAPI | Redis,,0,48
+1,orbit_q03,orbit,orbit_b3,Orbit Support,implicit,linear,当前这个项目部署在哪个区域，服务端口是多少？,"AWS ap-southeast-1, 8100",4591,906,7739,13559.65,False,True,,AWS ap-southeast-1 | 8100,1,35
+1,orbit_q03,orbit,orbit_b3,Orbit Support,implicit,linear_tagged,当前这个项目部署在哪个区域，服务端口是多少？,"AWS ap-southeast-1, 8100",4649,1212,7861,17434.59,False,True,,AWS ap-southeast-1 | 8100,1,35
+1,orbit_q03,orbit,orbit_b3,Orbit Support,implicit,branch,当前这个项目部署在哪个区域，服务端口是多少？,部署区域：GCP us-central1，服务端口：8200,1043,1102,1761,12811.52,True,False,GCP us-central1 | 8200,,1,35
+1,orbit_q03,orbit,orbit_b3,Orbit Support,implicit,branch_compact_oracle,当前这个项目部署在哪个区域，服务端口是多少？,GCP us-central1，8200,522,1827,862,20140.51,True,False,GCP us-central1 | 8200,,1,35
+1,orbit_q04,orbit,orbit_b4,Orbit Growth,explicit,linear,Orbit Growth 的最终发布日期是什么时候，负责人是谁？,10月8日，Carol,4591,1073,7749,15159.57,True,False,10月8日 | Carol,,2,44
+1,orbit_q04,orbit,orbit_b4,Orbit Growth,explicit,linear_tagged,Orbit Growth 的最终发布日期是什么时候，负责人是谁？,10月8日，Carol,4649,1050,7868,15192.3,True,False,10月8日 | Carol,,2,44
+1,orbit_q04,orbit,orbit_b4,Orbit Growth,explicit,branch,Orbit Growth 的最终发布日期是什么时候，负责人是谁？,10月8日，Carol,1223,917,2068,11287.76,True,False,10月8日 | Carol,,2,44
+1,orbit_q04,orbit,orbit_b4,Orbit Growth,explicit,branch_compact_oracle,Orbit Growth 的最终发布日期是什么时候，负责人是谁？,10月8日，Carol,502,1095,838,11904.25,True,False,10月8日 | Carol,,2,44
+1,orbit_q05,orbit,orbit_b5,Orbit Insights,implicit,linear,当前这个产品的 Pro 方案多少钱，包含多少存储？,49美元/月，200GB,4590,605,7742,9183.34,False,True,,49美元/月 | 200GB,3,32
+1,orbit_q05,orbit,orbit_b5,Orbit Insights,implicit,linear_tagged,当前这个产品的 Pro 方案多少钱，包含多少存储？,Orbit Support 的 Pro 方案价格为 49美元/月，包含 200GB 存储。,4648,716,7867,11205.76,False,True,,49美元/月 | 200GB,3,32
+1,orbit_q05,orbit,orbit_b5,Orbit Insights,implicit,branch,当前这个产品的 Pro 方案多少钱，包含多少存储？,99美元/月，1TB存储,976,987,1688,11430.02,True,False,99美元/月 | 1TB,,3,32
+1,orbit_q05,orbit,orbit_b5,Orbit Insights,implicit,branch_compact_oracle,当前这个产品的 Pro 方案多少钱，包含多少存储？,99美元/月，1TB,521,1180,887,13070.85,True,False,99美元/月 | 1TB,,3,32
+1,orbit_q06,orbit,orbit_b1,Orbit CRM,explicit,linear,Orbit CRM 的本地模型和 temperature 最终分别是什么？,本地模型：Qwen3 4B，temperature：1.0,4591,542,7754,8498.88,True,False,Qwen3 4B | 1.0,,4,38
+1,orbit_q06,orbit,orbit_b1,Orbit CRM,explicit,linear_tagged,Orbit CRM 的本地模型和 temperature 最终分别是什么？,Qwen3 4B 和 1.0,4649,686,7864,10545.89,True,False,Qwen3 4B | 1.0,,4,38
+1,orbit_q06,orbit,orbit_b1,Orbit CRM,explicit,branch,Orbit CRM 的本地模型和 temperature 最终分别是什么？,Qwen3 4B 和 1.0,1101,1494,1733,17413.42,True,False,Qwen3 4B | 1.0,,4,38
+1,orbit_q06,orbit,orbit_b1,Orbit CRM,explicit,branch_compact_oracle,Orbit CRM 的本地模型和 temperature 最终分别是什么？,本地模型：Qwen3 4B，temperature：1.0,511,528,816,6231.25,True,False,Qwen3 4B | 1.0,,4,38
+1,orbit_q07,orbit,orbit_b2,Orbit Billing,implicit,linear,当前这个项目的数据库和后端框架最终是什么？,SQLite 和 Spring Boot,4589,1124,7738,15734.31,False,True,,SQLite | Spring Boot,0,48
+1,orbit_q07,orbit,orbit_b2,Orbit Billing,implicit,linear_tagged,当前这个项目的数据库和后端框架最终是什么？,数据库：SQLite，后端框架：Spring Boot,4647,975,7860,15111.5,False,True,,SQLite | Spring Boot,0,48
+1,orbit_q07,orbit,orbit_b2,Orbit Billing,implicit,branch,当前这个项目的数据库和后端框架最终是什么？,数据库：PostgreSQL 16，后端框架：FastAPI,1311,734,2234,8622.91,True,False,PostgreSQL 16 | FastAPI,,0,48
+1,orbit_q07,orbit,orbit_b2,Orbit Billing,implicit,branch_compact_oracle,当前这个项目的数据库和后端框架最终是什么？,"数据库：PostgreSQL 16  
+后端框架：FastAPI",506,447,837,5104.81,True,False,PostgreSQL 16 | FastAPI,,0,48
+1,orbit_q08,orbit,orbit_b3,Orbit Support,explicit,linear,Orbit Support 部署在哪个区域，生产数据库是什么？,Orbit Support 部署在 GCP us-central1，生产数据库是 MongoDB 7。,4593,936,7748,13511.16,True,False,GCP us-central1 | MongoDB 7,,1,35
+1,orbit_q08,orbit,orbit_b3,Orbit Support,explicit,linear_tagged,Orbit Support 部署在哪个区域，生产数据库是什么？,GCP us-central1 和 MongoDB 7,4651,1608,7870,22767.63,True,False,GCP us-central1 | MongoDB 7,,1,35
+1,orbit_q08,orbit,orbit_b3,Orbit Support,explicit,branch,Orbit Support 部署在哪个区域，生产数据库是什么？,部署在 GCP us-central1，生产数据库是 MongoDB 7。,1045,1065,1770,12693.17,True,False,GCP us-central1 | MongoDB 7,,1,35
+1,orbit_q08,orbit,orbit_b3,Orbit Support,explicit,branch_compact_oracle,Orbit Support 部署在哪个区域，生产数据库是什么？,"部署区域：GCP us-central1  
+生产数据库：MongoDB 7",524,807,871,8997.21,True,False,GCP us-central1 | MongoDB 7,,1,35
+1,orbit_q09,orbit,orbit_b4,Orbit Growth,implicit,linear,当前这个版本最终发布日期和服务端口分别是什么？,发布日期：8月30日，服务端口：8100,4590,574,7740,8596.48,False,True,,8月30日 | 8100,2,44
+1,orbit_q09,orbit,orbit_b4,Orbit Growth,implicit,linear_tagged,当前这个版本最终发布日期和服务端口分别是什么？,10月8日 和 8300,4648,1647,7859,23731.6,True,False,10月8日 | 8300,,2,44
+1,orbit_q09,orbit,orbit_b4,Orbit Growth,implicit,branch,当前这个版本最终发布日期和服务端口分别是什么？,10月8日，8300,1222,1688,2059,20622.84,True,False,10月8日 | 8300,,2,44
+1,orbit_q09,orbit,orbit_b4,Orbit Growth,implicit,branch_compact_oracle,当前这个版本最终发布日期和服务端口分别是什么？,10月8日 和 8300,501,1539,829,17162.06,True,False,10月8日 | 8300,,2,44
+1,orbit_q10,orbit,orbit_b5,Orbit Insights,explicit,linear,Orbit Insights 当前选用什么本地模型，Pro 存储是多少？,"Phi-4 Mini, 1TB",4594,661,7753,10124.15,True,False,Phi-4 Mini | 1TB,,3,32
+1,orbit_q10,orbit,orbit_b5,Orbit Insights,explicit,linear_tagged,Orbit Insights 当前选用什么本地模型，Pro 存储是多少？,本地模型：Phi-4 Mini，Pro 存储：1TB,4652,923,7878,13846.79,True,False,Phi-4 Mini | 1TB,,3,32
+1,orbit_q10,orbit,orbit_b5,Orbit Insights,explicit,branch,Orbit Insights 当前选用什么本地模型，Pro 存储是多少？,"Phi-4 Mini, 1TB",980,1577,1699,18153.29,True,False,Phi-4 Mini | 1TB,,3,32
+1,orbit_q10,orbit,orbit_b5,Orbit Insights,explicit,branch_compact_oracle,Orbit Insights 当前选用什么本地模型，Pro 存储是多少？,"Phi-4 Mini, 1TB",525,2488,898,27829.13,True,False,Phi-4 Mini | 1TB,,3,32
+1,aurora_q01,aurora,aurora_b1,Aurora Web,implicit,linear,当前这个项目最终使用什么数据库，负责人是谁？,数据库：MySQL 8，负责人：Carol,4594,1506,7436,20951.21,False,True,,MySQL 8 | Carol,0,32
+1,aurora_q01,aurora,aurora_b1,Aurora Web,implicit,linear_tagged,当前这个项目最终使用什么数据库，负责人是谁？,MySQL 8；Carol,4653,1845,7549,25707.67,False,True,,MySQL 8 | Carol,0,32
+1,aurora_q01,aurora,aurora_b1,Aurora Web,implicit,branch,当前这个项目最终使用什么数据库，负责人是谁？,数据库：PostgreSQL 16，负责人：Alice,997,1521,1565,17693.59,True,False,PostgreSQL 16 | Alice,,0,32
+1,aurora_q01,aurora,aurora_b1,Aurora Web,implicit,branch_compact_oracle,当前这个项目最终使用什么数据库，负责人是谁？,数据库：PostgreSQL 16，负责人：Alice,522,519,825,5857.75,True,False,PostgreSQL 16 | Alice,,0,32
+1,aurora_q02,aurora,aurora_b2,Aurora Mobile,explicit,linear,Aurora Mobile 当前最终采用什么后端框架和缓存？,后端框架：Express，缓存：Memcached,4599,1512,7444,21783.35,True,False,Express | Memcached,,1,34
+1,aurora_q02,aurora,aurora_b2,Aurora Mobile,explicit,linear_tagged,Aurora Mobile 当前最终采用什么后端框架和缓存？,后端框架：Express，缓存：Memcached,4658,1619,7566,23062.18,True,False,Express | Memcached,,1,34
+1,aurora_q02,aurora,aurora_b2,Aurora Mobile,explicit,branch,Aurora Mobile 当前最终采用什么后端框架和缓存？,后端框架：Express，缓存：Memcached,1044,829,1742,9932.97,True,False,Express | Memcached,,1,34
+1,aurora_q02,aurora,aurora_b2,Aurora Mobile,explicit,branch_compact_oracle,Aurora Mobile 当前最终采用什么后端框架和缓存？,Express 和 Memcached,535,1395,894,15631.09,True,False,Express | Memcached,,1,34
+1,aurora_q03,aurora,aurora_b3,Aurora Engine,implicit,linear,当前这个项目部署在哪个区域，服务端口是多少？,AWS eu-west-1，9200,4596,1017,7436,14458.9,False,True,,AWS eu-west-1 | 9200,2,39
+1,aurora_q03,aurora,aurora_b3,Aurora Engine,implicit,linear_tagged,当前这个项目部署在哪个区域，服务端口是多少？,"Azure eastasia, 8300",4655,1997,7558,27973.62,True,False,Azure eastasia | 8300,,2,39
+1,aurora_q03,aurora,aurora_b3,Aurora Engine,implicit,branch,当前这个项目部署在哪个区域，服务端口是多少？,部署区域：Azure eastasia，服务端口：8300,1155,1093,1906,13131.24,True,False,Azure eastasia | 8300,,2,39
+1,aurora_q03,aurora,aurora_b3,Aurora Engine,implicit,branch_compact_oracle,当前这个项目部署在哪个区域，服务端口是多少？,"部署区域：Azure eastasia  
+服务端口：8300",512,403,835,4696.04,True,False,Azure eastasia | 8300,,2,39
+1,aurora_q04,aurora,aurora_b4,Aurora Studio,explicit,linear,Aurora Studio 的最终发布日期是什么时候，负责人是谁？,11月12日，David,4597,1359,7447,18824.13,True,False,11月12日 | David,,3,43
+1,aurora_q04,aurora,aurora_b4,Aurora Studio,explicit,linear_tagged,Aurora Studio 的最终发布日期是什么时候，负责人是谁？,Aurora Studio 的最终发布日期是 11月12日，负责人是 David。,4656,574,7569,9344.82,True,False,11月12日 | David,,3,43
+1,aurora_q04,aurora,aurora_b4,Aurora Studio,explicit,branch,Aurora Studio 的最终发布日期是什么时候，负责人是谁？,11月12日，David,1238,1053,2058,12495.92,True,False,11月12日 | David,,3,43
+1,aurora_q04,aurora,aurora_b4,Aurora Studio,explicit,branch_compact_oracle,Aurora Studio 的最终发布日期是什么时候，负责人是谁？,最终发布日期：11月12日，负责人：David,507,889,850,9784.41,True,False,11月12日 | David,,3,43
+1,aurora_q05,aurora,aurora_b5,Aurora Hub,implicit,linear,当前这个产品的 Pro 方案多少钱，包含多少存储？,149美元/月，2TB存储,4595,917,7439,13231.75,True,False,149美元/月 | 2TB,,4,43
+1,aurora_q05,aurora,aurora_b5,Aurora Hub,implicit,linear_tagged,当前这个产品的 Pro 方案多少钱，包含多少存储？,149美元/月，2TB存储,4654,610,7552,9765.45,True,False,149美元/月 | 2TB,,4,43
+1,aurora_q05,aurora,aurora_b5,Aurora Hub,implicit,branch,当前这个产品的 Pro 方案多少钱，包含多少存储？,149美元/月，2TB,1238,1380,1907,16078.94,True,False,149美元/月 | 2TB,,4,43
+1,aurora_q05,aurora,aurora_b5,Aurora Hub,implicit,branch_compact_oracle,当前这个产品的 Pro 方案多少钱，包含多少存储？,149美元/月，2TB,513,830,808,9114.99,True,False,149美元/月 | 2TB,,4,43
+1,aurora_q06,aurora,aurora_b1,Aurora Web,explicit,linear,Aurora Web 的本地模型和 temperature 最终分别是什么？,本地模型：Qwen3 1.7B，temperature：0,4597,1324,7452,18458.63,True,False,Qwen3 1.7B | 0,,0,32
+1,aurora_q06,aurora,aurora_b1,Aurora Web,explicit,linear_tagged,Aurora Web 的本地模型和 temperature 最终分别是什么？,Qwen3 1.7B 和 0,4656,1674,7565,23444.78,True,False,Qwen3 1.7B | 0,,0,32
+1,aurora_q06,aurora,aurora_b1,Aurora Web,explicit,branch,Aurora Web 的本地模型和 temperature 最终分别是什么？,本地模型：Qwen3 1.7B，temperature：0,1000,1667,1581,19094.69,True,False,Qwen3 1.7B | 0,,0,32
+1,aurora_q06,aurora,aurora_b1,Aurora Web,explicit,branch_compact_oracle,Aurora Web 的本地模型和 temperature 最终分别是什么？,Qwen3 1.7B 和 0,525,1784,841,19952.01,True,False,Qwen3 1.7B | 0,,0,32
+1,aurora_q07,aurora,aurora_b2,Aurora Mobile,implicit,linear,当前这个项目的数据库和后端框架最终是什么？,数据库：PostgreSQL 16，后端框架：FastAPI,4594,1676,7435,23274.87,False,True,,PostgreSQL 16 | FastAPI,1,34
+1,aurora_q07,aurora,aurora_b2,Aurora Mobile,implicit,linear_tagged,当前这个项目的数据库和后端框架最终是什么？,PostgreSQL 16 和 FastAPI,4653,1846,7557,26040.64,False,True,,PostgreSQL 16 | FastAPI,1,34
+1,aurora_q07,aurora,aurora_b2,Aurora Mobile,implicit,branch,当前这个项目的数据库和后端框架最终是什么？,数据库：MongoDB 7，后端框架：Express,1039,2061,1733,24109.01,True,False,MongoDB 7 | Express,,1,34
+1,aurora_q07,aurora,aurora_b2,Aurora Mobile,implicit,branch_compact_oracle,当前这个项目的数据库和后端框架最终是什么？,"数据库：MongoDB 7  
+后端框架：Express",530,324,885,3678.13,True,False,MongoDB 7 | Express,,1,34
+1,aurora_q08,aurora,aurora_b3,Aurora Engine,explicit,linear,Aurora Engine 部署在哪个区域，生产数据库是什么？,Azure eastasia 和 MySQL 8,4599,2595,7445,37303.22,True,False,Azure eastasia | MySQL 8,,2,39
+1,aurora_q08,aurora,aurora_b3,Aurora Engine,explicit,linear_tagged,Aurora Engine 部署在哪个区域，生产数据库是什么？,"Azure eastasia, MySQL 8",4658,2397,7567,33657.83,True,False,Azure eastasia | MySQL 8,,2,39
+1,aurora_q08,aurora,aurora_b3,Aurora Engine,explicit,branch,Aurora Engine 部署在哪个区域，生产数据库是什么？,部署区域：Azure eastasia；生产数据库：MySQL 8,1158,1411,1915,16644.99,True,False,Azure eastasia | MySQL 8,,2,39
+1,aurora_q08,aurora,aurora_b3,Aurora Engine,explicit,branch_compact_oracle,Aurora Engine 部署在哪个区域，生产数据库是什么？,"Azure eastasia, MySQL 8",515,1461,844,16300.73,True,False,Azure eastasia | MySQL 8,,2,39
+1,aurora_q09,aurora,aurora_b4,Aurora Studio,implicit,linear,当前这个版本最终发布日期和服务端口分别是什么？,最终发布日期：8月30日，服务端口：8100,4595,859,7437,12433.1,False,True,,8月30日 | 8100,3,43
+1,aurora_q09,aurora,aurora_b4,Aurora Studio,implicit,linear_tagged,当前这个版本最终发布日期和服务端口分别是什么？,"8月30日, 8100",4654,1732,7559,24734.83,False,True,,8月30日 | 8100,3,43
+1,aurora_q09,aurora,aurora_b4,Aurora Studio,implicit,branch,当前这个版本最终发布日期和服务端口分别是什么？,"11月12日, 9200",1236,2050,2048,23951.14,True,False,11月12日 | 9200,,3,43
+1,aurora_q09,aurora,aurora_b4,Aurora Studio,implicit,branch_compact_oracle,当前这个版本最终发布日期和服务端口分别是什么？,11月12日 和 9200,505,1284,840,14059.11,True,False,11月12日 | 9200,,3,43
+1,aurora_q10,aurora,aurora_b5,Aurora Hub,explicit,linear,Aurora Hub 当前选用什么本地模型，Pro 存储是多少？,Qwen3 4B，2TB,4600,2014,7446,27318.63,True,False,Qwen3 4B | 2TB,,4,43
+1,aurora_q10,aurora,aurora_b5,Aurora Hub,explicit,linear_tagged,Aurora Hub 当前选用什么本地模型，Pro 存储是多少？,本地模型：Qwen3 4B，Pro 存储：2TB,4659,2552,7559,35672.69,True,False,Qwen3 4B | 2TB,,4,43
+1,aurora_q10,aurora,aurora_b5,Aurora Hub,explicit,branch,Aurora Hub 当前选用什么本地模型，Pro 存储是多少？,Qwen3 4B 和 2TB,1243,1778,1914,20914.63,True,False,Qwen3 4B | 2TB,,4,43
+1,aurora_q10,aurora,aurora_b5,Aurora Hub,explicit,branch_compact_oracle,Aurora Hub 当前选用什么本地模型，Pro 存储是多少？,"Qwen3 4B, 2TB",518,682,815,7678.36,True,False,Qwen3 4B | 2TB,,4,43
+1,vector_q01,vector,vector_b1,Vector Search,implicit,linear,当前这个项目最终使用什么数据库，负责人是谁？,数据库：CockroachDB，负责人：Eve,3961,697,6960,9989.94,False,True,,CockroachDB | Eve,1,44
+1,vector_q01,vector,vector_b1,Vector Search,implicit,linear_tagged,当前这个项目最终使用什么数据库，负责人是谁？,数据库：CockroachDB，负责人：Eve,4018,679,7082,10149.11,False,True,,CockroachDB | Eve,1,44
+1,vector_q01,vector,vector_b1,Vector Search,implicit,branch,当前这个项目最终使用什么数据库，负责人是谁？,MongoDB 7 和 Bob,1197,2113,2102,24155.61,True,False,MongoDB 7 | Bob,,1,44
+1,vector_q01,vector,vector_b1,Vector Search,implicit,branch_compact_oracle,当前这个项目最终使用什么数据库，负责人是谁？,数据库：MongoDB 7，负责人：Bob,501,1162,846,12707.16,True,False,MongoDB 7 | Bob,,1,44
+1,vector_q02,vector,vector_b2,Vector Index,explicit,linear,Vector Index 当前最终采用什么后端框架和缓存？,后端框架：Django，缓存：KeyDB,3964,515,6967,7550.98,True,False,Django | KeyDB,,2,33
+1,vector_q02,vector,vector_b2,Vector Index,explicit,linear_tagged,Vector Index 当前最终采用什么后端框架和缓存？,Django 和 KeyDB,4026,872,7086,12686.44,True,False,Django | KeyDB,,2,33
+1,vector_q02,vector,vector_b2,Vector Index,explicit,branch,Vector Index 当前最终采用什么后端框架和缓存？,Django 和 KeyDB,965,1420,1648,16311.65,True,False,Django | KeyDB,,2,33
+1,vector_q02,vector,vector_b2,Vector Index,explicit,branch_compact_oracle,Vector Index 当前最终采用什么后端框架和缓存？,Django 和 KeyDB,502,1293,847,14527.54,True,False,Django | KeyDB,,2,33
+1,vector_q03,vector,vector_b3,Vector Query,implicit,linear,当前这个项目部署在哪个区域，服务端口是多少？,AWS ap-southeast-1，8100,3963,2073,6960,27236.22,False,True,,AWS ap-southeast-1 | 8100,3,31
+1,vector_q03,vector,vector_b3,Vector Query,implicit,linear_tagged,当前这个项目部署在哪个区域，服务端口是多少？,AWS ap-southeast-1，8100,4025,2114,7079,28554.54,False,True,,AWS ap-southeast-1 | 8100,3,31
+1,vector_q03,vector,vector_b3,Vector Query,implicit,branch,当前这个项目部署在哪个区域，服务端口是多少？,AWS eu-west-1，9200,910,1655,1574,18877.28,True,False,AWS eu-west-1 | 9200,,3,31
+1,vector_q03,vector,vector_b3,Vector Query,implicit,branch_compact_oracle,当前这个项目部署在哪个区域，服务端口是多少？,"AWS eu-west-1, 9200",498,2107,862,26123.34,True,False,AWS eu-west-1 | 9200,,3,31
+1,vector_q04,vector,vector_b4,Vector Console,explicit,linear,Vector Console 的最终发布日期是什么时候，负责人是谁？,12月3日，Eve,3962,1696,6972,23143.5,True,False,12月3日 | Eve,,4,35
+1,vector_q04,vector,vector_b4,Vector Console,explicit,linear_tagged,Vector Console 的最终发布日期是什么时候，负责人是谁？,12月3日，Eve,4019,1794,7097,25005.53,True,False,12月3日 | Eve,,4,35
+1,vector_q04,vector,vector_b4,Vector Console,explicit,branch,Vector Console 的最终发布日期是什么时候，负责人是谁？,12月3日，Eve,1009,1695,1793,19343.65,True,False,12月3日 | Eve,,4,35
+1,vector_q04,vector,vector_b4,Vector Console,explicit,branch_compact_oracle,Vector Console 的最终发布日期是什么时候，负责人是谁？,12月3日，Eve,501,1245,853,13673.52,True,False,12月3日 | Eve,,4,35
+1,vector_q05,vector,vector_b5,Vector Agent,implicit,linear,当前这个产品的 Pro 方案多少钱，包含多少存储？,99美元/月，1TB存储,3962,674,6963,9577.67,False,True,,99美元/月 | 1TB,0,31
+1,vector_q05,vector,vector_b5,Vector Agent,implicit,linear_tagged,当前这个产品的 Pro 方案多少钱，包含多少存储？,99美元/月，1TB存储。,4024,454,7082,7173.4,False,True,,99美元/月 | 1TB,0,31
+1,vector_q05,vector,vector_b5,Vector Agent,implicit,branch,当前这个产品的 Pro 方案多少钱，包含多少存储？,29美元/月，50GB,936,1236,1597,13951.67,True,False,29美元/月 | 50GB,,0,31
+1,vector_q05,vector,vector_b5,Vector Agent,implicit,branch_compact_oracle,当前这个产品的 Pro 方案多少钱，包含多少存储？,29美元/月，50GB,507,412,875,4629.8,True,False,29美元/月 | 50GB,,0,31
+1,vector_q06,vector,vector_b1,Vector Search,explicit,linear,Vector Search 的本地模型和 temperature 最终分别是什么？,Llama 3.2 3B 和 0.2,3962,2811,6979,36784.35,True,False,Llama 3.2 3B | 0.2,,1,44
+1,vector_q06,vector,vector_b1,Vector Search,explicit,linear_tagged,Vector Search 的本地模型和 temperature 最终分别是什么？,本地模型：Llama 3.2 3B，temperature：0.2,4024,1307,7101,17971.89,True,False,Llama 3.2 3B | 0.2,,1,44
+1,vector_q06,vector,vector_b1,Vector Search,explicit,branch,Vector Search 的本地模型和 temperature 最终分别是什么？,本地模型：Llama 3.2 3B，temperature：0.2,1198,1544,2121,18486.8,True,False,Llama 3.2 3B | 0.2,,1,44
+1,vector_q06,vector,vector_b1,Vector Search,explicit,branch_compact_oracle,Vector Search 的本地模型和 temperature 最终分别是什么？,Llama 3.2 3B 和 0.2,502,699,865,8121.42,True,False,Llama 3.2 3B | 0.2,,1,44
+1,vector_q07,vector,vector_b2,Vector Index,implicit,linear,当前这个项目的数据库和后端框架最终是什么？,"数据库：MongoDB 7  
+后端框架：Express",3961,411,6959,6494.07,False,True,,MongoDB 7 | Express,2,33
+1,vector_q07,vector,vector_b2,Vector Index,implicit,linear_tagged,当前这个项目的数据库和后端框架最终是什么？,数据库：MongoDB 7，后端框架：Express,4018,1083,7078,15321.02,False,True,,MongoDB 7 | Express,2,33
+1,vector_q07,vector,vector_b2,Vector Index,implicit,branch,当前这个项目的数据库和后端框架最终是什么？,数据库：MySQL 8，后端框架：Django,962,1638,1640,19099.39,True,False,MySQL 8 | Django,,2,33
+1,vector_q07,vector,vector_b2,Vector Index,implicit,branch_compact_oracle,当前这个项目的数据库和后端框架最终是什么？,数据库：MySQL 8，后端框架：Django,499,1110,839,12342.86,True,False,MySQL 8 | Django,,2,33
+1,vector_q08,vector,vector_b3,Vector Query,explicit,linear,Vector Query 部署在哪个区域，生产数据库是什么？,AWS eu-west-1 和 SQLite,3964,1000,6968,13724.44,True,False,AWS eu-west-1 | SQLite,,3,31
+1,vector_q08,vector,vector_b3,Vector Query,explicit,linear_tagged,Vector Query 部署在哪个区域，生产数据库是什么？,"AWS eu-west-1, SQLite",4026,1763,7087,23739.17,True,False,AWS eu-west-1 | SQLite,,3,31
+1,vector_q08,vector,vector_b3,Vector Query,explicit,branch,Vector Query 部署在哪个区域，生产数据库是什么？,部署区域：AWS eu-west-1，生产数据库：SQLite,911,908,1582,10491.35,True,False,AWS eu-west-1 | SQLite,,3,31
+1,vector_q08,vector,vector_b3,Vector Query,explicit,branch_compact_oracle,Vector Query 部署在哪个区域，生产数据库是什么？,AWS eu-west-1，SQLite,499,1808,870,19843.06,True,False,AWS eu-west-1 | SQLite,,3,31
+1,vector_q09,vector,vector_b4,Vector Console,implicit,linear,当前这个版本最终发布日期和服务端口分别是什么？,"服务端口：9300  
+最终发布日期：12月3日",3962,464,6961,6774.24,True,False,12月3日 | 9300,,4,35
+1,vector_q09,vector,vector_b4,Vector Console,implicit,linear_tagged,当前这个版本最终发布日期和服务端口分别是什么？,12月3日 和 9300,4019,1568,7086,21171.05,True,False,12月3日 | 9300,,4,35
+1,vector_q09,vector,vector_b4,Vector Console,implicit,branch,当前这个版本最终发布日期和服务端口分别是什么？,"12月3日, 9300",1009,2126,1782,24327.95,True,False,12月3日 | 9300,,4,35
+1,vector_q09,vector,vector_b4,Vector Console,implicit,branch_compact_oracle,当前这个版本最终发布日期和服务端口分别是什么？,12月3日 和 9300,501,1188,842,13049.77,True,False,12月3日 | 9300,,4,35
+1,vector_q10,vector,vector_b5,Vector Agent,explicit,linear,Vector Agent 当前选用什么本地模型，Pro 存储是多少？,Qwen3 1.7B，50GB,3965,2373,6972,31341.9,True,False,Qwen3 1.7B | 50GB,,0,31
+1,vector_q10,vector,vector_b5,Vector Agent,explicit,linear_tagged,Vector Agent 当前选用什么本地模型，Pro 存储是多少？,Qwen3 1.7B，50GB,4022,1220,7091,17002.58,True,False,Qwen3 1.7B | 50GB,,0,31
+1,vector_q10,vector,vector_b5,Vector Agent,explicit,branch,Vector Agent 当前选用什么本地模型，Pro 存储是多少？,Qwen3 1.7B 和 50GB,939,1718,1606,19465.42,True,False,Qwen3 1.7B | 50GB,,0,31
+1,vector_q10,vector,vector_b5,Vector Agent,explicit,branch_compact_oracle,Vector Agent 当前选用什么本地模型，Pro 存储是多少？,"Qwen3 1.7B, 50GB",510,1285,884,14086.2,True,False,Qwen3 1.7B | 50GB,,0,31
+1,nimbus_q01,nimbus,nimbus_b1,Nimbus API,implicit,linear,当前这个项目最终使用什么数据库，负责人是谁？,"SQLite, David",4177,1062,6801,18899.43,False,True,,SQLite | David,2,47
+1,nimbus_q01,nimbus,nimbus_b1,Nimbus API,implicit,linear_tagged,当前这个项目最终使用什么数据库，负责人是谁？,数据库：SQLite，负责人：David,4235,952,6914,13566.87,False,True,,SQLite | David,2,47
+1,nimbus_q01,nimbus,nimbus_b1,Nimbus API,implicit,branch,当前这个项目最终使用什么数据库，负责人是谁？,"数据库：MySQL 8  
+负责人：Carol",1284,361,2058,4656.52,True,False,MySQL 8 | Carol,,2,47
+1,nimbus_q01,nimbus,nimbus_b1,Nimbus API,implicit,branch_compact_oracle,当前这个项目最终使用什么数据库，负责人是谁？,"MySQL 8, Carol",496,361,811,4022.32,True,False,MySQL 8 | Carol,,2,47
+1,nimbus_q02,nimbus,nimbus_b2,Nimbus Jobs,explicit,linear,Nimbus Jobs 当前最终采用什么后端框架和缓存？,Spring Boot 和 Dragonfly,4181,1421,6807,19184.85,True,False,Spring Boot | Dragonfly,,3,30
+1,nimbus_q02,nimbus,nimbus_b2,Nimbus Jobs,explicit,linear_tagged,Nimbus Jobs 当前最终采用什么后端框架和缓存？,Spring Boot 和 Dragonfly,4239,1189,6923,16352.85,True,False,Spring Boot | Dragonfly,,3,30
+1,nimbus_q02,nimbus,nimbus_b2,Nimbus Jobs,explicit,branch,Nimbus Jobs 当前最终采用什么后端框架和缓存？,Spring Boot 和 Dragonfly,921,1431,1517,16182.74,True,False,Spring Boot | Dragonfly,,3,30
+1,nimbus_q02,nimbus,nimbus_b2,Nimbus Jobs,explicit,branch_compact_oracle,Nimbus Jobs 当前最终采用什么后端框架和缓存？,Spring Boot 和 Dragonfly,518,2024,862,22276.88,True,False,Spring Boot | Dragonfly,,3,30
+1,nimbus_q03,nimbus,nimbus_b3,Nimbus Flow,implicit,linear,当前这个项目部署在哪个区域，服务端口是多少？,GCP asia-northeast1 和 9300,4179,616,6801,9139.36,True,False,GCP asia-northeast1 | 9300,,4,33
+1,nimbus_q03,nimbus,nimbus_b3,Nimbus Flow,implicit,linear_tagged,当前这个项目部署在哪个区域，服务端口是多少？,"GCP asia-northeast1, 9300",4237,1195,6917,16351.47,True,False,GCP asia-northeast1 | 9300,,4,33
+1,nimbus_q03,nimbus,nimbus_b3,Nimbus Flow,implicit,branch,当前这个项目部署在哪个区域，服务端口是多少？,"GCP asia-northeast1, 9300",996,1338,1614,15256.38,True,False,GCP asia-northeast1 | 9300,,4,33
+1,nimbus_q03,nimbus,nimbus_b3,Nimbus Flow,implicit,branch_compact_oracle,当前这个项目部署在哪个区域，服务端口是多少？,部署区域：GCP asia-northeast1，服务端口：9300,514,855,841,9289.72,True,False,GCP asia-northeast1 | 9300,,4,33
+1,nimbus_q04,nimbus,nimbus_b4,Nimbus Desk,explicit,linear,Nimbus Desk 的最终发布日期是什么时候，负责人是谁？,8月30日，Alice,4179,1267,6810,17321.15,True,False,8月30日 | Alice,,0,31
+1,nimbus_q04,nimbus,nimbus_b4,Nimbus Desk,explicit,linear_tagged,Nimbus Desk 的最终发布日期是什么时候，负责人是谁？,8月30日，Alice,4237,1043,6926,14710.81,True,False,8月30日 | Alice,,0,31
+1,nimbus_q04,nimbus,nimbus_b4,Nimbus Desk,explicit,branch,Nimbus Desk 的最终发布日期是什么时候，负责人是谁？,8月30日，Alice,948,490,1553,5750.82,True,False,8月30日 | Alice,,0,31
+1,nimbus_q04,nimbus,nimbus_b4,Nimbus Desk,explicit,branch_compact_oracle,Nimbus Desk 的最终发布日期是什么时候，负责人是谁？,8月30日，Alice,514,1213,844,13233.42,True,False,8月30日 | Alice,,0,31
+1,nimbus_q05,nimbus,nimbus_b5,Nimbus Lake,implicit,linear,当前这个产品的 Pro 方案多少钱，包含多少存储？,1TB 存储，价格未定,4178,3384,6804,45499.3,False,True,,1TB,1,37
+1,nimbus_q05,nimbus,nimbus_b5,Nimbus Lake,implicit,linear_tagged,当前这个产品的 Pro 方案多少钱，包含多少存储？,149美元/月，1TB存储,4236,1125,6920,16169.59,False,True,,1TB | 149美元/月,1,37
+1,nimbus_q05,nimbus,nimbus_b5,Nimbus Lake,implicit,branch,当前这个产品的 Pro 方案多少钱，包含多少存储？,Pro方案价格49美元/月，包含200GB存储,1095,1148,1782,13670.57,True,False,49美元/月 | 200GB,,1,37
+1,nimbus_q05,nimbus,nimbus_b5,Nimbus Lake,implicit,branch_compact_oracle,当前这个产品的 Pro 方案多少钱，包含多少存储？,"$49/month, 200GB",521,1687,840,18877.38,True,False,49美元/月 | 200GB,,1,37
+1,nimbus_q06,nimbus,nimbus_b1,Nimbus API,explicit,linear,Nimbus API 的本地模型和 temperature 最终分别是什么？,Gemma 3 4B 和 0.4,4179,1924,6817,26080.4,True,False,Gemma 3 4B | 0.4,,2,47
+1,nimbus_q06,nimbus,nimbus_b1,Nimbus API,explicit,linear_tagged,Nimbus API 的本地模型和 temperature 最终分别是什么？,Gemma 3 4B 和 0.4,4237,1842,6930,25869.92,True,False,Gemma 3 4B | 0.4,,2,47
+1,nimbus_q06,nimbus,nimbus_b1,Nimbus API,explicit,branch,Nimbus API 的本地模型和 temperature 最终分别是什么？,本地模型：Gemma 3 4B，temperature：0.4,1286,1395,2074,16803.46,True,False,Gemma 3 4B | 0.4,,2,47
+1,nimbus_q06,nimbus,nimbus_b1,Nimbus API,explicit,branch_compact_oracle,Nimbus API 的本地模型和 temperature 最终分别是什么？,Gemma 3 4B 和 0.4,498,2285,827,25812.75,True,False,Gemma 3 4B | 0.4,,2,47
+1,nimbus_q07,nimbus,nimbus_b2,Nimbus Jobs,implicit,linear,当前这个项目的数据库和后端框架最终是什么？,数据库：MongoDB 7，后端框架：Express,4177,1551,6800,21841.64,False,True,,MongoDB 7 | Express,3,30
+1,nimbus_q07,nimbus,nimbus_b2,Nimbus Jobs,implicit,linear_tagged,当前这个项目的数据库和后端框架最终是什么？,数据库：MongoDB 7，后端框架：Express,4235,919,6916,13641.4,False,True,,MongoDB 7 | Express,3,30
+1,nimbus_q07,nimbus,nimbus_b2,Nimbus Jobs,implicit,branch,当前这个项目的数据库和后端框架最终是什么？,SQLite 和 Spring Boot,917,1263,1510,14830.45,True,False,SQLite | Spring Boot,,3,30
+1,nimbus_q07,nimbus,nimbus_b2,Nimbus Jobs,implicit,branch_compact_oracle,当前这个项目的数据库和后端框架最终是什么？,数据库：SQLite，后端框架：Spring Boot,514,899,855,10507.99,True,False,SQLite | Spring Boot,,3,30
+1,nimbus_q08,nimbus,nimbus_b3,Nimbus Flow,explicit,linear,Nimbus Flow 部署在哪个区域，生产数据库是什么？,Nimbus Flow 部署在 GCP asia-northeast1，生产数据库是 CockroachDB。,4181,1411,6808,18984.78,True,False,GCP asia-northeast1 | CockroachDB,,4,33
+1,nimbus_q08,nimbus,nimbus_b3,Nimbus Flow,explicit,linear_tagged,Nimbus Flow 部署在哪个区域，生产数据库是什么？,Nimbus Flow 部署在 GCP asia-northeast1，生产数据库是 CockroachDB。,4239,2173,6924,30240.27,True,False,GCP asia-northeast1 | CockroachDB,,4,33
+1,nimbus_q08,nimbus,nimbus_b3,Nimbus Flow,explicit,branch,Nimbus Flow 部署在哪个区域，生产数据库是什么？,"部署区域：GCP asia-northeast1  
+生产数据库：CockroachDB",998,1179,1621,13664.91,True,False,GCP asia-northeast1 | CockroachDB,,4,33
+1,nimbus_q08,nimbus,nimbus_b3,Nimbus Flow,explicit,branch_compact_oracle,Nimbus Flow 部署在哪个区域，生产数据库是什么？,Nimbus Flow 部署在 GCP asia-northeast1 区域，生产数据库是 CockroachDB。,516,886,848,9758.49,True,False,GCP asia-northeast1 | CockroachDB,,4,33
+1,nimbus_q09,nimbus,nimbus_b4,Nimbus Desk,implicit,linear,当前这个版本最终发布日期和服务端口分别是什么？,11月12日，9200,4178,2218,6802,30326.22,False,True,,11月12日 | 9200,0,31
+1,nimbus_q09,nimbus,nimbus_b4,Nimbus Desk,implicit,linear_tagged,当前这个版本最终发布日期和服务端口分别是什么？,"11月12日, 9200",4236,1525,6918,22373.32,False,True,,11月12日 | 9200,0,31
+1,nimbus_q09,nimbus,nimbus_b4,Nimbus Desk,implicit,branch,当前这个版本最终发布日期和服务端口分别是什么？,8月30日，8100,947,1296,1545,14670.67,True,False,8月30日 | 8100,,0,31
+1,nimbus_q09,nimbus,nimbus_b4,Nimbus Desk,implicit,branch_compact_oracle,当前这个版本最终发布日期和服务端口分别是什么？,8月30日 和 8100,513,1174,836,12395.08,True,False,8月30日 | 8100,,0,31
+1,nimbus_q10,nimbus,nimbus_b5,Nimbus Lake,explicit,linear,Nimbus Lake 当前选用什么本地模型，Pro 存储是多少？,本地模型：Llama 3.2 3B，Pro 存储：200GB,4182,1523,6812,19372.09,True,False,Llama 3.2 3B | 200GB,,1,37
+1,nimbus_q10,nimbus,nimbus_b5,Nimbus Lake,explicit,linear_tagged,Nimbus Lake 当前选用什么本地模型，Pro 存储是多少？,本地模型：Llama 3.2 3B，Pro 存储：200GB,4240,1783,6928,27657.7,True,False,Llama 3.2 3B | 200GB,,1,37
+1,nimbus_q10,nimbus,nimbus_b5,Nimbus Lake,explicit,branch,Nimbus Lake 当前选用什么本地模型，Pro 存储是多少？,本地模型：Llama 3.2 3B，Pro 存储：200GB,1099,1324,1790,20038.01,True,False,Llama 3.2 3B | 200GB,,1,37
+1,nimbus_q10,nimbus,nimbus_b5,Nimbus Lake,explicit,branch_compact_oracle,Nimbus Lake 当前选用什么本地模型，Pro 存储是多少？,"Llama 3.2 3B, 200GB",525,1580,848,25618.28,True,False,Llama 3.2 3B | 200GB,,1,37
+1,meridian_q01,meridian,meridian_b1,Meridian Core,implicit,linear,当前这个项目最终使用什么数据库，负责人是谁？,Meridian Data 的数据库是 MongoDB 7，负责人是 Bob。,4725,1110,8018,21945.3,False,True,,MongoDB 7 | Bob,3,34
+1,meridian_q01,meridian,meridian_b1,Meridian Core,implicit,linear_tagged,当前这个项目最终使用什么数据库，负责人是谁？,SQLite，David,4785,1618,8140,28765.46,True,False,SQLite | David,,3,34
+1,meridian_q01,meridian,meridian_b1,Meridian Core,implicit,branch,当前这个项目最终使用什么数据库，负责人是谁？,数据库：SQLite，负责人：David,1036,1651,1756,28008.33,True,False,SQLite | David,,3,34
+1,meridian_q01,meridian,meridian_b1,Meridian Core,implicit,branch_compact_oracle,当前这个项目最终使用什么数据库，负责人是谁？,SQLite 和 David,520,1492,885,24118.48,True,False,SQLite | David,,3,34
+1,meridian_q02,meridian,meridian_b2,Meridian Pay,explicit,linear,Meridian Pay 当前最终采用什么后端框架和缓存？,后端框架：Go Gin，缓存：无缓存,4729,587,8025,9578.53,True,False,Go Gin | 无缓存,,4,40
+1,meridian_q02,meridian,meridian_b2,Meridian Pay,explicit,linear_tagged,Meridian Pay 当前最终采用什么后端框架和缓存？,后端框架：Go Gin，缓存：无缓存,4789,850,8144,18571.32,True,False,Go Gin | 无缓存,,4,40
+1,meridian_q02,meridian,meridian_b2,Meridian Pay,explicit,branch,Meridian Pay 当前最终采用什么后端框架和缓存？,Go Gin 和 无缓存,1167,1939,1926,22911.79,True,False,Go Gin | 无缓存,,4,40
+1,meridian_q02,meridian,meridian_b2,Meridian Pay,explicit,branch_compact_oracle,Meridian Pay 当前最终采用什么后端框架和缓存？,Go Gin 和 无缓存,514,1495,831,16680.39,True,False,Go Gin | 无缓存,,4,40
+1,meridian_q03,meridian,meridian_b3,Meridian Auth,implicit,linear,当前这个项目部署在哪个区域，服务端口是多少？,部署区域：Azure eastasia，服务端口：8300,4727,1286,8018,18143.06,False,True,,Azure eastasia | 8300,0,46
+1,meridian_q03,meridian,meridian_b3,Meridian Auth,implicit,linear_tagged,当前这个项目部署在哪个区域，服务端口是多少？,区域：Azure eastasia，端口：8300,4787,2499,8140,34816.32,False,True,,Azure eastasia | 8300,0,46
+1,meridian_q03,meridian,meridian_b3,Meridian Auth,implicit,branch,当前这个项目部署在哪个区域，服务端口是多少？,"AWS ap-southeast-1, 8100",1274,952,2174,11194.21,True,False,AWS ap-southeast-1 | 8100,,0,46
+1,meridian_q03,meridian,meridian_b3,Meridian Auth,implicit,branch_compact_oracle,当前这个项目部署在哪个区域，服务端口是多少？,"AWS ap-southeast-1, 8100",506,560,853,6220.33,True,False,AWS ap-southeast-1 | 8100,,0,46
+1,meridian_q04,meridian,meridian_b4,Meridian Data,explicit,linear,Meridian Data 的最终发布日期是什么时候，负责人是谁？,Meridian Data 的最终发布日期是9月15日，负责人是Bob。,4727,820,8029,12167.04,True,False,9月15日 | Bob,,1,48
+1,meridian_q04,meridian,meridian_b4,Meridian Data,explicit,linear_tagged,Meridian Data 的最终发布日期是什么时候，负责人是谁？,9月15日，Bob,4787,905,8151,13418.97,True,False,9月15日 | Bob,,1,48
+1,meridian_q04,meridian,meridian_b4,Meridian Data,explicit,branch,Meridian Data 的最终发布日期是什么时候，负责人是谁？,Meridian Data 的最终发布日期是9月15日，负责人是Bob。,1321,713,2242,8641.68,True,False,9月15日 | Bob,,1,48
+1,meridian_q04,meridian,meridian_b4,Meridian Data,explicit,branch_compact_oracle,Meridian Data 的最终发布日期是什么时候，负责人是谁？,最终发布日期：9月15日，负责人：Bob,510,466,855,5261.54,True,False,9月15日 | Bob,,1,48
+1,meridian_q05,meridian,meridian_b5,Meridian App,implicit,linear,当前这个产品的 Pro 方案多少钱，包含多少存储？,29美元/月，50GB,4726,1192,8021,17017.82,False,True,,29美元/月 | 50GB,2,34
+1,meridian_q05,meridian,meridian_b5,Meridian App,implicit,linear_tagged,当前这个产品的 Pro 方案多少钱，包含多少存储？,79美元/月，500GB,4786,952,8140,14182.49,True,False,79美元/月 | 500GB,,2,34
+1,meridian_q05,meridian,meridian_b5,Meridian App,implicit,branch,当前这个产品的 Pro 方案多少钱，包含多少存储？,79美元/月，500GB存储,1008,1756,1689,20311.94,True,False,79美元/月 | 500GB,,2,34
+1,meridian_q05,meridian,meridian_b5,Meridian App,implicit,branch_compact_oracle,当前这个产品的 Pro 方案多少钱，包含多少存储？,79美元/月，500GB,513,1082,857,12161.48,True,False,79美元/月 | 500GB,,2,34
+1,meridian_q06,meridian,meridian_b1,Meridian Core,explicit,linear,Meridian Core 的本地模型和 temperature 最终分别是什么？,本地模型：Phi-4 Mini，temperature：0.7,4727,1739,8037,23975.65,True,False,Phi-4 Mini | 0.7,,3,34
+1,meridian_q06,meridian,meridian_b1,Meridian Core,explicit,linear_tagged,Meridian Core 的本地模型和 temperature 最终分别是什么？,Meridian Core 的最终本地模型是 Phi-4 Mini，temperature 是 0.7。,4787,492,8159,8159.99,True,False,Phi-4 Mini | 0.7,,3,34
+1,meridian_q06,meridian,meridian_b1,Meridian Core,explicit,branch,Meridian Core 的本地模型和 temperature 最终分别是什么？,本地模型：Phi-4 Mini，temperature：0.7,1038,1668,1775,19498.04,True,False,Phi-4 Mini | 0.7,,3,34
+1,meridian_q06,meridian,meridian_b1,Meridian Core,explicit,branch_compact_oracle,Meridian Core 的本地模型和 temperature 最终分别是什么？,本地模型：Phi-4 Mini，temperature：0.7,522,1344,904,15153.6,True,False,Phi-4 Mini | 0.7,,3,34
+1,meridian_q07,meridian,meridian_b2,Meridian Pay,implicit,linear,当前这个项目的数据库和后端框架最终是什么？,CockroachDB 和 Go Gin,4725,1204,8017,17304.72,True,False,CockroachDB | Go Gin,,4,40
+1,meridian_q07,meridian,meridian_b2,Meridian Pay,implicit,linear_tagged,当前这个项目的数据库和后端框架最终是什么？,数据库：CockroachDB，后端框架：Go Gin,4785,1438,8136,20681.67,True,False,CockroachDB | Go Gin,,4,40
+1,meridian_q07,meridian,meridian_b2,Meridian Pay,implicit,branch,当前这个项目的数据库和后端框架最终是什么？,数据库：CockroachDB，后端框架：Go Gin,1163,1009,1918,12283.64,True,False,CockroachDB | Go Gin,,4,40
+1,meridian_q07,meridian,meridian_b2,Meridian Pay,implicit,branch_compact_oracle,当前这个项目的数据库和后端框架最终是什么？,数据库：CockroachDB，后端框架：Go Gin,510,573,823,6482.54,True,False,CockroachDB | Go Gin,,4,40
+1,meridian_q08,meridian,meridian_b3,Meridian Auth,explicit,linear,Meridian Auth 部署在哪个区域，生产数据库是什么？,AWS ap-southeast-1 和 PostgreSQL 16,4729,1267,8027,17734.16,True,False,AWS ap-southeast-1 | PostgreSQL 16,,0,46
+1,meridian_q08,meridian,meridian_b3,Meridian Auth,explicit,linear_tagged,Meridian Auth 部署在哪个区域，生产数据库是什么？,Meridian Auth 部署在 AWS ap-southeast-1，生产数据库是 PostgreSQL 16。,4789,678,8149,10642.65,True,False,AWS ap-southeast-1 | PostgreSQL 16,,0,46
+1,meridian_q08,meridian,meridian_b3,Meridian Auth,explicit,branch,Meridian Auth 部署在哪个区域，生产数据库是什么？,部署区域：AWS ap-southeast-1，生产数据库：PostgreSQL 16,1276,847,2183,9594.0,True,False,AWS ap-southeast-1 | PostgreSQL 16,,0,46
+1,meridian_q08,meridian,meridian_b3,Meridian Auth,explicit,branch_compact_oracle,Meridian Auth 部署在哪个区域，生产数据库是什么？,部署区域：AWS ap-southeast-1；生产数据库：PostgreSQL 16,508,1409,862,15122.92,True,False,AWS ap-southeast-1 | PostgreSQL 16,,0,46
+1,meridian_q09,meridian,meridian_b4,Meridian Data,implicit,linear,当前这个版本最终发布日期和服务端口分别是什么？,"11月12日, 9200",4726,1935,8019,25218.74,False,True,,11月12日 | 9200,1,48
+1,meridian_q09,meridian,meridian_b4,Meridian Data,implicit,linear_tagged,当前这个版本最终发布日期和服务端口分别是什么？,"11月12日, 9200",4786,1307,8141,18676.6,False,True,,11月12日 | 9200,1,48
+1,meridian_q09,meridian,meridian_b4,Meridian Data,implicit,branch,当前这个版本最终发布日期和服务端口分别是什么？,9月15日，8200,1320,1791,2232,20698.67,True,False,9月15日 | 8200,,1,48
+1,meridian_q09,meridian,meridian_b4,Meridian Data,implicit,branch_compact_oracle,当前这个版本最终发布日期和服务端口分别是什么？,9月15日 和 8200,509,479,845,5807.35,True,False,9月15日 | 8200,,1,48
+1,meridian_q10,meridian,meridian_b5,Meridian App,explicit,linear,Meridian App 当前选用什么本地模型，Pro 存储是多少？,Gemma 3 4B 和 500GB,4730,2363,8030,31813.26,True,False,Gemma 3 4B | 500GB,,2,34
+1,meridian_q10,meridian,meridian_b5,Meridian App,explicit,linear_tagged,Meridian App 当前选用什么本地模型，Pro 存储是多少？,Gemma 3 4B，500GB,4790,2282,8149,30779.37,True,False,Gemma 3 4B | 500GB,,2,34
+1,meridian_q10,meridian,meridian_b5,Meridian App,explicit,branch,Meridian App 当前选用什么本地模型，Pro 存储是多少？,本地模型：Gemma 3 4B，Pro存储：500GB,1012,557,1698,6926.13,True,False,Gemma 3 4B | 500GB,,2,34
+1,meridian_q10,meridian,meridian_b5,Meridian App,explicit,branch_compact_oracle,Meridian App 当前选用什么本地模型，Pro 存储是多少？,Gemma 3 4B 和 500GB,517,2080,866,22334.72,True,False,Gemma 3 4B | 500GB,,2,34
+1,zenith_q01,zenith,zenith_b1,Zenith One,implicit,linear,当前这个项目最终使用什么数据库，负责人是谁？,"CockroachDB, Eve",4730,1860,7621,24993.04,True,False,CockroachDB | Eve,,4,33
+1,zenith_q01,zenith,zenith_b1,Zenith One,implicit,linear_tagged,当前这个项目最终使用什么数据库，负责人是谁？,CockroachDB 和 Eve,4790,1759,7734,24268.49,True,False,CockroachDB | Eve,,4,33
+1,zenith_q01,zenith,zenith_b1,Zenith One,implicit,branch,当前这个项目最终使用什么数据库，负责人是谁？,数据库：CockroachDB；负责人：Eve,1014,1196,1583,13416.75,True,False,CockroachDB | Eve,,4,33
+1,zenith_q01,zenith,zenith_b1,Zenith One,implicit,branch_compact_oracle,当前这个项目最终使用什么数据库，负责人是谁？,数据库：CockroachDB，负责人：Eve,524,1642,826,17677.62,True,False,CockroachDB | Eve,,4,33
+1,zenith_q02,zenith,zenith_b2,Zenith Pro,explicit,linear,Zenith Pro 当前最终采用什么后端框架和缓存？,后端框架：FastAPI，缓存：Redis,4734,1224,7626,16847.51,True,False,FastAPI | Redis,,0,43
+1,zenith_q02,zenith,zenith_b2,Zenith Pro,explicit,linear_tagged,Zenith Pro 当前最终采用什么后端框架和缓存？,后端框架：FastAPI，缓存：Redis,4794,1467,7739,20325.34,True,False,FastAPI | Redis,,0,43
+1,zenith_q02,zenith,zenith_b2,Zenith Pro,explicit,branch,Zenith Pro 当前最终采用什么后端框架和缓存？,FastAPI 和 Redis,1217,1699,1955,19153.49,True,False,FastAPI | Redis,,0,43
+1,zenith_q02,zenith,zenith_b2,Zenith Pro,explicit,branch_compact_oracle,Zenith Pro 当前最终采用什么后端框架和缓存？,FastAPI 和 Redis,514,1007,828,10781.55,True,False,FastAPI | Redis,,0,43
+1,zenith_q03,zenith,zenith_b3,Zenith Teams,implicit,linear,当前这个项目部署在哪个区域，服务端口是多少？,"AWS ap-southeast-1, 8100",4732,1017,7621,14100.82,False,True,,AWS ap-southeast-1 | 8100,1,40
+1,zenith_q03,zenith,zenith_b3,Zenith Teams,implicit,linear_tagged,当前这个项目部署在哪个区域，服务端口是多少？,"AWS ap-southeast-1, 8100",4792,882,7740,12651.61,False,True,,AWS ap-southeast-1 | 8100,1,40
+1,zenith_q03,zenith,zenith_b3,Zenith Teams,implicit,branch,当前这个项目部署在哪个区域，服务端口是多少？,部署区域：GCP us-central1，服务端口：8200,1166,1169,1910,13247.32,True,False,GCP us-central1 | 8200,,1,40
+1,zenith_q03,zenith,zenith_b3,Zenith Teams,implicit,branch_compact_oracle,当前这个项目部署在哪个区域，服务端口是多少？,GCP us-central1 和 8200,511,828,824,8910.91,True,False,GCP us-central1 | 8200,,1,40
+1,zenith_q04,zenith,zenith_b4,Zenith Edge,explicit,linear,Zenith Edge 的最终发布日期是什么时候，负责人是谁？,10月8日，Carol,4732,893,7630,12566.75,True,False,10月8日 | Carol,,2,44
+1,zenith_q04,zenith,zenith_b4,Zenith Edge,explicit,linear_tagged,Zenith Edge 的最终发布日期是什么时候，负责人是谁？,Zenith Edge 的最终发布日期是 10月8日，负责人是 Carol。,4792,489,7746,7692.65,True,False,10月8日 | Carol,,2,44
+1,zenith_q04,zenith,zenith_b4,Zenith Edge,explicit,branch,Zenith Edge 的最终发布日期是什么时候，负责人是谁？,Zenith Edge 的最终发布日期是10月8日，负责人是Carol。,1227,657,2007,7802.43,True,False,10月8日 | Carol,,2,44
+1,zenith_q04,zenith,zenith_b4,Zenith Edge,explicit,branch_compact_oracle,Zenith Edge 的最终发布日期是什么时候，负责人是谁？,"Zenith Edge 最终发布日期：10月8日  
+负责人：Carol",503,556,827,5990.75,True,False,10月8日 | Carol,,2,44
+1,zenith_q05,zenith,zenith_b5,Zenith Lab,implicit,linear,当前这个产品的 Pro 方案多少钱，包含多少存储？,Zenith Teams Pro 方案：49美元/月，200GB存储。,4731,585,7624,8619.65,False,True,,49美元/月 | 200GB,3,41
+1,zenith_q05,zenith,zenith_b5,Zenith Lab,implicit,linear_tagged,当前这个产品的 Pro 方案多少钱，包含多少存储？,99美元/月，1TB,4791,1486,7737,20409.47,True,False,99美元/月 | 1TB,,3,41
+1,zenith_q05,zenith,zenith_b5,Zenith Lab,implicit,branch,当前这个产品的 Pro 方案多少钱，包含多少存储？,99美元/月，1TB,1187,1523,1885,17026.52,True,False,99美元/月 | 1TB,,3,41
+1,zenith_q05,zenith,zenith_b5,Zenith Lab,implicit,branch_compact_oracle,当前这个产品的 Pro 方案多少钱，包含多少存储？,99美元/月，1TB,495,1143,799,12092.3,True,False,99美元/月 | 1TB,,3,41
+1,zenith_q06,zenith,zenith_b1,Zenith One,explicit,linear,Zenith One 的本地模型和 temperature 最终分别是什么？,Qwen3 4B 和 1.0,4732,1610,7637,21691.05,True,False,Qwen3 4B | 1.0,,4,33
+1,zenith_q06,zenith,zenith_b1,Zenith One,explicit,linear_tagged,Zenith One 的本地模型和 temperature 最终分别是什么？,Qwen3 4B 和 1.0,4792,1311,7750,18288.32,True,False,Qwen3 4B | 1.0,,4,33
+1,zenith_q06,zenith,zenith_b1,Zenith One,explicit,branch,Zenith One 的本地模型和 temperature 最终分别是什么？,Qwen3 4B 和 1.0,1016,2023,1599,22589.21,True,False,Qwen3 4B | 1.0,,4,33
+1,zenith_q06,zenith,zenith_b1,Zenith One,explicit,branch_compact_oracle,Zenith One 的本地模型和 temperature 最终分别是什么？,Qwen3 4B 和 1.0,526,1891,842,20296.69,True,False,Qwen3 4B | 1.0,,4,33
+1,zenith_q07,zenith,zenith_b2,Zenith Pro,implicit,linear,当前这个项目的数据库和后端框架最终是什么？,数据库：MongoDB 7，后端框架：Express,4730,1109,7620,15268.51,False,True,,MongoDB 7 | Express,0,43
+1,zenith_q07,zenith,zenith_b2,Zenith Pro,implicit,linear_tagged,当前这个项目的数据库和后端框架最终是什么？,数据库：MongoDB 7，后端框架：Express,4790,2463,7733,33349.4,False,True,,MongoDB 7 | Express,0,43
+1,zenith_q07,zenith,zenith_b2,Zenith Pro,implicit,branch,当前这个项目的数据库和后端框架最终是什么？,数据库：PostgreSQL 16，后端框架：FastAPI,1213,1708,1949,19161.74,True,False,PostgreSQL 16 | FastAPI,,0,43
+1,zenith_q07,zenith,zenith_b2,Zenith Pro,implicit,branch_compact_oracle,当前这个项目的数据库和后端框架最终是什么？,"数据库：PostgreSQL 16  
+后端框架：FastAPI",510,370,822,4121.13,True,False,PostgreSQL 16 | FastAPI,,0,43
+1,zenith_q08,zenith,zenith_b3,Zenith Teams,explicit,linear,Zenith Teams 部署在哪个区域，生产数据库是什么？,"GCP us-central1, MongoDB 7",4734,1802,7629,24314.31,True,False,GCP us-central1 | MongoDB 7,,1,40
+1,zenith_q08,zenith,zenith_b3,Zenith Teams,explicit,linear_tagged,Zenith Teams 部署在哪个区域，生产数据库是什么？,Zenith Teams 部署在 GCP us-central1，生产数据库是 MongoDB 7。,4794,1236,7748,17277.62,True,False,GCP us-central1 | MongoDB 7,,1,40
+1,zenith_q08,zenith,zenith_b3,Zenith Teams,explicit,branch,Zenith Teams 部署在哪个区域，生产数据库是什么？,GCP us-central1，MongoDB 7,1168,2385,1918,26983.55,True,False,GCP us-central1 | MongoDB 7,,1,40
+1,zenith_q08,zenith,zenith_b3,Zenith Teams,explicit,branch_compact_oracle,Zenith Teams 部署在哪个区域，生产数据库是什么？,部署区域：GCP us-central1；生产数据库：MongoDB 7,513,1936,832,20839.68,True,False,GCP us-central1 | MongoDB 7,,1,40
+1,zenith_q09,zenith,zenith_b4,Zenith Edge,implicit,linear,当前这个版本最终发布日期和服务端口分别是什么？,"12月3日, 9300",4731,1809,7622,24319.53,False,True,,12月3日 | 9300,2,44
+1,zenith_q09,zenith,zenith_b4,Zenith Edge,implicit,linear_tagged,当前这个版本最终发布日期和服务端口分别是什么？,Zenith One 的最终发布日期是 12月3日，服务端口是 9300。,4791,879,7738,12672.6,False,True,,12月3日 | 9300,2,44
+1,zenith_q09,zenith,zenith_b4,Zenith Edge,implicit,branch,当前这个版本最终发布日期和服务端口分别是什么？,最终发布日期：10月8日，服务端口：8300,1226,1389,1999,15574.55,True,False,10月8日 | 8300,,2,44
+1,zenith_q09,zenith,zenith_b4,Zenith Edge,implicit,branch_compact_oracle,当前这个版本最终发布日期和服务端口分别是什么？,"10月8日, 8300",502,960,819,10198.16,True,False,10月8日 | 8300,,2,44
+1,zenith_q10,zenith,zenith_b5,Zenith Lab,explicit,linear,Zenith Lab 当前选用什么本地模型，Pro 存储是多少？,Zenith Lab 当前选用本地模型 Phi-4 Mini，Pro 存储 1TB。,4735,1123,7631,15505.05,True,False,Phi-4 Mini | 1TB,,3,41
+1,zenith_q10,zenith,zenith_b5,Zenith Lab,explicit,linear_tagged,Zenith Lab 当前选用什么本地模型，Pro 存储是多少？,Zenith Lab 本地模型：Phi-4 Mini，Pro 存储：1TB,4795,3012,7744,40501.3,True,False,Phi-4 Mini | 1TB,,3,41
+1,zenith_q10,zenith,zenith_b5,Zenith Lab,explicit,branch,Zenith Lab 当前选用什么本地模型，Pro 存储是多少？,本地模型：Phi-4 Mini；Pro 存储：1TB,1191,2189,1892,24738.81,True,False,Phi-4 Mini | 1TB,,3,41
+1,zenith_q10,zenith,zenith_b5,Zenith Lab,explicit,branch_compact_oracle,Zenith Lab 当前选用什么本地模型，Pro 存储是多少？,"Phi-4 Mini, 1TB",499,1479,806,15869.17,True,False,Phi-4 Mini | 1TB,,3,41

@@ -1,0 +1,426 @@
+{
+  "study": {
+    "id": "msc-human-v0.2",
+    "version": "1.0.0",
+    "title": "Minimal Sufficient Context 人因验证",
+    "tasks_per_session": 6,
+    "target_minutes": 50,
+    "conditions": ["linear", "branch"]
+  },
+  "tasks": [
+    {
+      "id": "programming-a",
+      "pair_id": "programming",
+      "variant": "A",
+      "domain": "programming",
+      "title": "Atlas Webhook 幂等修复",
+      "active_branch_id": "py-invoice",
+      "linear_order": ["node-orders", "java-ledger", "py-invoice", "go-refunds"],
+      "seed": 1101,
+      "brief": "线上 webhook 被并发重放时会重复创建发票。请基于当前分支资料给出修复方案。",
+      "deliverable": "写出关键 Python 代码或清晰伪代码，并列出至少 3 个测试场景。",
+      "shared_context": [
+        {"role": "user", "content": "Atlas 账务平台有四个名字相近的 webhook 服务，技术栈和协议各不相同。"},
+        {"role": "assistant", "content": "后续必须以指定服务自己的最终决定为准，不能借用其他服务的实现细节。"}
+      ],
+      "branches": [
+        {
+          "id": "py-invoice",
+          "name": "Python Invoice Webhook",
+          "history": [
+            {"role": "user", "content": "当前只讨论 Python Invoice Webhook，它使用 FastAPI 接收发票事件。"},
+            {"role": "assistant", "content": "已锁定 Python Invoice Webhook 分支。"},
+            {"role": "user", "content": "最终方案是在 PostgreSQL 表 webhook_receipts 上为 event_id 建唯一约束。"},
+            {"role": "assistant", "content": "发票写入和 webhook_receipts 写入必须处于同一个数据库事务。"},
+            {"role": "user", "content": "重复 event_id 不再创建发票，直接返回 HTTP 204；签名头是 X-Atlas-Signature。"},
+            {"role": "assistant", "content": "测试使用 pytest，必须覆盖两个并发请求、事务回滚后重试和非法签名。"}
+          ]
+        },
+        {
+          "id": "node-orders",
+          "name": "Node Orders Webhook",
+          "history": [
+            {"role": "user", "content": "Node Orders Webhook 使用 Express。"},
+            {"role": "assistant", "content": "它不是发票服务。"},
+            {"role": "user", "content": "该服务用 Redis SET NX 去重，键保留 48 小时。"},
+            {"role": "assistant", "content": "重复订单事件返回 HTTP 202。"},
+            {"role": "user", "content": "签名头是 X-Orbit-Signature。"},
+            {"role": "assistant", "content": "测试框架是 Vitest。"}
+          ]
+        },
+        {
+          "id": "go-refunds",
+          "name": "Go Refunds Webhook",
+          "history": [
+            {"role": "user", "content": "Go Refunds Webhook 使用 Gin。"},
+            {"role": "assistant", "content": "退款事件走独立链路。"},
+            {"role": "user", "content": "幂等记录存入 DynamoDB，使用 conditional put。"},
+            {"role": "assistant", "content": "重复请求返回 HTTP 200。"},
+            {"role": "user", "content": "签名在 X-Refund-Sig。"},
+            {"role": "assistant", "content": "并发测试使用 Testify。"}
+          ]
+        },
+        {
+          "id": "java-ledger",
+          "name": "Java Ledger Webhook",
+          "history": [
+            {"role": "user", "content": "Java Ledger Webhook 基于 Spring Boot。"},
+            {"role": "assistant", "content": "它只处理总账同步。"},
+            {"role": "user", "content": "去重依赖 Kafka compacted topic。"},
+            {"role": "assistant", "content": "发现重复时返回 HTTP 409。"},
+            {"role": "user", "content": "签名字段放在请求体 ledger_sig。"},
+            {"role": "assistant", "content": "测试使用 JUnit。"}
+          ]
+        }
+      ],
+      "expected_terms": ["webhook_receipts", "event_id", "HTTP 204", "X-Atlas-Signature", "pytest"],
+      "forbidden_terms": ["SET NX", "X-Orbit-Signature", "DynamoDB", "Testify", "Kafka compacted", "HTTP 409", "JUnit"],
+      "rubric": ["事务边界正确", "并发幂等可执行", "协议事实无串线", "测试覆盖失败路径"]
+    },
+    {
+      "id": "programming-b",
+      "pair_id": "programming",
+      "variant": "B",
+      "domain": "programming",
+      "title": "Comet 搜索竞态修复",
+      "active_branch_id": "ts-web",
+      "linear_order": ["swift-ios", "ts-web", "python-cli", "kotlin-android"],
+      "seed": 1102,
+      "brief": "快速输入搜索词时，旧请求会覆盖新结果。请为当前客户端设计取消、缓存与竞态处理。",
+      "deliverable": "给出 TypeScript hook 的关键实现和至少 3 个自动化测试。",
+      "shared_context": [
+        {"role": "user", "content": "Comet 搜索有 Web、CLI、iOS 和 Android 四个客户端，参数十分相似。"},
+        {"role": "assistant", "content": "每个客户端已经分别定稿，回答时只能采用当前客户端资料。"}
+      ],
+      "branches": [
+        {
+          "id": "ts-web",
+          "name": "TypeScript Web Client",
+          "history": [
+            {"role": "user", "content": "当前分支是 React + TypeScript Web 客户端。"},
+            {"role": "assistant", "content": "已切换到 TypeScript Web Client。"},
+            {"role": "user", "content": "输入防抖最终定为 350 ms，每次新查询用 AbortController 取消旧请求。"},
+            {"role": "assistant", "content": "只有未取消且成功的响应可以进入缓存。"},
+            {"role": "user", "content": "缓存键是 [workspaceId, normalizedQuery]，响应还要核对递增 requestId。"},
+            {"role": "assistant", "content": "单测使用 Vitest，浏览器竞态回归使用 Playwright。"}
+          ]
+        },
+        {
+          "id": "python-cli",
+          "name": "Python CLI Client",
+          "history": [
+            {"role": "user", "content": "Python CLI 使用 asyncio。"},
+            {"role": "assistant", "content": "它不是浏览器客户端。"},
+            {"role": "user", "content": "延迟为 500 ms，通过 asyncio.Task.cancel 取消。"},
+            {"role": "assistant", "content": "缓存键为 [tenantId, rawQuery]。"},
+            {"role": "user", "content": "失败结果也缓存 30 秒。"},
+            {"role": "assistant", "content": "测试使用 pytest-asyncio。"}
+          ]
+        },
+        {
+          "id": "swift-ios",
+          "name": "Swift iOS Client",
+          "history": [
+            {"role": "user", "content": "iOS 客户端使用 Combine。"},
+            {"role": "assistant", "content": "这是 Swift 分支。"},
+            {"role": "user", "content": "debounce 定为 250 ms。"},
+            {"role": "assistant", "content": "缓存落到 URLCache。"},
+            {"role": "user", "content": "请求以 AnyCancellable 替换。"},
+            {"role": "assistant", "content": "测试使用 XCTest。"}
+          ]
+        },
+        {
+          "id": "kotlin-android",
+          "name": "Kotlin Android Client",
+          "history": [
+            {"role": "user", "content": "Android 客户端基于 Kotlin Flow。"},
+            {"role": "assistant", "content": "这是 Android 分支。"},
+            {"role": "user", "content": "debounce 为 300 ms，使用 collectLatest。"},
+            {"role": "assistant", "content": "缓存写入 Room。"},
+            {"role": "user", "content": "键为 accountId 和 query。"},
+            {"role": "assistant", "content": "测试使用 JUnit 和 Turbine。"}
+          ]
+        }
+      ],
+      "expected_terms": ["AbortController", "350 ms", "workspaceId", "normalizedQuery", "requestId", "Vitest"],
+      "forbidden_terms": ["asyncio.Task", "500 ms", "tenantId", "URLCache", "XCTest", "Room", "collectLatest"],
+      "rubric": ["取消旧请求", "阻止迟到响应覆盖", "缓存键正确", "测试可复现竞态"]
+    },
+    {
+      "id": "research-a",
+      "pair_id": "research",
+      "variant": "A",
+      "domain": "research",
+      "title": "低温储能证据摘要",
+      "active_branch_id": "north-ridge-24",
+      "linear_order": ["south-port-24", "north-ridge-23", "meta-25", "north-ridge-24"],
+      "seed": 2201,
+      "brief": "这是封闭资料任务。请概括指定试验对低温仓储采用钠离子电池的证据。",
+      "deliverable": "写 180–260 字证据摘要，包含设计、结果、比较基线和至少两个限制。",
+      "shared_context": [
+        {"role": "user", "content": "资料包包含几个名称相近但样本单位不同的储能研究。"},
+        {"role": "assistant", "content": "不要合并研究，也不要补充资料包之外的事实。"}
+      ],
+      "branches": [
+        {
+          "id": "north-ridge-24",
+          "name": "North Ridge N-24 现场试验",
+          "history": [
+            {"role": "user", "content": "目标研究是 North Ridge N-24，采用预注册的集群配对现场设计。"},
+            {"role": "assistant", "content": "已锁定 N-24。"},
+            {"role": "user", "content": "样本为 128 个储能模块，环境温度 -20°C，跟踪 600 次循环。"},
+            {"role": "assistant", "content": "钠离子组容量保持率为 86.4%，LFP 对照组为 91.8%。"},
+            {"role": "user", "content": "预注册编号 OSF-NR24；主要限制是只有一个仓库且运维团队未盲法。"},
+            {"role": "assistant", "content": "报告没有给出火灾风险终点，不能据此下安全性结论。"}
+          ]
+        },
+        {
+          "id": "north-ridge-23",
+          "name": "North Ridge N-23 可行性试验",
+          "history": [
+            {"role": "user", "content": "N-23 是上一年的可行性研究。"},
+            {"role": "assistant", "content": "它不属于目标研究。"},
+            {"role": "user", "content": "样本为 96 个模块，温度 -10°C。"},
+            {"role": "assistant", "content": "跟踪 400 次循环，保持率 89.7%。"},
+            {"role": "user", "content": "比较对象是 NMC。"},
+            {"role": "assistant", "content": "注册号为 ISRCTN-NR23。"}
+          ]
+        },
+        {
+          "id": "south-port-24",
+          "name": "South Port S-24 实验室试验",
+          "history": [
+            {"role": "user", "content": "S-24 在实验室完成。"},
+            {"role": "assistant", "content": "样本单位是单体电芯。"},
+            {"role": "user", "content": "共 240 个电芯，温度 -30°C。"},
+            {"role": "assistant", "content": "跟踪 800 次循环。"},
+            {"role": "user", "content": "容量保持率为 82.1%。"},
+            {"role": "assistant", "content": "对照是固态锂电池。"}
+          ]
+        },
+        {
+          "id": "meta-25",
+          "name": "ColdStore Meta-25",
+          "history": [
+            {"role": "user", "content": "Meta-25 是 12 项研究的叙述性综述。"},
+            {"role": "assistant", "content": "它不是现场原始试验。"},
+            {"role": "user", "content": "合计样本量写作 1,420 个电芯。"},
+            {"role": "assistant", "content": "报告平均保持率 88.9%。"},
+            {"role": "user", "content": "温度范围为 -5°C 到 -25°C。"},
+            {"role": "assistant", "content": "作者未做发表偏倚评估。"}
+          ]
+        }
+      ],
+      "expected_terms": ["128 个", "-20°C", "600 次", "86.4", "91.8", "OSF-NR24"],
+      "forbidden_terms": ["96 个", "89.7", "NMC", "240 个", "-30°C", "82.1", "1,420", "88.9"],
+      "rubric": ["研究身份正确", "定量结果完整", "不外推安全性", "限制具体"]
+    },
+    {
+      "id": "research-b",
+      "pair_id": "research",
+      "variant": "B",
+      "domain": "research",
+      "title": "检索练习干预摘要",
+      "active_branch_id": "rural-recall-25",
+      "linear_order": ["urban-recall-24", "rural-recall-25", "rural-reading-25", "meta-learning-26"],
+      "seed": 2202,
+      "brief": "这是封闭资料任务。请评估指定教育干预是否支持在乡镇初中扩大试点。",
+      "deliverable": "写 180–260 字研究备忘录，说明设计、效应、不确定性、实施限制与建议。",
+      "shared_context": [
+        {"role": "user", "content": "资料包中有多个检索练习项目，学校类型和学科不同。"},
+        {"role": "assistant", "content": "结论只能来自指定项目，不能把综述或相邻试验的数据拼入。"}
+      ],
+      "branches": [
+        {
+          "id": "rural-recall-25",
+          "name": "Rural Recall 2025 数学试验",
+          "history": [
+            {"role": "user", "content": "目标项目 Rural Recall 2025 是集群随机试验。"},
+            {"role": "assistant", "content": "已锁定乡镇初中数学项目。"},
+            {"role": "user", "content": "18 所学校、742 名学生，干预持续 12 周。"},
+            {"role": "assistant", "content": "每周一次低风险数学检索练习，标准化成绩效应为 +0.18 SD。"},
+            {"role": "user", "content": "95% CI 为 [0.06, 0.30]，失访率 7.1%。"},
+            {"role": "assistant", "content": "教师未盲法，且只覆盖一个学期；建议扩展但继续监测实施忠实度。"}
+          ]
+        },
+        {
+          "id": "urban-recall-24",
+          "name": "Urban Recall 2024 科学试验",
+          "history": [
+            {"role": "user", "content": "Urban Recall 2024 在城市高中开展。"},
+            {"role": "assistant", "content": "学科是科学。"},
+            {"role": "user", "content": "24 所学校、1,180 名学生。"},
+            {"role": "assistant", "content": "干预 16 周，效应 +0.27 SD。"},
+            {"role": "user", "content": "95% CI 为 [0.15, 0.39]。"},
+            {"role": "assistant", "content": "失访率为 4.3%。"}
+          ]
+        },
+        {
+          "id": "rural-reading-25",
+          "name": "Rural Reading 2025",
+          "history": [
+            {"role": "user", "content": "Rural Reading 2025 研究语文阅读。"},
+            {"role": "assistant", "content": "它采用个人随机。"},
+            {"role": "user", "content": "样本为 506 名学生。"},
+            {"role": "assistant", "content": "干预持续 8 周。"},
+            {"role": "user", "content": "效应为 +0.09 SD。"},
+            {"role": "assistant", "content": "95% CI 为 [-0.02, 0.20]。"}
+          ]
+        },
+        {
+          "id": "meta-learning-26",
+          "name": "Learning Meta 2026",
+          "history": [
+            {"role": "user", "content": "Learning Meta 2026 汇总了 31 项试验。"},
+            {"role": "assistant", "content": "它覆盖小学到大学。"},
+            {"role": "user", "content": "总体效应为 +0.22 SD。"},
+            {"role": "assistant", "content": "异质性 I² 为 68%。"},
+            {"role": "user", "content": "总样本量 9,420。"},
+            {"role": "assistant", "content": "研究者提示小样本效应。"}
+          ]
+        }
+      ],
+      "expected_terms": ["18 所", "742 名", "12 周", "0.18", "0.06", "0.30", "7.1"],
+      "forbidden_terms": ["1,180", "0.27", "4.3", "506", "0.09", "-0.02", "31 项", "0.22", "68%"],
+      "rubric": ["设计与人群正确", "效应和区间完整", "限制不夸大", "建议与证据强度匹配"]
+    },
+    {
+      "id": "writing-a",
+      "pair_id": "writing",
+      "variant": "A",
+      "domain": "writing",
+      "title": "Northstar Team 发布邮件",
+      "active_branch_id": "team-plan",
+      "linear_order": ["starter-plan", "education-plan", "team-plan", "enterprise-plan"],
+      "seed": 3301,
+      "brief": "为指定订阅方案写一封简洁发布邮件，事实必须严格来自当前分支。",
+      "deliverable": "正文 160–240 字，包含主题行、核心价值、价格、发布日期和明确行动号召。",
+      "shared_context": [
+        {"role": "user", "content": "Northstar 本季同时更新四种套餐，名称和功能容易混淆。"},
+        {"role": "assistant", "content": "文案必须维持克制、专业的产品语气，不使用夸张承诺。"}
+      ],
+      "branches": [
+        {
+          "id": "team-plan",
+          "name": "Northstar Team",
+          "history": [
+            {"role": "user", "content": "当前写 Northstar Team，不是其他套餐。"},
+            {"role": "assistant", "content": "已锁定 Team 发布分支。"},
+            {"role": "user", "content": "发布日期最终为 2026 年 10 月 15 日。"},
+            {"role": "assistant", "content": "按年付价格为每用户每月 68 元，适用 5–50 席。"},
+            {"role": "user", "content": "主打共享分支库和审计导出；不要声称无限容量。"},
+            {"role": "assistant", "content": "行动号召固定为“开启 14 天团队试用”。"}
+          ]
+        },
+        {
+          "id": "starter-plan",
+          "name": "Northstar Starter",
+          "history": [
+            {"role": "user", "content": "Starter 面向个人用户。"},
+            {"role": "assistant", "content": "发布日期为 2026 年 9 月 20 日。"},
+            {"role": "user", "content": "价格每月 29 元。"},
+            {"role": "assistant", "content": "只含 3 个活跃分支。"},
+            {"role": "user", "content": "不提供审计导出。"},
+            {"role": "assistant", "content": "行动号召是“立即升级个人版”。"}
+          ]
+        },
+        {
+          "id": "enterprise-plan",
+          "name": "Northstar Enterprise",
+          "history": [
+            {"role": "user", "content": "Enterprise 面向 100 席以上组织。"},
+            {"role": "assistant", "content": "发布日期为 2026 年 11 月 1 日。"},
+            {"role": "user", "content": "价格为联系销售。"},
+            {"role": "assistant", "content": "功能包括 SAML SSO 和专属密钥。"},
+            {"role": "user", "content": "提供无限历史保留。"},
+            {"role": "assistant", "content": "行动号召是“预约企业演示”。"}
+          ]
+        },
+        {
+          "id": "education-plan",
+          "name": "Northstar Education",
+          "history": [
+            {"role": "user", "content": "Education 只向认证院校开放。"},
+            {"role": "assistant", "content": "发布日期为 2027 年 1 月 8 日。"},
+            {"role": "user", "content": "价格为每席每月 18 元。"},
+            {"role": "assistant", "content": "最低 30 席。"},
+            {"role": "user", "content": "包含课堂模板库。"},
+            {"role": "assistant", "content": "行动号召是“申请教育资格”。"}
+          ]
+        }
+      ],
+      "expected_terms": ["2026 年 10 月 15 日", "68 元", "5–50 席", "共享分支库", "审计导出", "开启 14 天团队试用"],
+      "forbidden_terms": ["29 元", "3 个活跃分支", "立即升级个人版", "SAML SSO", "无限历史", "预约企业演示", "18 元", "课堂模板库"],
+      "rubric": ["关键信息完整", "无套餐串线", "语气克制", "行动号召准确"]
+    },
+    {
+      "id": "writing-b",
+      "pair_id": "writing",
+      "variant": "B",
+      "domain": "writing",
+      "title": "Harbor Heat 项目摘要",
+      "active_branch_id": "heat-resilience",
+      "linear_order": ["flood-sensors", "food-access", "heat-resilience", "air-quality"],
+      "seed": 3302,
+      "brief": "为指定城市韧性项目写资助申请执行摘要，不得混入相邻项目事实。",
+      "deliverable": "正文 180–260 字，说明问题、干预、范围、预算、周期、指标、伙伴与截止日。",
+      "shared_context": [
+        {"role": "user", "content": "Harbor 基金同时评审四个城市项目，团队和指标各自独立。"},
+        {"role": "assistant", "content": "摘要必须具体、可信，不得用其他项目的数字补空缺。"}
+      ],
+      "branches": [
+        {
+          "id": "heat-resilience",
+          "name": "Harbor Heat Resilience",
+          "history": [
+            {"role": "user", "content": "当前项目是 Harbor Heat Resilience，落地城市为宁波。"},
+            {"role": "assistant", "content": "已锁定高温韧性分支。"},
+            {"role": "user", "content": "预算 280 万元，周期 18 个月，覆盖 12 个社区。"},
+            {"role": "assistant", "content": "干预包括凉屋顶改造和面向高风险居民的高温预警入户服务。"},
+            {"role": "user", "content": "目标是白天室内温度平均降低 2°C，并服务 1,200 名居民。"},
+            {"role": "assistant", "content": "伙伴为宁波大学公共卫生学院，申请截止 2026 年 11 月 30 日。"}
+          ]
+        },
+        {
+          "id": "flood-sensors",
+          "name": "Harbor Flood Sensors",
+          "history": [
+            {"role": "user", "content": "Flood Sensors 在厦门实施。"},
+            {"role": "assistant", "content": "预算为 410 万元。"},
+            {"role": "user", "content": "周期 24 个月，覆盖 8 个街道。"},
+            {"role": "assistant", "content": "部署 320 个积水传感器。"},
+            {"role": "user", "content": "伙伴是厦门大学海洋学院。"},
+            {"role": "assistant", "content": "截止日为 2026 年 12 月 15 日。"}
+          ]
+        },
+        {
+          "id": "food-access",
+          "name": "Harbor Food Access",
+          "history": [
+            {"role": "user", "content": "Food Access 在青岛实施。"},
+            {"role": "assistant", "content": "预算 190 万元。"},
+            {"role": "user", "content": "周期 15 个月，覆盖 20 个社区。"},
+            {"role": "assistant", "content": "建设 6 个移动生鲜站。"},
+            {"role": "user", "content": "目标服务 3,500 户家庭。"},
+            {"role": "assistant", "content": "伙伴是青岛农业大学。"}
+          ]
+        },
+        {
+          "id": "air-quality",
+          "name": "Harbor Air Quality",
+          "history": [
+            {"role": "user", "content": "Air Quality 在天津实施。"},
+            {"role": "assistant", "content": "预算 330 万元。"},
+            {"role": "user", "content": "周期 30 个月。"},
+            {"role": "assistant", "content": "部署 85 个 PM2.5 节点。"},
+            {"role": "user", "content": "目标覆盖 50,000 名居民。"},
+            {"role": "assistant", "content": "伙伴是天津大学环境学院。"}
+          ]
+        }
+      ],
+      "expected_terms": ["宁波", "280 万", "18 个月", "12 个社区", "2°C", "1,200", "宁波大学公共卫生学院", "2026 年 11 月 30 日"],
+      "forbidden_terms": ["厦门", "410 万", "320 个", "青岛", "190 万", "3,500", "天津", "330 万", "PM2.5", "50,000"],
+      "rubric": ["项目身份正确", "数字和伙伴完整", "干预与指标对应", "表达适合资助申请"]
+    }
+  ]
+}

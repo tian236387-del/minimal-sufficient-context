@@ -1,0 +1,109 @@
+﻿run_id,status,error,started_at,model,model_digest,model_family,model_size,model_tier,dataset_seed,inference_seed,repeat,num_ctx,history_min,history_max,temperature,think,num_predict,case_id,family_id,question_mode,active_branch_position,condition,question,answer,prompt_chars,prompt_tokens,response_tokens,latency_ms,load_ms,prompt_eval_ms,eval_ms,tokens_per_second,context_saturation,correct,polluted,expected_hits,forbidden_hits
+run-01b87c214a345bad,ok,,2026-08-25T04:28:31.482813+00:00,qwen3:4b,359d7dd4bcdab3d86b87d73ac27966f4dbb9f5efdfcc75d34a8764a09474fae7,Qwen,4B,standard,42,11,1,4096,230,270,0.2,False,128,nova_q01,nova,implicit,0,linear_tagged,当前这个项目最终使用什么数据库，负责人是谁？,"首先，我需要理解用户的问题。用户问：""当前这个项目最终使用什么数据库，负责人是谁？""
+
+回顾之前的对话历史，我注意到在最后一次用户消息中，用户说：""Nova Data：演示环境数据将在发布前一天重置。"" 然后我回复了：""Nova Data 当前有效的数据库仍然是 SQLite。Nova Data 当前有效的本地模型仍然是 Phi-4 Mini。""
+
+用户现在的问题是关于""当前这个项目""的数据库和负责人。这里的""这个项目""应该指的是之前提到的""Nova Data""项目。
+
+在之前的回复中，我明确指出：""Nova Data 当前有效的",39593,4094,128,56523.63,4220.88,1266.14,1513.97,84.55,0.9995,False,True,,SQLite
+run-4c36cb92f8be6bcb,ok,,2026-08-25T04:29:28.012151+00:00,qwen3:4b,359d7dd4bcdab3d86b87d73ac27966f4dbb9f5efdfcc75d34a8764a09474fae7,Qwen,4B,standard,42,11,1,4096,230,270,0.2,False,128,nova_q01,nova,implicit,0,branch,当前这个项目最终使用什么数据库，负责人是谁？,"首先，我需要理解用户的问题。用户问的是“当前这个项目最终使用什么数据库，负责人是谁？”。这里的“这个项目”指的是前面提到的Nova Web项目。
+
+回顾之前的对话历史，我注意到在最近的交互中，用户提供了两个信息：
+1. ""Nova Web 当前有效的本地模型仍然是 Qwen3 1.7B。""
+2. ""Nova Web 当前有效的Pro 存储仍然是 50GB。""
+
+但是，这些信息并没有直接回答用户关于数据库和负责人的问题。在之前的对话中，我作为AI助手，一直在记录Nova Web的补充讨论，但",8434,4093,128,4025.48,17.09,1074.79,1498.31,85.43,0.9993,False,False,,
+run-35f38dcb84d1893f,ok,,2026-08-25T04:29:32.058415+00:00,qwen3:4b,359d7dd4bcdab3d86b87d73ac27966f4dbb9f5efdfcc75d34a8764a09474fae7,Qwen,4B,standard,42,11,1,8192,230,270,0.2,False,128,nova_q01,nova,implicit,0,linear_tagged,当前这个项目最终使用什么数据库，负责人是谁？,"首先，我需要仔细分析当前的对话上下文，特别是关于Nova Data项目的最新信息。
+
+从对话历史中，我可以看到用户一直在询问Nova Data项目的各种细节。在最后一条消息中，用户问：""当前这个项目最终使用什么数据库，负责人是谁？""
+
+我需要回顾之前的所有信息，找出关于Nova Data项目数据库和负责人的最新、最确定的信息。
+
+在对话中，我注意到以下关键点：
+
+1. 之前有明确提到：""Nova Data：代码仓库命名规范保持不变。"" 这表明项目仍在进行中。
+
+2. 之前有明确提到：""Nova Data：产品",39593,8182,128,52581.5,2807.69,2521.87,1759.77,72.74,0.9988,False,False,,
+run-575538cfe741b2c7,ok,,2026-08-25T04:30:24.658134+00:00,qwen3:4b,359d7dd4bcdab3d86b87d73ac27966f4dbb9f5efdfcc75d34a8764a09474fae7,Qwen,4B,standard,42,11,1,8192,230,270,0.2,False,128,nova_q01,nova,implicit,0,branch,当前这个项目最终使用什么数据库，负责人是谁？,"首先，我需要仔细分析当前对话上下文，确保只基于Nova Web项目的信息回答问题。
+
+用户问：""当前这个项目最终使用什么数据库，负责人是谁？""
+
+根据之前的对话记录，我需要找出关于Nova Web项目的最终数据库和负责人信息。
+
+回顾关键信息：
+
+1. 之前有明确的最终结论：
+   - ""Nova Web 最终负责人：Alice。这是当前有效结论。""
+   - ""Nova Web 最终本地模型：Qwen3 1.7B。这是当前有效结论。""
+   - ""Nova Web 这项已经定了：数据库最终改为 PostgreSQL 16",8434,5552,128,3448.55,19.55,1527.75,1623.82,78.83,0.6777,True,False,PostgreSQL 16 | Alice,
+run-7462471e4460cb31,ok,,2026-08-25T04:30:28.127388+00:00,qwen3:4b,359d7dd4bcdab3d86b87d73ac27966f4dbb9f5efdfcc75d34a8764a09474fae7,Qwen,4B,standard,42,11,1,16384,230,270,0.2,False,128,nova_q01,nova,implicit,0,linear_tagged,当前这个项目最终使用什么数据库，负责人是谁？,"我需要回答当前项目（Nova Data）最终使用什么数据库和负责人是谁。
+
+从对话历史中，我可以看到：
+
+1. 之前讨论了Nova Data项目
+2. 在最后一条消息中，用户问：""当前这个项目最终使用什么数据库，负责人是谁？""
+
+从对话历史中，我可以看到关于Nova Data的数据库和负责人的信息：
+
+- ""Nova Data 这项已经定了：数据库最终改为 SQLite，以前的相关方案全部作废。"" → 所以Nova Data最终使用的数据库是SQLite
+- ""Nova Data 最终负责人：David"" → 所以Nova Data的负责人",39593,16368,128,40123.18,2750.76,6492.3,2174.15,58.87,0.999,False,True,,SQLite | David
+run-644de9af8d7902f5,ok,,2026-08-25T04:31:08.274830+00:00,qwen3:4b,359d7dd4bcdab3d86b87d73ac27966f4dbb9f5efdfcc75d34a8764a09474fae7,Qwen,4B,standard,42,11,1,16384,230,270,0.2,False,128,nova_q01,nova,implicit,0,branch,当前这个项目最终使用什么数据库，负责人是谁？,"首先，我需要仔细分析当前对话上下文，确保只基于Nova Web项目的信息回答问题。
+
+用户问：""当前这个项目最终使用什么数据库，负责人是谁？""
+
+根据之前的对话记录，我需要找出关于Nova Web项目的最终数据库和负责人信息。
+
+回顾关键信息：
+
+1. 之前有明确的最终结论：
+   - ""Nova Web 最终负责人：Alice。这是当前有效结论。""
+   - ""Nova Web 最终本地模型：Qwen3 1.7B。这是当前有效结论。""
+   - ""Nova Web 这项已经定了：数据库最终改为 PostgreSQL 16",8434,5552,128,3719.93,18.89,1526.93,1631.71,78.45,0.3389,True,False,PostgreSQL 16 | Alice,
+run-1b303f491a253caf,ok,,2026-08-25T04:31:12.007287+00:00,qwen3:4b,359d7dd4bcdab3d86b87d73ac27966f4dbb9f5efdfcc75d34a8764a09474fae7,Qwen,4B,standard,42,11,1,32768,230,270,0.2,False,128,nova_q01,nova,implicit,0,linear_tagged,当前这个项目最终使用什么数据库，负责人是谁？,"我需要回答当前项目（Nova Data）的最终数据库和负责人。
+
+根据之前的对话记录，我可以看到：
+
+1. 在Nova Data项目中，有明确的最终结论：
+   - ""Nova Data 这项已经定了：数据库最终改为 SQLite，以前的相关方案全部作废。""
+   - ""Nova Data 这项已经定了：负责人最终改为 David，以前的相关方案全部作废。""
+
+2. 从对话历史中，我可以看到：
+   - ""Nova Data：团队讨论过 UI 主题色，决定以后再处理。""
+   - ""Nova Data：文档目录需要清理，但这",39593,24939,128,42300.23,4240.57,15811.48,22017.01,5.81,0.7611,False,True,,SQLite | David
+run-36ab8262d008fd27,ok,,2026-08-25T04:31:54.340918+00:00,qwen3:4b,359d7dd4bcdab3d86b87d73ac27966f4dbb9f5efdfcc75d34a8764a09474fae7,Qwen,4B,standard,42,11,1,32768,230,270,0.2,False,128,nova_q01,nova,implicit,0,branch,当前这个项目最终使用什么数据库，负责人是谁？,"首先，我需要仔细分析当前的对话上下文，确保只基于Nova Web项目的信息来回答问题。
+
+用户问：""当前这个项目最终使用什么数据库，负责人是谁？""
+
+根据之前的对话记录，我需要找出关于Nova Web的最终数据库和负责人信息：
+
+1. 从之前的对话中，我看到：
+   - ""Nova Web 这项已经定了：数据库最终改为 PostgreSQL 16，以前的相关方案全部作废。""
+   - ""Nova Web 最终负责人：Alice。这是当前有效结论。""
+
+2. 这些信息在对话中被明确标记为""当前有效结论",8434,5552,128,8685.48,13.25,284.86,6898.38,18.56,0.1694,True,False,PostgreSQL 16 | Alice,
+run-ac666b404599809e,ok,,2026-08-25T04:32:03.072779+00:00,llama3.2:3b,a80c4f17acd55265feec403c7aef86be0c25983ab279d83f3bcd3abbcb5b8b72,Llama,3B,standard,42,11,1,4096,230,270,0.2,False,128,nova_q01,nova,implicit,0,linear_tagged,当前这个项目最终使用什么数据库，负责人是谁？,目前 Nova Data 最终将使用 PostgreSQL 数据库。,39593,4079,12,57277.41,4085.98,1028.54,123.74,96.98,0.9958,False,False,,
+run-c49682c816d41247,ok,,2026-08-25T04:33:00.361833+00:00,llama3.2:3b,a80c4f17acd55265feec403c7aef86be0c25983ab279d83f3bcd3abbcb5b8b72,Llama,3B,standard,42,11,1,4096,230,270,0.2,False,128,nova_q01,nova,implicit,0,branch,当前这个项目最终使用什么数据库，负责人是谁？,我没有任何信息可以确定 Nova Web 最终使用的数据库或负责人。,8434,4088,18,2982.43,4.15,749.93,181.35,99.25,0.998,False,False,,
+run-96df17750520f795,ok,,2026-08-25T04:33:03.362416+00:00,llama3.2:3b,a80c4f17acd55265feec403c7aef86be0c25983ab279d83f3bcd3abbcb5b8b72,Llama,3B,standard,42,11,1,8192,230,270,0.2,False,128,nova_q01,nova,implicit,0,linear_tagged,当前这个项目最终使用什么数据库，负责人是谁？,目前 Nova Data 最终使用的数据库是 PostgreSQL。,39593,8169,12,53651.9,2561.46,1990.68,141.0,85.11,0.9972,False,False,,
+run-7f88efe6088ddf31,ok,,2026-08-25T04:33:57.027186+00:00,llama3.2:3b,a80c4f17acd55265feec403c7aef86be0c25983ab279d83f3bcd3abbcb5b8b72,Llama,3B,standard,42,11,1,8192,230,270,0.2,False,128,nova_q01,nova,implicit,0,branch,当前这个项目最终使用什么数据库，负责人是谁？,Nova Web 最终使用的数据库是 PostgreSQL 16，负责人是 Alice。,8434,6487,18,1921.57,19.07,1344.83,194.46,92.56,0.7919,True,False,PostgreSQL 16 | Alice,
+run-53a3ee0bf04981d4,ok,,2026-08-25T04:33:58.963105+00:00,llama3.2:3b,a80c4f17acd55265feec403c7aef86be0c25983ab279d83f3bcd3abbcb5b8b72,Llama,3B,standard,42,11,1,16384,230,270,0.2,False,128,nova_q01,nova,implicit,0,linear_tagged,当前这个项目最终使用什么数据库，负责人是谁？,Nova Data 最终使用的数据库是 PostgreSQL。,39593,16382,11,45017.94,2841.31,4896.68,153.29,71.76,0.9999,False,False,,
+run-48fe2de902adc108,ok,,2026-08-25T04:34:43.992265+00:00,llama3.2:3b,a80c4f17acd55265feec403c7aef86be0c25983ab279d83f3bcd3abbcb5b8b72,Llama,3B,standard,42,11,1,16384,230,270,0.2,False,128,nova_q01,nova,implicit,0,branch,当前这个项目最终使用什么数据库，负责人是谁？,Nova Web 最终使用的数据库是 PostgreSQL 16，负责人是 Alice。,8434,6487,18,1950.48,14.87,1369.46,194.13,92.72,0.3959,True,False,PostgreSQL 16 | Alice,
+run-931ee3e6f707a458,ok,,2026-08-25T04:34:45.973484+00:00,llama3.2:3b,a80c4f17acd55265feec403c7aef86be0c25983ab279d83f3bcd3abbcb5b8b72,Llama,3B,standard,42,11,1,32768,230,270,0.2,False,128,nova_q01,nova,implicit,0,linear_tagged,当前这个项目最终使用什么数据库，负责人是谁？,"Nova Data 最终使用的数据库是 PostgreSQL 16。
+
+Nova Data 的最终负责人是 David。",39593,29133,23,15328.91,2836.3,11858.99,389.29,59.08,0.8891,False,True,PostgreSQL 16,David
+run-4706de6b31ea70ef,ok,,2026-08-25T04:35:01.315466+00:00,llama3.2:3b,a80c4f17acd55265feec403c7aef86be0c25983ab279d83f3bcd3abbcb5b8b72,Llama,3B,standard,42,11,1,32768,230,270,0.2,False,128,nova_q01,nova,implicit,0,branch,当前这个项目最终使用什么数据库，负责人是谁？,Nova Web 最终使用的数据库是 PostgreSQL 16，负责人是 Alice。,8434,6487,18,1429.46,17.63,19.48,159.08,113.15,0.198,True,False,PostgreSQL 16 | Alice,
+run-719b5e16516b2242,ok,,2026-08-25T04:35:02.757800+00:00,gemma3:4b,a2af6cc3eb7fa8be8504abaf9b04e88f17a119ec3f04a3addf55f92841195f5a,Gemma,4B,standard,42,11,1,4096,230,270,0.2,False,128,nova_q01,nova,implicit,0,linear_tagged,当前这个项目最终使用什么数据库，负责人是谁？,Nova Web 使用 SQLite。 负责人是,39593,4088,8,55283.31,14556.65,1128.63,100.7,79.44,0.998,False,True,,SQLite
+run-b88f1359845ea7a2,ok,,2026-08-25T04:35:58.060987+00:00,gemma3:4b,a2af6cc3eb7fa8be8504abaf9b04e88f17a119ec3f04a3addf55f92841195f5a,Gemma,4B,standard,42,11,1,4096,230,270,0.2,False,128,nova_q01,nova,implicit,0,branch,当前这个项目最终使用什么数据库，负责人是谁？,目前 Nova Web 项目使用 PostgreSQL 作为数据库。 项目负责人是李明。,8434,2051,16,2026.26,16.15,526.08,195.64,81.78,0.5007,False,False,,
+run-3f1352fae75d8f88,ok,,2026-08-25T04:36:00.098589+00:00,gemma3:4b,a2af6cc3eb7fa8be8504abaf9b04e88f17a119ec3f04a3addf55f92841195f5a,Gemma,4B,standard,42,11,1,8192,230,270,0.2,False,128,nova_q01,nova,implicit,0,linear_tagged,当前这个项目最终使用什么数据库，负责人是谁？,Nova Web 最终使用 SQLite 数据库，负责人是 David。,39593,8178,14,42314.8,4068.86,1877.84,175.79,79.64,0.9983,False,True,,SQLite | David
+run-b90fa44174d1dc34,ok,,2026-08-25T04:36:42.426319+00:00,gemma3:4b,a2af6cc3eb7fa8be8504abaf9b04e88f17a119ec3f04a3addf55f92841195f5a,Gemma,4B,standard,42,11,1,8192,230,270,0.2,False,128,nova_q01,nova,implicit,0,branch,当前这个项目最终使用什么数据库，负责人是谁？,Nova Web 的最终数据库是 PostgreSQL 16，负责人是 Alice。,8434,5809,16,1715.53,14.89,1309.87,192.33,83.19,0.7091,True,False,PostgreSQL 16 | Alice,
+run-2fa4110baa4f708e,ok,,2026-08-25T04:36:44.153917+00:00,gemma3:4b,a2af6cc3eb7fa8be8504abaf9b04e88f17a119ec3f04a3addf55f92841195f5a,Gemma,4B,standard,42,11,1,16384,230,270,0.2,False,128,nova_q01,nova,implicit,0,linear_tagged,当前这个项目最终使用什么数据库，负责人是谁？,SQLite。David。,39593,16371,5,32679.35,3918.86,3891.57,62.97,79.4,0.9992,False,True,,SQLite | David
+run-03d01281012d452f,ok,,2026-08-25T04:37:16.846007+00:00,gemma3:4b,a2af6cc3eb7fa8be8504abaf9b04e88f17a119ec3f04a3addf55f92841195f5a,Gemma,4B,standard,42,11,1,16384,230,270,0.2,False,128,nova_q01,nova,implicit,0,branch,当前这个项目最终使用什么数据库，负责人是谁？,Nova Web 的最终数据库是 PostgreSQL 16，负责人是 Alice。,8434,5809,16,1838.3,17.72,1316.74,189.2,84.57,0.3546,True,False,PostgreSQL 16 | Alice,
+run-dff7206237a185b0,ok,,2026-08-25T04:37:18.698527+00:00,gemma3:4b,a2af6cc3eb7fa8be8504abaf9b04e88f17a119ec3f04a3addf55f92841195f5a,Gemma,4B,standard,42,11,1,32768,230,270,0.2,False,128,nova_q01,nova,implicit,0,linear_tagged,当前这个项目最终使用什么数据库，负责人是谁？,数据库最终改为 PostgreSQL 16，负责人是 Alice。,39593,26121,13,10555.45,3922.1,6259.75,177.23,73.35,0.7971,True,False,PostgreSQL 16 | Alice,
+run-1fbdd8cdebb89350,ok,,2026-08-25T04:37:29.269937+00:00,gemma3:4b,a2af6cc3eb7fa8be8504abaf9b04e88f17a119ec3f04a3addf55f92841195f5a,Gemma,4B,standard,42,11,1,32768,230,270,0.2,False,128,nova_q01,nova,implicit,0,branch,当前这个项目最终使用什么数据库，负责人是谁？,Nova Web 的最终数据库是 PostgreSQL 16，负责人是 Alice。,8434,5809,16,1875.28,15.32,1319.36,189.13,84.6,0.1773,True,False,PostgreSQL 16 | Alice,
+run-e202cdcfaff1b1db,ok,,2026-08-25T04:37:31.159819+00:00,llama3.1:8b,46e0c10c039e019119339687c3c1757cc81b9da49709a3b3924863ba87ca666e,Llama,8B,larger,42,11,1,4096,230,270,0.2,False,128,nova_q01,nova,implicit,0,linear_tagged,当前这个项目最终使用什么数据库，负责人是谁？,Nova Data 最终使用的数据库是 PostgreSQL。,39593,4090,11,60783.22,4957.41,1865.89,215.19,51.12,0.9985,False,False,,
+run-993cdfdffd2dcba8,ok,,2026-08-25T04:38:31.958270+00:00,llama3.1:8b,46e0c10c039e019119339687c3c1757cc81b9da49709a3b3924863ba87ca666e,Llama,8B,larger,42,11,1,4096,230,270,0.2,False,128,nova_q01,nova,implicit,0,branch,当前这个项目最终使用什么数据库，负责人是谁？,Nova Web 使用的数据库是 MySQL。,8434,4078,9,3692.0,14.47,1678.11,162.25,55.47,0.9956,False,False,,
+run-d387dbe4543654c2,ok,,2026-08-25T04:38:35.668514+00:00,llama3.1:8b,46e0c10c039e019119339687c3c1757cc81b9da49709a3b3924863ba87ca666e,Llama,8B,larger,42,11,1,8192,230,270,0.2,False,128,nova_q01,nova,implicit,0,linear_tagged,当前这个项目最终使用什么数据库，负责人是谁？,Nova Data 最终使用的数据库是 SQLite，负责人是未知。,39593,8184,17,56930.97,3353.42,3808.22,368.5,46.13,0.999,False,True,,SQLite
+run-6c21d19e82b958d3,ok,,2026-08-25T04:39:32.615635+00:00,llama3.1:8b,46e0c10c039e019119339687c3c1757cc81b9da49709a3b3924863ba87ca666e,Llama,8B,larger,42,11,1,8192,230,270,0.2,False,128,nova_q01,nova,implicit,0,branch,当前这个项目最终使用什么数据库，负责人是谁？,Nova Web 最终使用的数据库是 PostgreSQL 16，负责人是 Alice。,8434,6477,18,3467.46,16.06,2817.72,362.91,49.6,0.7906,True,False,PostgreSQL 16 | Alice,
+run-a57d263c02e73636,ok,,2026-08-25T04:39:36.101280+00:00,llama3.1:8b,46e0c10c039e019119339687c3c1757cc81b9da49709a3b3924863ba87ca666e,Llama,8B,larger,42,11,1,16384,230,270,0.2,False,128,nova_q01,nova,implicit,0,linear_tagged,当前这个项目最终使用什么数据库，负责人是谁？,Nova Data 的最终数据库是 SQLite，负责人是 David。,39593,16372,15,51965.49,4292.2,10136.1,1059.42,14.16,0.9993,False,True,,SQLite | David
+run-6d9dab2331e962e3,ok,,2026-08-25T04:40:28.112190+00:00,llama3.1:8b,46e0c10c039e019119339687c3c1757cc81b9da49709a3b3924863ba87ca666e,Llama,8B,larger,42,11,1,16384,230,270,0.2,False,128,nova_q01,nova,implicit,0,branch,当前这个项目最终使用什么数据库，负责人是谁？,Nova Web 最终使用的数据库是 PostgreSQL 16，负责人是 Alice。,8434,6477,18,4837.0,12.1,3485.55,816.0,22.06,0.3953,True,False,PostgreSQL 16 | Alice,
+run-53bad8752a25c277,ok,,2026-08-25T04:40:32.992014+00:00,llama3.1:8b,46e0c10c039e019119339687c3c1757cc81b9da49709a3b3924863ba87ca666e,Llama,8B,larger,42,11,1,32768,230,270,0.2,False,128,nova_q01,nova,implicit,0,linear_tagged,当前这个项目最终使用什么数据库，负责人是谁？,Nova Data 的最终数据库是 SQLite，负责人是 David。,39593,29123,15,40108.77,5586.22,29709.2,4488.7,3.34,0.8888,False,True,,SQLite | David
+run-94d04f74c82f7e77,ok,,2026-08-25T04:41:13.122335+00:00,llama3.1:8b,46e0c10c039e019119339687c3c1757cc81b9da49709a3b3924863ba87ca666e,Llama,8B,larger,42,11,1,32768,230,270,0.2,False,128,nova_q01,nova,implicit,0,branch,当前这个项目最终使用什么数据库，负责人是谁？,Nova Web 最终使用的数据库是 PostgreSQL 16，负责人是 Alice。,8434,6477,18,4115.36,22.05,586.47,1705.55,10.55,0.1977,True,False,PostgreSQL 16 | Alice,

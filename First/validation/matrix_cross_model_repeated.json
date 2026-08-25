@@ -1,0 +1,23 @@
+{
+  "name": "cross-model-multiseed-repeated-window-scan",
+  "models": [
+    {"name": "qwen3:4b", "family": "Qwen", "size": "4B"},
+    {"name": "llama3.2:3b", "family": "Llama", "size": "3B"},
+    {"name": "gemma3:4b", "family": "Gemma", "size": "4B"},
+    {"name": "llama3.1:8b", "family": "Llama", "size": "8B", "tier": "larger"}
+  ],
+  "dataset_seeds": [42, 314],
+  "inference_seeds": [11, 29],
+  "repeats": 2,
+  "context_windows": [4096, 8192, 16384, 32768],
+  "conditions": ["linear_tagged", "branch"],
+  "history_min": 230,
+  "history_max": 270,
+  "limit": 1,
+  "temperature": 0.2,
+  "think": false,
+  "num_predict": 128,
+  "timeout_seconds": 300,
+  "retries": 1,
+  "keep_alive": "15m"
+}

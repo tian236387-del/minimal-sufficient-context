@@ -1,0 +1,99 @@
+[
+  {
+    "id": "project_database_deadline",
+    "shared_context": "你正在同时推进两个软件项目，两个项目的信息都曾出现在此前聊天里。",
+    "branch_a": "项目 Nova Web：数据库最终决定使用 PostgreSQL；后端使用 FastAPI；发布日期是 8 月 30 日；负责人是 Alice。",
+    "branch_b": "项目 Nova Mobile：数据库最终决定使用 MongoDB；后端使用 Express；发布日期是 9 月 15 日；负责人是 Bob。",
+    "active_branch": "A",
+    "question": "当前这个项目最终使用什么数据库，负责人是谁？",
+    "expected_contains": [
+      "PostgreSQL",
+      "Alice"
+    ],
+    "forbidden_contains": [
+      "MongoDB",
+      "Bob"
+    ]
+  },
+  {
+    "id": "api_framework",
+    "shared_context": "你在讨论两个名字相近的内部服务，它们分别属于不同产品线。",
+    "branch_a": "Atlas Analytics 服务：API 使用 FastAPI；缓存使用 Redis；运行端口是 8100。",
+    "branch_b": "Atlas Admin 服务：API 使用 Express；缓存使用 Memcached；运行端口是 9200。",
+    "active_branch": "A",
+    "question": "这个服务的 API 框架和缓存分别是什么？",
+    "expected_contains": [
+      "FastAPI",
+      "Redis"
+    ],
+    "forbidden_contains": [
+      "Express",
+      "Memcached"
+    ]
+  },
+  {
+    "id": "pricing_plan",
+    "shared_context": "你正在设计两个不同 SaaS 产品的定价方案。",
+    "branch_a": "产品 Orbit：Pro 方案最终价格为每月 29 美元，包含 50GB 存储和 10 个团队成员。",
+    "branch_b": "产品 Orbital：Pro 方案最终价格为每月 49 美元，包含 200GB 存储和 25 个团队成员。",
+    "active_branch": "A",
+    "question": "当前产品的 Pro 方案多少钱，包含多少存储？",
+    "expected_contains": [
+      "29",
+      "50GB"
+    ],
+    "forbidden_contains": [
+      "49",
+      "200GB"
+    ]
+  },
+  {
+    "id": "model_choice",
+    "shared_context": "你在两个独立 AI 实验中都讨论过模型选择。",
+    "branch_a": "实验 Alpha：最终决定使用 Qwen3 1.7B；temperature 设为 0；主要测试 Context Pollution。",
+    "branch_b": "实验 Beta：最终决定使用 Llama 3.2 3B；temperature 设为 0.7；主要测试创意写作。",
+    "active_branch": "A",
+    "question": "这个实验最终选了什么模型，temperature 是多少？",
+    "expected_contains": [
+      "Qwen3",
+      "1.7B",
+      "0"
+    ],
+    "forbidden_contains": [
+      "Llama",
+      "0.7"
+    ]
+  },
+  {
+    "id": "deployment_region",
+    "shared_context": "两个项目都部署在云上，但区域和供应商不同。",
+    "branch_a": "项目 Helios API：部署到 AWS ap-southeast-1；生产数据库使用 PostgreSQL 16。",
+    "branch_b": "项目 Helios Worker：部署到 GCP us-central1；生产数据库使用 MySQL 8。",
+    "active_branch": "A",
+    "question": "当前项目部署在哪个区域，数据库是什么？",
+    "expected_contains": [
+      "ap-southeast-1",
+      "PostgreSQL"
+    ],
+    "forbidden_contains": [
+      "us-central1",
+      "MySQL"
+    ]
+  },
+  {
+    "id": "deadline_conflict",
+    "shared_context": "你正在同时准备两个名称相似的发布计划。",
+    "branch_a": "Phoenix Desktop：原计划 10 月 20 日发布，后来调整为 10 月 28 日；测试冻结时间为 10 月 21 日。",
+    "branch_b": "Phoenix Mobile：原计划 10 月 28 日发布，后来提前到 10 月 18 日；测试冻结时间为 10 月 12 日。",
+    "active_branch": "A",
+    "question": "这个版本最终发布日期和测试冻结时间是什么时候？",
+    "expected_contains": [
+      "10 月 28 日",
+      "10 月 21 日"
+    ],
+    "forbidden_contains": [
+      "10 月 18 日",
+      "10 月 12 日"
+    ]
+  }
+]
